@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>duckbot</title>
+
+		<link rel="stylesheet" href="../../dist/reset.css">
+		<link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+		<style>
+			figure {
+				padding: 0;
+				display: inline-block;
+				margin: 0;
+				position: relative;
+			}
+
+			figcaption {
+				position: absolute;
+				font-size: 30%;
+				bottom: 1em;
+				left: 0;
+				/* background-color: yellow; */
+				width: 100%;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Custom Worfklow Automation with Jubilee</h3>
+					<!-- <br> -->
+					<!-- <video data-autoplay src="data/intro-jubilee.mp4"></video> -->
+					<p>Blair Subbaraman | Sam Ferguson | Nadya Peek</p>
+					<p>Machine Agency, University of Washington</p>
+				</section>
+
+				<section> <!-- style="text-align: left;"-->
+					<h4>Scientific research is results-driven</h4>
+					<p><small>Sometimes by any means necessary</small></p>
+					<figure>
+						<img height=300 data-src="data/duckweed-test.png">
+						<figcaption>duckweed</figcaption>
+					</figure>
+					<figure>
+						<img height=300 data-src="data/thermal-well.png">
+						<figcaption>thermal well plate</figcaption>
+					</figure>
+				</section>
+
+				<section>
+					<h4>Previously: “dull, dirty, and dangerous”</h4>
+					<p><small>
+						Robots have historically been for mass-production.
+						<br><br>
+						They are expensive, tedious to program, and difficult to customize & run. 
+					</small></p>
+
+					<figure>
+						<img height=200 data-src="data/programming-interface.png">
+						<figcaption>programming interface</figcaption>
+					</figure>
+					<figure>
+						<img height=200 data-src="data/runtime-control.jpg">
+						<figcaption>runtime control</figcaption>
+					</figure>
+					<figure>
+						<img height=200 data-src="data/machine-setup.png">
+						<figcaption>machine setup</figcaption>
+					</figure>
+				</section>
+
+				<section data-auto-animate>
+					<h4>Automation as a tool for Creative Exploration</h4>
+					<img width=auto data-src="data/creative-automation.jpg">
+				</section>
+
+				<section data-auto-animate>
+					<h4>Automation as a tool for Creative Exploration</h4>
+					<img width=auto data-src="data/creative-automation.jpg">
+					<p><small>requires...</small></p>
+					<ul>
+						<small> 
+						<li>Modular, Low-cost, Extensible Hardware</li>
+						<li>Human-centered Systems for Programming/Running Experiments</li>
+						</small>
+					</ul>
+				</section>
+
+				<section>
+					<section data-transition="fade-in none-out">
+						<h4>Modular, Low-cost, Extensible Hardware</h4>
+						<p><small>Open-source design for distributed manufacturing</small></p>
+						<figure>
+							<img height=300 data-src="data/jubilee.jpg">
+							<figcaption>Jubilee: tool-changing machine</figcaption>
+						</figure>
+						<figure>
+							<img height=300 data-src="data/tool-lock.jpg">
+							<figcaption>design for precise repeatable positioning</figcaption>
+						</figure>
+						</section>
+
+						<section data-transition="none-in fade-out">
+							<b>Modular, Low-cost, Extensible Hardware</b>
+							<p><small>Digital fabrication of modular and customizable hardware</small></p>
+							<figure>
+								<img height=300 data-src="data/gigapan.jpg">
+								<figcaption>gigapan microscopy</figcaption>
+							</figure>
+							<figure>
+								<img height=300 data-src="data/jubilee-diagram.jpg">
+								<figcaption>multi-tool processes</figcaption>
+							</figure>
+						</section>
+					<section>
+						<h4>Human-Centered Systems for Programming Experiments</h4>
+						<figure>
+							<img height=auto data-src="data/programming-experiments.png">
+							<figcaption><b>programs synthesized into machine instructions</b></figcaption>
+						</figure>
+						<figure>
+							<img height=100 data-src="data/instructions.png">
+							<figcaption><b>human-in-the-loop instructions</b></figcaption>
+						</figure>
+						<figure> 
+							<img height=200 data-src="data/frond-count.jpg">
+							<figcaption><b>analyzed data can be used in code</b></figcaption>
+						</figure>
+					</section>
+				</section>
+
+				<section>
+					<section data-transition="fade-in none-out" data-auto-animate>
+						<h4>Duckbot</h4>
+						<img width=500 data-src="data/software.png">
+					</section>
+
+					<section data-transition="none-in fade-out" data-auto-animate>
+						<h4>Duckbot</h4>
+						<p><small>Hardware</small></p>
+						<!-- <img width=auto data-src="data/creative-automation.jpg"> -->
+						<p><small>pics of the tools</small></p>
+					</section>
+
+					<section data-transition="none-in fade-out" data-auto-animate>
+						<h4>Duckbot</h4>
+						<p><small>Machine Control</small></p>
+						<img height=150 data-src="data/jubilee.jpg">
+						<pre><code class="python" data-line-numbers="1|2|3-5|6-8">	m = MachineCommunication(port)
+	m.moveTo(x=100, y=200, z=50)
+	m.toolChange(tools['media-syringe'])
+	m.moveTo(x=media_reservoir['x'], y=media_reservoir['y'])
+	m.aspirate(mL=20)
+	wellA1 = fetch_well_position(1, "A1") # (plate, well id)
+	m.moveTo(x=wellA1['x'], y=wellA1['y'])
+	m.dispense(ml=1.5)
+	</code></pre>
+					</section>
+				</section>		
+
+				<section data-auto-animate>
+					<h4 class='r-fit-text'>Automating Growth Assays</h4>
+					<p class='r-fit-text'><small>define experiment → setup plates → collect data → analyze data</small></p>
+					<!-- <img width=auto data-src="data/duckbot-diagram.jpg"> -->
+				</section>
+
+				<section data-auto-animate>
+					<h4>Automating Growth Assays</h4>
+					<p><small>define experiment → setup plates → collect data → analyze data</small></p>
+					<img width=auto data-src="data/duckbot-diagram.jpg">
+				</section>
+
+				<section>
+					<h4>Defining an Experiment</h4>
+					<pre><code class="python" data-line-numbers>	Experiment_name = "Demo" 
+	genotypes = ["Sp7498", "Lm5500", "Lm8627", "Wa7788"]
+	media = ["0mM", "25mM", "50mM", "100mM"]
+	reps  = 4			
+</code></pre>
+					<div class="r-stack">
+						<img height=400 class="fragment fade-out" data-fragment-index="0" data-src="data/plate-1-viz.png">
+						<img height=400 class="fragment current-visible" data-fragment-index="0" data-src="data/plate-2-viz.png">
+						<img height=400 class="fragment" data-src="data/plate-3-viz.png">
+					</div>
+				</section>
+				
+				<section>
+					<h4>Plate Setup</h4>
+					video aspirating & dispensing
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Duckweed Transfer</h4>
+						video, maybe code block
+					</section>
+
+					<section data-auto-animate>
+						<h4>Duckweed Transfer</h4>
+						<img width=auto data-src="data/transfer-tool-graph.png">
+					</section>
+
+					<section data-auto-animate>
+						<h4>Duckweed Transfer</h4>
+						<img width=auto data-src="data/single-full-plate-adjusted.png">
+						<img width=auto data-src="data/all-plates-adjusted.png">
+					</section>
+				</section>
+
+				<section data-auto-animate>
+					<h4>Image Plates</h4>
+					video + code block (?)
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Image Plates</h4>
+						<!-- <img width=auto data-src="data/single-full-plate-adjusted.png"> -->
+					</section>
+					<section data-auto-animate>
+						<h4>Image Plates</h4>
+						<figure> 
+							<img height=300 data-src="data/lm-loop.gif">
+							<figcaption>lemna</figcaption>
+						</figure>
+						<figure> 
+							<img height=300 data-src="data/sp-loop.gif">
+							<figcaption>spirodella</figcaption>
+						</figure>
+						<figure> 
+							<img height=300 data-src="data/wf-loop.gif">
+							<figcaption>wolffia</figcaption>
+						</figure>
+					</section>
+				</section>
+
+				<section>
+					<h4>Data Analysis</h4>
+					graph + code block
+				</section>
+
+				<section>
+					<h4>Root Imaging</h4>
+					
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/notes/notes.js"></script>
+		<script src="../../plugin/markdown/markdown.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
