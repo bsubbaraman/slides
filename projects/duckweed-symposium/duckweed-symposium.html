@@ -28,6 +28,7 @@
 				/* background-color: yellow; */
 				width: 100%;
 			}
+
 		</style>
 	</head>
 	
@@ -35,11 +36,14 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h3>Custom Worfklow Automation with Jubilee</h3>
-					<!-- <br> -->
-					<!-- <video data-autoplay src="data/intro-jubilee.mp4"></video> -->
-					<p>Blair Subbaraman | Sam Ferguson | Nadya Peek</p>
-					<p>Machine Agency, University of Washington</p>
+					<h2 class="r-fit-text">Custom Worfklow Automation with Jubilee</h2>
+					<img height=300 data-src="data/overhead.png">
+					<img height=300 data-src="data/syringe-zoom.png">
+					<img height=300 data-src="data/inoculation-zoom.png">
+
+					<small>Machine Agency, University of Washington</small>
+					<br/>
+					<small>Dec 11, 2022</small>
 				</section>
 
 				<section> <!-- style="text-align: left;"-->
@@ -78,12 +82,12 @@
 				</section>
 
 				<section data-auto-animate>
-					<h4>Automation as a tool for Creative Exploration</h4>
+					<h4>Automation as a Tool for Creative Exploration</h4>
 					<img width=auto data-src="data/creative-automation.jpg">
 				</section>
 
 				<section data-auto-animate>
-					<h4>Automation as a tool for Creative Exploration</h4>
+					<h4>Automation as a Tool for Creative Exploration</h4>
 					<img width=auto data-src="data/creative-automation.jpg">
 					<p><small>requires...</small></p>
 					<ul>
@@ -120,7 +124,7 @@
 								<figcaption>multi-tool processes</figcaption>
 							</figure>
 						</section>
-					<section>
+					<!-- <section>
 						<h4>Human-Centered Systems for Programming Experiments</h4>
 						<figure>
 							<img height=auto data-src="data/programming-experiments.png">
@@ -134,27 +138,35 @@
 							<img height=200 data-src="data/frond-count.jpg">
 							<figcaption><b>analyzed data can be used in code</b></figcaption>
 						</figure>
-					</section>
+					</section> -->
 				</section>
 
 				<section>
 					<section data-transition="fade-in none-out" data-auto-animate>
 						<h4>Duckbot</h4>
-						<img width=500 data-src="data/software.png">
+						<p><small>A Jubilee outfitted with tools and associated control software for handling duckweed</small></p>
+						<img height=300 data-src="data/duckbot.jpg">
+						<img height=300 data-src="data/overhead.png">
+						<img height=300 data-src="data/software.png">
 					</section>
 
 					<section data-transition="none-in fade-out" data-auto-animate>
 						<h4>Duckbot</h4>
-						<p><small>Hardware</small></p>
-						<!-- <img width=auto data-src="data/creative-automation.jpg"> -->
-						<p><small>pics of the tools</small></p>
+						<p><small>Interchangeable tools and bed plates for duckweed applications </small></p>
+						<img height=325 data-src="data/tools.png">
+						<img height=325 data-src="data/bed-plate.png">
 					</section>
 
 					<section data-transition="none-in fade-out" data-auto-animate>
 						<h4>Duckbot</h4>
-						<p><small>Machine Control</small></p>
-						<img height=150 data-src="data/jubilee.jpg">
-						<pre><code class="python" data-line-numbers="1|2|3-5|6-8">	m = MachineCommunication(port)
+						<p><small>Interchangeable tools and bed plates for duckweed applications </small></p>
+						<video controls loop width=1000 data-autoplay src="data/tool-change.mp4"></video>
+					</section>
+
+					<section data-transition="none-in fade-out" data-auto-animate>
+						<h4>Duckbot</h4>
+						<p><small>Human-Centered Systems for Programming Experiments</small></p>
+						<pre class="stretch"><code class="python" data-line-numbers="1|2|3|4|5|6-8">	m = MachineCommunication(port)
 	m.moveTo(x=100, y=200, z=50)
 	m.toolChange(tools['media-syringe'])
 	m.moveTo(x=media_reservoir['x'], y=media_reservoir['y'])
@@ -163,6 +175,7 @@
 	m.moveTo(x=wellA1['x'], y=wellA1['y'])
 	m.dispense(ml=1.5)
 	</code></pre>
+						<video controls loop width=1000 data-autoplay src="data/example-controls.mp4"></video>
 					</section>
 				</section>		
 
@@ -187,44 +200,46 @@
 </code></pre>
 					<div class="r-stack">
 						<img height=400 class="fragment fade-out" data-fragment-index="0" data-src="data/plate-1-viz.png">
-						<img height=400 class="fragment current-visible" data-fragment-index="0" data-src="data/plate-2-viz.png">
-						<img height=400 class="fragment" data-src="data/plate-3-viz.png">
+						<!-- <img height=400 class="fragment current-visible" data-fragment-index="0" data-src="data/plate-2-viz.png"> -->
+						<!-- <img height=400 class="fragment" data-src="data/plate-3-viz.png"> -->
+						<video class="fragment current-visible" data-fragment-index="0" controls loop width=1000 data-autoplay src="data/plate-setup.mp4"></video>
 					</div>
 				</section>
 				
-				<section>
+				<!-- <section>
 					<h4>Plate Setup</h4>
-					video aspirating & dispensing
-				</section>
+					<video controls loop width=1000 data-autoplay src="data/plate-setup.mp4"></video>
+				</section> -->
 
 				<section>
 					<section data-auto-animate>
 						<h4>Duckweed Transfer</h4>
-						video, maybe code block
+						<p><small>Different tools might be best suited for different genotypes or applications</small></p>
+						<img width=800 data-src="data/pickups.gif">
 					</section>
 
-					<section data-auto-animate>
+					<!-- <section data-auto-animate>
 						<h4>Duckweed Transfer</h4>
 						<img width=auto data-src="data/transfer-tool-graph.png">
-					</section>
+					</section> -->
 
 					<section data-auto-animate>
 						<h4>Duckweed Transfer</h4>
 						<img width=auto data-src="data/single-full-plate-adjusted.png">
-						<img width=auto data-src="data/all-plates-adjusted.png">
+						<!-- <img width=auto data-src="data/all-plates-adjusted.png"> -->
 					</section>
 				</section>
 
 				<section data-auto-animate>
 					<h4>Image Plates</h4>
-					video + code block (?)
+					<video controls loop width=1000 data-autoplay src="data/image-plates-composed.mp4"></video>
 				</section>
 
 				<section>
-					<section data-auto-animate>
+					<!-- <section data-auto-animate>
 						<h4>Image Plates</h4>
-						<!-- <img width=auto data-src="data/single-full-plate-adjusted.png"> -->
-					</section>
+						<img width=auto data-src="data/single-full-plate-adjusted.png">
+					</section> -->
 					<section data-auto-animate>
 						<h4>Image Plates</h4>
 						<figure> 
@@ -242,14 +257,30 @@
 					</section>
 				</section>
 
-				<section>
+				<!-- <section>
 					<h4>Data Analysis</h4>
-					graph + code block
-				</section>
+					<div class="r-stack">
+						<img height=600 class="fragment fade-out" data-fragment-index="0" data-src="data/lm-growth.png">
+						<img height=600 class="fragment current-visible" data-fragment-index="0" data-src="data/sp-growth.png">
+						<img height=600 class="fragment" data-src="data/wa-growth.png">
+					</div>
+				</section> -->
 
 				<section>
 					<h4>Root Imaging</h4>
+					<p><small>todo</small></p>
 					
+				</section>
+
+				<section>
+					<h2 class="r-fit-text">Custom Worfklow Automation with Jubilee</h2>
+					<img height=300 data-src="data/overhead.png">
+					<img height=300 data-src="data/syringe-zoom.png">
+					<img height=300 data-src="data/inoculation-zoom.png">
+
+					<small>Machine Agency</small>
+					<br/>
+					<small>Dec 11, 2022</small>
 				</section>
 
 			</div>
