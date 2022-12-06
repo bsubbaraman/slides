@@ -44,6 +44,15 @@
 					<small>Machine Agency, University of Washington</small>
 					<br/>
 					<small>Dec 11, 2022</small>
+
+					<aside class="notes">
+						Hi! I'm Blair, I'm a PhD student at the University of Washington, in the department of Human-Centered
+						Design and Engineering. That's to say that I'm decidedly not a biologist, but
+						at the lab I'm a part of, Machine Agency, we care a lot about automation-- especially of creative
+						and unconventional tasks, like the ones common in science. I'm going to talk today about some of our
+						explorations in automating workflows for duckweed applications, specifically using a multi-tool
+						changing platform from our lab called Jubilee.
+					</aside>
 				</section>
 
 				<section> <!-- style="text-align: left;"-->
@@ -57,6 +66,19 @@
 						<img height=300 data-src="data/thermal-well.png">
 						<figcaption>thermal well plate</figcaption>
 					</figure>
+
+					<aside class="notes">
+						Here we're looking at some duckweed in a well plate, and a thermal image of a 96-well plate. As I've
+						learned from experts such as yourselves, it's these sorts of images that might provide information
+						to answer particular research questions; maybe we're interested in tracking how that duckweed grows
+						over time, under various environmental conditions. Less relevant to answering those sorts of questions
+						is the story of how that duckweed got <i>into</i> that well. Probably, a research assistant was responsible
+						for moving individual fronds into each well by hand. Not only is this sort of manual work time-consuming 
+						and tedious, but there's also high stakes; in order to trust the final data, we need to be confident that
+						the right duckweed went into the right wells, which were filled with the right media, which are adequately
+						randomized around the well plates, and so on. This sort of work is currently a necessary bottleneck in 
+						getting to some desired result.
+					</aside>
 				</section>
 
 				<section>
@@ -79,11 +101,39 @@
 						<img height=200 data-src="data/machine-setup.png">
 						<figcaption>machine setup</figcaption>
 					</figure>
+
+					<aside class="notes">
+						This is just the sort of 'dull' job that might make a good candidate for
+						automation. And in fact, labs have often benefited from
+						machines to automate other tasks which fall under these 3 'D's of dull, dirty,
+						and dangerous. While highly successful at specific tasks, these machines have
+						historically been intended for mass production. As a result, they are often expensive,
+						even at the scale of a University budget; difficult to use, using proprietary 
+						software with little documentation; and by virtue of being commerical products,
+						you'll probably only be able to find a machine which automates a task with wide appeal.
+						If you want to customize or do something more niche, you'll likely run into problems. 
+					</aside>
 				</section>
 
 				<section data-auto-animate>
 					<h4>Automation as a Tool for Creative Exploration</h4>
 					<img width=auto data-src="data/creative-automation.jpg">
+
+					<aside class="notes">
+						In negotiating these two positions, of fully manual and fully automated approaches,
+						our lab is interested in automation as a tool for creative exploration. 
+						For science, that might look something like this: defining an experiment up front in a way that
+						accommodates niche experimental design; being able to compile that experiment to instructions which can
+						be run on a machine-- and maybe this requires physically configuring the machine for your 
+						custom application, and finally collecting data, where the operator--the scientist in this case--
+						can have some role to play at runtime.
+
+						In addition to, say, scaling up an individual experiment, our research interest here is also in how we can 
+						provide flexible infrastructure which allows scientists to build, customize, and run machines across a 
+						<i>range</i> of applications. It takes significant time, skill, & effort to build a system for a specific task.
+						We want to lower the threshold to automation in a way that allows scientists design and reuse systems without
+						compromising the level of control over the experiment. 
+					</aside>
 				</section>
 
 				<section data-auto-animate>
@@ -96,6 +146,20 @@
 						<li>Human-centered Systems for Programming/Running Experiments</li>
 						</small>
 					</ul>
+
+					<aside class="notes">
+						This picture of automation requires some infrastructure distinct from that of the
+						mass-automation machines we were looking at. First, niche applications require niche
+						tools, we can't take advantage of high volume sales & production to offset costs. Instead, we 
+						need modular, low-cost, and extensible hardware to customize one-off applications. 
+						
+						And after we build a machine, we need good ways of actually running it. Control is commonly
+						enacted from an interface built for a specific task. We are interested alternative controls, including
+						writing code which compiles to machine instructions to allow reusability and flexibility in defining
+						experiments, as well as live sensor readings to interactively control the flow of the experiment at runtime.
+
+						These are two areas of research that our lab has been been actively engaged in.
+					</aside>
 				</section>
 
 				<section>
@@ -110,7 +174,23 @@
 							<img height=300 data-src="data/tool-lock.jpg">
 							<figcaption>design for precise repeatable positioning</figcaption>
 						</figure>
-						</section>
+
+						<aside class="notes">
+							To the first point, this is Jubilee; a multi-tool changing platform previously developed in
+							our lab. Jubilee looks like a conventional 3D printer- it has a carriage that can move around
+							in the x-y plane, and the bed can move up and down. It's interior volume is 300x300x300mm.
+							It also has the ability to automatically pick up and change tools. That's shown on the right, where we see the carriage
+							features this twist lock shaft. Each tool has a matching wedge plate, and the shaft can
+							engage the tool and twist to lock th. By virtue of some clever mechanical design, 
+							these pickups are repeatable, so every time we grab a tool we can be sure its in the same place. 
+
+							Jubilee is fully open-source, and designed to be fabricatable. This means it is made with parts
+							that are available in low volume, or made with readily available tools & equipment, and distributed with 
+							documentation which inludes all the information needed to build one. The parts to build a Jubilee cost just over 1500 dollars. 
+							There are at least 170 Jubilees in the world which have been independentely built, and this success in the communinity resulted in it
+							being made available as a kit with all the parts needed to build one. 
+						</aside>
+					</section>
 
 						<section data-transition="none-in fade-out">
 							<b>Modular, Low-cost, Extensible Hardware</b>
@@ -123,6 +203,25 @@
 								<img height=300 data-src="data/jubilee-diagram.jpg">
 								<figcaption>multi-tool processes</figcaption>
 							</figure>
+
+							<aside class="notes">
+								Jubilee's tool-changing ability allows us to build up multi-tool processes. We can park multiple tools
+								on Jubilee, and change between them as the machine runs. This allows us to build custom tools.
+								Take this microscope tool shown here for example-- it's almost entirely 3D printed, with a few standard 
+								screws and the like thrown in. In terms of electronics, Jubilee features both control boards for motion planning
+								and controlling things like motors, as well as a Raspberry Pi for some computing power. This means we can plug this
+								USB microscope in to the Raspberry Pi to take & analyze images while moving it around.
+								
+								Along with the documentation, Jubilee has an active user community, particularly on Discord. This has proved to be a significant resource for
+								community members to share designs files and ideas for replication by others. Part of our research here
+								is trying to understand how we can bootstrap communities to integrate these sorts of automation into
+								their own work. 
+
+								One difficult thing about custom tools, though, is the need to control them. For example, the software which
+								controls the machine doesn't know anything about how to take and save pictures. This requires domain-specific software.
+								
+							</aside>
+
 						</section>
 					<!-- <section>
 						<h4>Human-Centered Systems for Programming Experiments</h4>
@@ -147,7 +246,17 @@
 						<p><small>A Jubilee outfitted with tools and associated control software for handling duckweed</small></p>
 						<img height=300 data-src="data/duckbot.jpg">
 						<img height=300 data-src="data/overhead.png">
-						<img height=300 data-src="data/software.png">
+						<img height=300 data-src="data/jupyter.png">
+
+						<aside class="notes">
+							We've been exploring an instantiation of Jubilee outfitted with tools for duckweed applications, 
+							which we call the Duckbot. This involves some new tools, and new ways of controlling the machine.
+							In particular, we've been building software utilities to control the Duckbot from Jupyter notebooks
+							using python code to more easily integrate into the software workflows of plant biologists, from 
+							experimental definition through data analysis.
+
+							
+						</aside>
 					</section>
 
 					<section data-transition="none-in fade-out" data-auto-animate>
@@ -155,19 +264,47 @@
 						<p><small>Interchangeable tools and bed plates for duckweed applications </small></p>
 						<img height=325 data-src="data/tools.png">
 						<img height=325 data-src="data/bed-plate.png">
+
+						<aside class="notes">
+							The tools on our duckbot are shown here; we have a standard inoculation loop, a 50cc syringe
+							for liquid handling, both a front facing and downward-facing camera, and a smaller 10cc syringe.
+							In addition, the bed plates on Jubilee are interchangeable. Our duckbot has a bed plate with 6
+							slots for standard sized well plates to be repeatably and securely inserted.
+						</aside>
 					</section>
 
 					<section data-transition="none-in fade-out" data-auto-animate>
 						<h4>Duckbot</h4>
 						<p><small>Interchangeable tools and bed plates for duckweed applications </small></p>
 						<video controls loop width=1000 data-autoplay src="data/tool-change.mp4"></video>
+
+						<aside class="notes">
+							All this is probably better served by a video-- so here's the duckbot picking up its tools. First
+							we see it pickup up an inoculation loop, then a syringe, followed by a camera. Hopefully you
+							can get a sense here of how we can build up multi-tool processes. 
+						</aside>
 					</section>
 
 					<section data-transition="none-in fade-out" data-auto-animate>
 						<h4>Duckbot</h4>
+						<p><small>Interchangeable tools and bed plates for duckweed applications </small></p>
+						<img width=250 data-src="data/pipette-tool-front.jpg">
+						<img width=250 data-src="data/pipette-tool-back.jpg">
+
+						<aside class="notes">
+							As another example of Jubilee's extensibility, one of our collaborators has adapted an OpenTrons
+							pipette for use with a Jubilee. (I have one here that we can pass around). We can see that on the back
+							here, the tool has the same wedge plate as the other tools, as well as this 3D printed structure that
+							looks something like a spring. Picking up a pipette tip is essentially a crash; this so-called
+							series elastic actuator helps control this crash. Again, this is another example of extensibility,
+							but crucially, we still need a good way of actually <i>controlling</i> these tools.
+						</aside>
+					</section>
+
+					<section data-transition="none-in fade-out" data-auto-animate >
+						<h4>Duckbot</h4>
 						<p><small>Human-Centered Systems for Programming Experiments</small></p>
-						<pre class="stretch"><code class="python" data-line-numbers="1|2|3|4|5|6-8">	m = MachineCommunication(port)
-	m.moveTo(x=100, y=200, z=50)
+						<pre class="stretch"><code class="python" data-line-numbers="1|2|3|4|5-7">	m = MachineCommunication(port)
 	m.toolChange(tools['media-syringe'])
 	m.moveTo(x=media_reservoir['x'], y=media_reservoir['y'])
 	m.aspirate(mL=20)
@@ -176,19 +313,38 @@
 	m.dispense(ml=1.5)
 	</code></pre>
 						<video controls loop width=1000 data-autoplay src="data/example-controls.mp4"></video>
+						<aside class="notes">
+							To that end, let's take a look at some example controls from python. We can, for example, connect
+							to the machine and specify a certain tool to pick up-- we see the bed automatically dropping down 
+							to accommodate the size of the syringe here. Then we can navigate over top a reservoir placed on the machine
+							and aspirate a certain volume of media. Then, we can move to a specific well to dispense. The commands shown
+							here are being executed from a jupyter notebook using the some code we're looking at here. With domain-specific
+							tools and a way to control them, we can start thinking about how to dive into automation of experiments.
+						</aside>
 					</section>
 				</section>		
 
 				<section data-auto-animate>
-					<h4 class='r-fit-text'>Automating Growth Assays</h4>
+					<h4>Automating Growth Assays</h4>
 					<p class='r-fit-text'><small>define experiment → setup plates → collect data → analyze data</small></p>
-					<!-- <img width=auto data-src="data/duckbot-diagram.jpg"> -->
+					<aside class="notes">
+						As an example of this, I'm going to walk through the steps necessary to automate a relatively
+						niche laboratory routine, namely, duckweed growth assays. By this, I'm referring to tracking duckweed 
+						growth over time under various conditions.
+					</aside>
 				</section>
 
 				<section data-auto-animate>
 					<h4>Automating Growth Assays</h4>
 					<p><small>define experiment → setup plates → collect data → analyze data</small></p>
 					<img width=auto data-src="data/duckbot-diagram.jpg">
+
+					<aside class="notes">
+						To do this, we need some specific hardware and software. Broadly, we need to be able to define our experimental
+						parameters, setup well plates filled with media + duckweed, image over a period of time, and finally analyze that 
+						image data. The tools that we've seen are well-suited to the tasks of populating and imaging well plates. Duckbot relatedly offers a straghtforward way to manage
+						and analyze our data within the same Jupyter notebooks from which we're enacting machine control.
+					</aside>
 				</section>
 
 				<section>
@@ -204,6 +360,29 @@
 						<!-- <img height=400 class="fragment" data-src="data/plate-3-viz.png"> -->
 						<video class="fragment current-visible" data-fragment-index="0" controls loop width=1000 data-autoplay src="data/plate-setup.mp4"></video>
 					</div>
+
+					<aside class="notes">
+						Let's start with defining the experiment. As we step through this workflow, I'll highilight snippets
+						of code as they appear in our Jupyter notebooks-- more code than just this is requried to actually run the experiment,
+						but this should convey the level of control we can have over the experiment to suggest alternative use cases, too.
+
+						Here, we're defining an experiment with 4 duckweed genotypes, 4 media solutions of varying salt molarity, and 
+						4 replicates of each condition. This 4x4x4 experimental design will already requires 64 wells, which approahces
+						a scales tedious to plan out by hand, if not necessarily high-throughput. Our experimental setup will randomize the location of each replicate around
+						the well plates, and the pre-visualization of our setup looks like this for the first plate.
+						
+						(show video)
+
+						We can see in here how running code which uses this experimental data as input can set up our experiment
+						for us. A couple important notes and limitations as we watch the syringe tool go around here. First, we're using
+						24-well plates here. We could also design experiments which use 12, or 96 well plates. Size cononstraints from the Jubilee mean 
+						we have room for 6 well plates or reservoirs. In our demo experiment, we already
+						have 4 media and 3 24-well plates, meaning we've exceeded this limit. We've designed our software with human-in-the human-in-the-loop
+						actions in mind, meaning duckbot will guide us through physical configurations like swapping media when necessary with simple text prompts.
+						Moreovoer, we can take advantage of the interchangeable bed plates for experiments requiring greater than 5 well plates.
+						And finally, our machine is being operated in the open. Sterility is a concern moving forward, and we can think about
+						differently sized machines that might, say, be able to be operated within a laminar flow hood. 
+					</aside>
 				</section>
 				
 				<!-- <section>
@@ -216,6 +395,24 @@
 						<h4>Duckweed Transfer</h4>
 						<p><small>Different tools might be best suited for different genotypes or applications</small></p>
 						<video controls loop width=800 data-autoplay src="data/pickups.mp4"></video>
+
+						<aside class="notes">
+							Once our wells are filled, we need to move duckweed! We explored with various duckweed transfer
+							techniques; 2 are shown here. First, dipping a standard inoculation loop into a reservoir of duckweed
+							proves a reliable way to move fronds. As you might be able to tell, the quantity of fronds depends strongly
+							on the density of the starting reservoir, and the duckweed species shape & size. We also tried custom
+							3D printed loops of various size and joint angle to provide higher success rates, particularly with heavier
+							duckweeds like spirodella.
+
+							We alternatively tried aspirating duckweed with a 10cc syringe. By using the camera tool to locate a frond,
+							we can hover over a frond and quickly retract the plunger to create a seal. Comparative growth assays found That
+							this didn't harm duckweed growth compared to manual transfer with tweezers. This technique is very successful in aspirating
+							<i>individual</i> fronds, but at the expense of a higher failure rate. We found that build transfer is best suited
+							to inoculation loops-- though we'll come back to syringe transfer in a bit. For both techniques, we also note that
+							Duckbot's modularity means we can provide a closed-loop system to ensure sucess. By this, I mean we can attempt
+							transfer and then automatically confirm with the camera tool that transfer was successful, and retry on failures. Multiple
+							of these passes can ensure 100 percent sucess rate at the expense of time.
+						</aside>
 					</section>
 
 					<!-- <section data-auto-animate>
@@ -227,12 +424,28 @@
 						<h4>Duckweed Transfer</h4>
 						<img width=auto data-src="data/single-full-plate-adjusted.png">
 						<!-- <img width=auto data-src="data/all-plates-adjusted.png"> -->
+						<aside class="notes">
+							After transfer, we can see a full well-plate of lemna minor, spirodella, and wolffia
+							duckweeds. In particular, we see our transfer techniques robust across morphologies.
+						</aside>
 					</section>
 				</section>
 
 				<section data-auto-animate>
 					<h4>Image Plates</h4>
 					<video controls loop width=1000 data-autoplay src="data/image-plates-composed.mp4"></video>
+					<aside class="notes">
+						With our plates setup, we can take images of each well. Here we see duckbot grabbing its camera
+						and moving to the first well. We can the go down the line to save close-up images of each well.
+						Cutting to the camera's view, we see here duckweed with the frond contours
+						highlighted. This sort of straighforward image analysis can be integrated into experiments on the fly.
+						By identifying fronds, we can differentially manipulate samples depending on, say, frond area, or growth rate
+						by pulling data from previous days.
+
+						Imaging individual wells provides high quality top-down images. It takes approximately a minute per 24 well plate. Images are saved with
+						consistent file naming conventions which id each well in a human-readable way. We can alternatively take images of all well 
+						plates at once by dropping the bed down. We can then segment individual wells from the full image.
+					</aside>
 				</section>
 
 				<section>
@@ -254,6 +467,16 @@
 							<img height=300 data-src="data/wf-loop.gif">
 							<figcaption>wolffia</figcaption>
 						</figure>
+
+						<aside class="notes">
+							After 10 days, we have our data all in one place for analysis, with duckweed that looks
+							something like this if they were happy! We also include Jupyter notebooks which produce graphs
+							of frond area over time for each condition, drawing directly from the saved image data.
+
+							Now, the growth assay is intended to be a demonstration of the opportunities 
+							and limittions in integrating Jubilee into scientific workflows. But, a key <i>feature</i>
+							of Jubilee is it's extensibility. What else is our Duckbot equipped to tackle?
+						</aside>
 					</section>
 				</section>
 
@@ -267,16 +490,93 @@
 				</section> -->
 
 				<section>
-					<h4>Root Imaging</h4>
-					<p><small>todo</small></p>
-					
+					<section data-auto-animate>
+						<h4>Root Imaging</h4>
+						<p><small>Using Duckbot for other niche duckweed applications</small></p>
+						<img height=250 data-src="data/root-attachment.jpg">
+						<img height=250 data-src="data/root-attachment-inserted.jpg">
+						<img height=250 data-src="data/root-picture-process.png">
+						<aside class="notes">
+							Something we're actively working on is using Duckbot to take maasurements which are
+							difficult to standardize, like root measurements. This sort of data is hard to collect;
+							roots are fragile, awkward structures to manually measure. This is just the sort of problem
+							we'd love to task the Duckbot with to promote novel data collection.
+
+							Shown here is a 3D printed adapter which slots into one of our well plate positions. It's intended
+							to act as a photobooth; a vial can be inserted into the center of the print. We added a front-facing
+							camera tool with adjustable focus to image plants placed in this vial. Background colors and light will
+							heavily affect our ability to standardize an image processing pipeline, and you can see here that we 
+							experimented with different filament colors inlcuding white and pink. With these materials in hand, we still
+							need to be able to mave a frond into the vial.
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<h4>Root Imaging</h4>
+						<p><small>Using Duckbot for other niche duckweed applications</small></p>
+						<video controls loop width=1000 data-autoplay src="data/root-transfer.mp4"></video>	
+						<aside class="notes">
+							<aside class="notes">
+								This is where our syringe transfer technique comes in handy. I mentioned that the syringe was 
+								sucessful at moving individual fronds; we can use the camera tool to automatically identify and pick
+								up fronds from wells, which have been placed under some experimental definiton. By dipping the frond into the
+								vial, the frond will, hopefully, release into the vial. Now, I'll not there's still several quirks we're working 
+								out to make this transfer more reliable-- but more on that in a bit.
+							</aside>
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Root Imaging</h4>
+						<p><small>Using Duckbot for other niche duckweed applications</small></p>
+						<img height=400 data-src="data/root.jpeg">
+						<img height=400 data-src="data/root-s-thresh.png">
+						<img height=400 data-src="data/root-skeleton.png">
+						<aside class="notes">
+							Once in the photobooth, we can take images under repeatable conditions. Here we see a raw image,
+							thresholded and then skeletonized. We can extract the root length from this skeleton, and use it 
+							to calculate an actual length. Our next step here is to compare Duckbot's results with those from
+							a more standard process using software like ImageJ to manually trace the root length.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Building & Extending a Duckbot</h4>
+						<video style="border: 5px solid black" controls loop width=1000 data-autoplay src="data/build-video-speedup.mp4"></video>	
+						<aside class="notes">
+							To switch gears slightly, a major challenge in developing these tools is creating documentation for 
+							others to follow. As a supplement to the hardware and sofware I've been showing, we're also working to create
+							a series of videos which demonstrate building a duckbot from parts through to first run. This adds to the 
+							existing text/image documentation, hopefully showing how to accomplish some of the manual work in detail. That's
+							what's being sped up and shown here. 
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Building & Extending a Duckbot</h4>
+						<img height=300 data-src="data/software.png">
+						<p><small>add some other pics here, maybe of other applications (gel extrusion?)</small></p>
+						<aside class="notes">
+							And, we've been building up documentation on github for using and making your own Jupyter notebooks.
+							The documentation helps guide through setup of a machine, calibration of tools, and hopefully lays
+							the foundationfor the notebooks to be extended and adapted. The goal here, then, is not for us
+							to build and add functionality for others, but rather supply the tools and resources for scientists to
+							do so themselves. As we've been looking at, we provide utility libraries for mov the machine, taking pictures,
+							and liquid handling. 
+						</aside>
+					</section>
 				</section>
 
 				<section>
 					<h2 class="r-fit-text">Custom Worfklow Automation with Jubilee</h2>
 					<img height=300 data-src="data/overhead.png">
-					<img height=300 data-src="data/syringe-zoom.png">
+					<img height=300 data-src="data/qrcode.png">
+					<!-- <img height=300 data-src="data/syringe-zoom.png"> -->
 					<img height=300 data-src="data/inoculation-zoom.png">
+					
+				
+					
 
 					<small>Machine Agency</small>
 					<br/>
