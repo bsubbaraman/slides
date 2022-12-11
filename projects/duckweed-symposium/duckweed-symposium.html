@@ -353,7 +353,7 @@
 	m.aspirate(mL=20)
 	wellA1 = fetch_well_position(1, "A1") # (plate, well id)
 	m.moveTo(x=wellA1['x'], y=wellA1['y'])
-	m.dispense(ml=1.5)
+	m.dispense(mL=1.5)
 	</code></pre>
 						<video controls loop width=1000 data-autoplay src="data/example-controls.mp4"></video>
 						<aside class="notes">
@@ -377,7 +377,7 @@
 					</aside>
 				</section>
 
-				<section data-auto-animate>
+				<!-- <section data-auto-animate>
 					<h4>Automating Growth Assays</h4>
 					<p><small>define experiment → setup plates → collect data → analyze data</small></p>
 					<img width=auto data-src="data/duckbot-diagram.jpg">
@@ -388,10 +388,11 @@
 						image data. The tools that we've seen are well-suited to the tasks of populating and imaging well plates. Duckbot relatedly offers a straghtforward way to manage
 						and analyze our data within the same Jupyter notebooks from which we're enacting machine control.
 					</aside>
-				</section>
+				</section> -->
 
-				<section>
-					<h4>Defining an Experiment</h4>
+				<section data-auto-animate>
+					<h4>Automating Growth Assays</h4>
+					<p><small><b>define experiment</b> → setup plates → collect data → analyze data</small></p>
 					<pre><code class="python" data-line-numbers>	Experiment_name = "Demo" 
 	genotypes = ["Sp7498", "Lm5500", "Lm8627", "Wa7788"]
 	media = ["0mM", "25mM", "50mM", "100mM"]
@@ -435,8 +436,9 @@
 
 				<section>
 					<section data-auto-animate>
-						<h4>Duckweed Transfer</h4>
-						<p><small>Different tools might be best suited for different genotypes or applications</small></p>
+						<h4>Automating Growth Assays</h4>
+						<p><small>define experiment → <b>setup plates</b> → collect data → analyze data</small></p>
+						<!-- <p><small>Different tools might be best suited for different genotypes or applications</small></p> -->
 						<video controls loop width=800 data-autoplay src="data/pickups.mp4"></video>
 
 						<aside class="notes">
@@ -464,8 +466,9 @@
 					</section> -->
 
 					<section data-auto-animate>
-						<h4>Duckweed Transfer</h4>
-						<img width=auto data-src="data/single-full-plate-adjusted.png">
+						<h4>Automating Growth Assays</h4>
+						<p><small>define experiment → <b>setup plates</b> → collect data → analyze data</small></p>
+						<img width=800 data-src="data/single-full-plate-adjusted.png">
 						<!-- <img width=auto data-src="data/all-plates-adjusted.png"> -->
 						<aside class="notes">
 							After transfer, we can see a full well-plate of lemna minor, spirodella, and wolffia
@@ -475,7 +478,8 @@
 				</section>
 
 				<section data-auto-animate>
-					<h4>Image Plates</h4>
+					<h4>Automating Growth Assays</h4>
+					<p><small>define experiment → setup plates → <b>collect data</b> → analyze data</small></p>
 					<video controls loop width=1000 data-autoplay src="data/image-plates-composed.mp4"></video>
 					<aside class="notes">
 						With our plates setup, we can take images of each well. Here we see duckbot grabbing its camera
@@ -497,7 +501,8 @@
 						<img width=auto data-src="data/single-full-plate-adjusted.png">
 					</section> -->
 					<section data-auto-animate>
-						<h4>Image Plates</h4>
+						<h4>Automating Growth Assays</h4>
+						<p><small>define experiment → setup plates → collect data → <b>analyze data</b></small></p>
 						<figure> 
 							<img height=300 data-src="data/lm-loop.gif">
 							<figcaption>lemna</figcaption>
@@ -645,7 +650,6 @@
 					
 
 					<section data-auto-animate>
-						
 						<h4>Building & Extending a Duckbot</h4>
 						<img height=300 data-src="data/jupyter.png">
 						<img height=300 data-src="data/github.png">
@@ -669,13 +673,25 @@
 					<img height=300 data-src="data/qrcode.png">
 					<!-- <img height=300 data-src="data/syringe-zoom.png"> -->
 					<img height=300 data-src="data/inoculation-zoom.png">
-					
-				
-					
-
 					<small>Machine Agency</small>
 					<br/>
 					<small>Dec 11, 2022</small>
+				</section>
+
+				<section>
+					<section>
+						<h4>Pourover Slides!</h4>
+					</section>
+
+					<section>
+						<h4>Growth Curve</h4>
+						<img height=500 data-src="data/lm-growth.png">
+					</section>
+
+					<section>
+						<h4>Syringe Transfer</h4>
+						<img height=500 data-src="data/transfer-tool-graph.png">
+					</section>
 				</section>
 
 			</div>
