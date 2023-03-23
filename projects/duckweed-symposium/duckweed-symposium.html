@@ -43,14 +43,14 @@
 
 					<small>Machine Agency, University of Washington</small>
 					<br/>
-					<small>Dec 11, 2022</small>
+					<small>Jan 28, 2023</small>
 
 					<aside class="notes">
 						Hi! I'm Blair, I'm a PhD student at the University of Washington, in the department of Human-Centered
 						Design and Engineering. That's to say that I'm decidedly not a biologist, but
-						at the lab I'm a part of, Machine Agency, we care a lot about automation-- especially of creative
+						at the lab I'm a part of, the Machine Agency at the University of Washington, we care a lot about automation-- especially of creative
 						and unconventional tasks, like the ones common in science. I'm going to talk today about some of our
-						explorations in automating workflows for duckweed applications, specifically using a multi-tool
+						explorations in automating workflows for plant biology applications, specifically using a multi-tool
 						changing platform from our lab called Jubilee.
 					</aside>
 				</section>
@@ -68,8 +68,10 @@
 					</figure>
 
 					<aside class="notes">
-						Here we're looking at some duckweed in a well plate, and a thermal image of a 96-well plate. As I've
-						learned from experts such as yourselves, it's these sorts of images that might provide information
+						Duckweed is a small aquatic plant with a very simple structure; just a frond which floats on the water, 
+						and some species have roots, and they're quite small with different species ranging from fractions of
+						a millimeter wide to a couple millimeters. Here we're looking at some duckweed in a well plate, and a thermal image of a 96-well plate. As I've
+						learned from working with duckweed scientists, it's these sorts of images that might provide information
 						to answer particular research questions; maybe we're interested in tracking how that duckweed grows
 						over time, under various environmental conditions. Less relevant to answering those sorts of questions
 						is the story of how that duckweed got <i>into</i> that well. Probably, a research assistant was responsible
@@ -128,7 +130,7 @@
 						custom application, and finally collecting data, where the operator--the scientist in this case--
 						can have some role to play at runtime.
 
-						In addition to, say, scaling up an individual experiment, our research interest here is also in how we can 
+						In addition to, say, scaling up an individual experiment, our research interest here is in how we can 
 						provide flexible infrastructure which allows scientists to build, customize, and run machines across a 
 						<i>range</i> of applications. It takes significant time, skill, & effort to build a system for a specific task.
 						We want to lower the threshold to automation in a way that allows scientists design and reuse systems without
@@ -181,7 +183,7 @@
 							in the x-y plane, and the bed can move up and down. It's interior volume is 300x300x300mm.
 							It also has the ability to automatically pick up and change tools. That's shown on the right, where we see the carriage
 							features this twist lock shaft. Each tool has a matching wedge plate, and the shaft can
-							engage the tool and twist to lock th. By virtue of some clever mechanical design, 
+							engage the tool and twist to lock it. By virtue of some clever mechanical design, 
 							these pickups are repeatable, so every time we grab a tool we can be sure its in the same place. 
 
 							Jubilee is fully open-source, and designed to be fabricatable. This means it is made with parts
@@ -336,7 +338,7 @@
 
 						<aside class="notes">
 							As another example of Jubilee's extensibility, one of our collaborators has adapted an OpenTrons
-							pipette for use with a Jubilee. (I have one here that we can pass around). We can see that on the back
+							pipette for use with a Jubilee. (the opentrons is an open source liquid handling robot). We can see that on the back
 							here, the tool has the same wedge plate as the other tools, as well as this 3D printed structure that
 							looks something like a spring. Picking up a pipette tip is essentially a crash; this so-called
 							series elastic actuator helps control this crash. Again, this is another example of extensibility,
@@ -373,7 +375,8 @@
 					<aside class="notes">
 						As an example of this, I'm going to walk through the steps necessary to automate a relatively
 						niche laboratory routine, namely, duckweed growth assays. By this, I'm referring to tracking duckweed 
-						growth over time under various conditions.
+						growth over time under various conditions; this is something our collaborators do allll them time
+						to understand interactions between duckweed and the microbiome. 
 					</aside>
 				</section>
 
@@ -452,7 +455,7 @@
 							We alternatively tried aspirating duckweed with a 10cc syringe. By using the camera tool to locate a frond,
 							we can hover over a frond and quickly retract the plunger to create a seal. Comparative growth assays found That
 							this didn't harm duckweed growth compared to manual transfer with tweezers. This technique is very successful in aspirating
-							<i>individual</i> fronds, but at the expense of a higher failure rate. We found that build transfer is best suited
+							<i>individual</i> fronds, but at the expense of a higher failure rate. We found that bulk transfer is best suited
 							to inoculation loops-- though we'll come back to syringe transfer in a bit. For both techniques, we also note that
 							Duckbot's modularity means we can provide a closed-loop system to ensure sucess. By this, I mean we can attempt
 							transfer and then automatically confirm with the camera tool that transfer was successful, and retry on failures. Multiple
@@ -628,13 +631,13 @@
 						</aside>
 					</section>
 
-					<section data-auto-animate data-background-iframe="https://jubilee3d.com/index.php?title=Main_Page" data-background-interactive>
+					<!-- <section data-auto-animate data-background-iframe="https://jubilee3d.com/index.php?title=Main_Page" data-background-interactive>
 						<aside class="notes">
 							When building the machine, you'll be guided by a set of pdf instructions; here I have the main Jubilee
 							page pulled up just to highlight it as a resource. This page also has links to the Discord community,
 							and a bunch of other community resources.
 						</aside>
-					</section>
+					</section> -->
 
 					<section data-auto-animate>
 						<h4>Building & Extending a Duckbot</h4>
@@ -675,7 +678,7 @@
 					<img height=300 data-src="data/inoculation-zoom.png">
 					<small>Machine Agency</small>
 					<br/>
-					<small>Dec 11, 2022</small>
+					<small>Jan 28, 2023</small>
 				</section>
 
 				<section>
