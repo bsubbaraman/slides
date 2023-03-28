@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>p5.fab</title>
+
+		<link rel="stylesheet" href="../../dist/reset.css">
+		<link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+		<style>
+			figure {
+				padding: 0;
+				display: inline-block;
+				margin: 0;
+				position: relative;
+			}
+
+			figcaption {
+				position: absolute;
+				font-size: 30%;
+				bottom: 1em;
+				left: 0;
+				/* background-color: yellow; */
+				width: 100%;
+			}
+
+			.code {
+  				font-family: monospace;
+			}
+
+
+			.top-left-header {
+				position: relative; 
+				min-height: 100vh;
+			}
+
+			.phl {
+				  position: absolute;
+				  color: black;
+				  background-color: #aeb3f7;
+			}
+
+			.split {
+    			display: flex;
+			}
+
+			.col {
+    			flex: 1;
+			}
+</style>
+		</style>
+
+	</head>
+	
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<div class="split">
+						<div class="col">
+							<br>
+							<h4 style="text-align: left;"><code>p5.fab</code></h4>
+							<h4 style="text-align: left;">Bridging Creative Code and Digital Fabrication</h4>
+						</div>
+						<div class="col">
+							<img height=500 data-src="data/teaser.jpg">
+						</div>
+					</div>
+					
+					<small>Blair Subbaraman, Machine Agency</small>
+					<br/>
+					<small style="margin-top: -20px;">socials: @blairsubbaraman</small>
+					<br>
+					<small style="margin-top: -40px;">slides: rb.gy/0pkxrn </small>
+					<br>
+					<small style="margin-top: -60px;">April 13th, 2023</small>
+
+					<aside class="notes">
+						Hi! I'm Blair, I'm a PhD student at the University of Washington. It's awesome to be here-- thanks so much to the organizers for letting me talk at you. For a few minutes I'll introduce p5.fab, which is a tool to support digital fabrication using p5.js; then I'll reflect a bit on building community around software which involves physical hardware. 
+					</aside>
+				</section>
+
+				<section data-background-video="data/line-vase.mp4"> 
+					<div class="top-left-header"> 
+						<p class="phl">Line Vase</p>
+					</div>
+					<aside class="notes">
+						p5.fab attempts to speak to the apparent tension between the precision & accuracy of machines like 3D printers, and the messy embodied practices which surround them. The video here shows a 3D printer whirring around-- plastic filament is melted in the hotend shown here, which is then extruded through the nozzle. We're printing these freehanging extrusions of a single line width are across overextruded dots. This wouldn't be possible to print with off-the-shelf software for 3D printing, which is instead really good at optimizing the path the machine should take based on a digital model. In contrast, the printing the object shown here requires manual tuning to negotatiate speed, acceleration, and the amount of filament that's extruded. This requires testing and observing material behavior rather than reasoning about in a modeling file. 
+					</aside>
+				</section>
+
+				<section>
+
+					<!-- <section data-transition="none-in none-out">
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/opener.mp4"></video>
+						<aside class="notes">
+							The idea directly control the machine programatticaly to iteratively observe material outcomes. 
+						</aside>
+					</section> -->
+
+					<section data-transition="none-in none-out">
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/fab-anim.mp4"></video>
+						<aside class="notes">
+							The idea directly control the machine programatticaly to iteratively observe material outcomes. We can compose prints with methods like this-- the base fab object represents the machine, and carries machine data like the nozzle and filament radius, and size of the machine. 
+						</aside>
+					</section>
+				
+
+					<section data-transition="none-in none-out" >
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/code-anim.mp4"></video>
+						<aside class="notes">
+							If we want to move to a position without depositing material, we can move retract, which will pull filament away from the nozzle to prevent unwanted oozing. Then we can move to an (x,y,z) coordinate on the bed.
+						</aside>
+					</section>
+
+					<section data-transition="none-in none-out" >
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/move-to-center.mp4"></video>
+						<aside class="notes">
+							For examnple, if we want to move to the center of the bed, we can access the machine's maxX and maxY propterties.
+						</aside>
+					</section>
+
+					<section data-transition="none-in none-out" >
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/move-extrude.mp4"></video>
+						<aside class="notes">
+							We can print filament with the move extrude command. Here we might also specify a speed and specific extrusion amount. We provide access to other sorts of commands like this, 
+						</aside>
+					</section>
+
+					<section data-transition="none-in none-out" >
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/more-code.mp4"></video>
+						<aside class="notes">
+							and together they help us quickly build up 3 dimensional shapes, and specify interesting geometry.
+						</aside>
+					</section>
+				</section>
+
+				<section data-auto-animate data-background-iframe="https://machineagency.github.io/p5.fab/editor/index.html" data-background-interactive>
+				<aside class="notes">
+					So for example, here's the editor-- we could open the Lissajous curve example, and visualize the toolpaths by changing some values
+				</aside>
+				</section>
+
+				<section data-background-video="data/lissajous-print-4x.mp4">
+					<div class="top-left-header"> 
+						<p class="phl">Lissajous Curve (4x)</p>
+					</div>
+					<aside class="notes">
+						and the idea is to make things plug-n-play, so we connect the computer over wired usb to the printer and then can start streaming commands immediately to the printer 
+					</aside>
+				</section>
+
+				<section data-background-video="data/compound-teaser.mp4">
+					<div class="top-left-header"> 
+					</div>
+					<aside class="notes">
+						and there's all sorts of other fun stuff I've messed around with, like...
+					</aside>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Tensions & Opportunities in Building Community</h4>
+						
+						<img width=auto data-src="data/workshops.jpg">
+
+						<aside class="notes">
+							In addition to building out a system-- and perhaps more to the point of this conference--I want to reflect on some tensions and opportunities in building community around a tool like this that I've been thinking about, by way of some underdeveloped metaphors
+						</aside>
+						</section>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Tensions & Opportunities in Building Community</h4>
+						<p><small>a <b>classroom</b> to make experts beginners & beginners experts</small></p>
+						<img style="margin-top: -20px;" width=auto data-src="data/workshops.jpg">
+
+						<aside class="notes">
+							We ran a couple of workshops with both makers experienced with 3D printing & artists who use code, and observed some productive ways that p5.fab made experts out of begginers and beginners out of experts. For example, the artists had never 3D printed and were able to immediately design & print complicated geometry; on the other hand, makers with minimal programming experience had to get a handle on coding, but were able to use the machine as a physical debugging platform to test their code; in both cases, participants were able to push the machine to weird limits
+						</aside>
+						</section>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Tensions & Opportunities in Building Community</h4>
+						<p><small>a <b>classroom</b> to make experts beginners & beginners experts</small></p>
+						<p style="margin-top: -20px;"><small>an <b>invitation</b> to digital fabrication/creative code</small></p>
+						<img style="margin-top: -20px;" width=auto data-src="data/workshops.jpg">
+						<aside class="notes">
+							To this end, p5.fab is asiprationally an invitation for creative coders to engage digital fabrication, and for makers to creatively use their machines
+						</aside>
+						</section>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Tensions & Opportunities in Building Community</h4>
+						<p><small>a <b>classroom</b> to make experts beginners & beginners experts</small></p>
+						<p style="margin-top: -20px;"><small>an <b>invitation</b> to digital fabrication/creative code</small></p>
+						<p style="margin-top: -20px;"><small>an <b>instrument</b> to develop skill with</small></p>
+						<img style="margin-top: -20px;" width=auto data-src="data/workshops.jpg">
+						<aside class="notes">
+							and in doing so, these different practitioners can develop new skills
+						</aside>
+						</section>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Tensions & Opportunities in Building Community</h4>
+						<p><small>a <b>classroom</b> to make experts beginners & beginners experts</small></p>
+						<p style="margin-top: -20px;"><small>an <b class="hl">invitation</b> to digital fabrication/creative code</small></p>
+						<p style="margin-top: -20px;"><small>an <b>instrument</b> to develop skill with</small></p>
+						<p style="margin-top: -20px;"><small>an <b>obstacle</b> to enact existing skill</small></p>
+						<aside class="notes">
+							There is, of course, a worry that that the tool gets in the way of enacting the skills that practitioners already bring to the table.
+						</aside>
+						<img style="margin-top: -20px;" width=auto data-src="data/workshops.jpg">
+						</section>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Tensions & Opportunities in Building Community</h4>
+						<p><small>a <b>classroom</b> to make experts beginners & beginners experts</small></p>
+						<p style="margin-top: -20px;"><small>an <b>invitation</b> to digital fabrication/creative code</small></p>
+						<p style="margin-top: -20px;"><small>an <b>instrument</b> to develop skill with</small></p>
+						<p style="margin-top: -20px;"><small>an <b>obstacle</b> to enact existing skill</small></p>
+						<img style="margin-top: -20px;" width=auto data-src="data/workshops.jpg">
+						<aside class="notes">
+							And in trying to make an accebile community, there's the question of what accessibility means in this context, and how to make a tool accessible which requires physical hardware. 3D printers are much cheaper than they used to be, but printing an artificat will still cost at least 200 dollars more than visualizing it on the computer screen. And of course, there are financial and maintenance risks to running arbitrary gcode on shared machines.
+						</aside>
+						</section>
+						
+					</section>	
+				</section>
+
+				<section>
+					<div class="split">
+						<div class="col">
+							<br>
+							<h4 style="text-align: left;"><code>p5.fab</code></h4>
+							<h4 style="text-align: left;">Bridging Creative Code and Digital Fabrication</h4>
+						</div>
+						<div class="col">
+							<img height=500 data-src="data/teaser.jpg">
+						</div>
+					</div>
+					
+					<small>Blair Subbaraman, Machine Agency</small>
+					<br/>
+					<small style="margin-top: -20px;">socials: @blairsubbaraman</small>
+					<br>
+					<small style="margin-top: -40px;">slides: rb.gy/0pkxrn </small>
+					<br>
+					<small style="margin-top: -60px;">April 13th, 2023</small>
+
+					<aside class="notes">
+						These are of course open questions, and I'm excited to learn from the rich expertise in this room over the next few days!
+					</aside>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/notes/notes.js"></script>
+		<script src="../../plugin/markdown/markdown.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
