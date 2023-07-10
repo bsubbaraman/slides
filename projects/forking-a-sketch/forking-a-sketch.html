@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="../../dist/theme/white.css">
 
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="../../plugin/highlight/github.css">
 		<style>
 			figure {
 				padding: 0;
@@ -115,7 +115,7 @@
 
 							<p style="text-align: left; font-size: .6em; margin-top: 20vh;">Blair Subbaraman, Shenna Shim, Nadya Peek</p>
 							<p style="text-align: left; font-size: .6em; margin-top: -2vh">Machine Agency, University of Washington</p>
-							<p style="text-align: left; font-size: .6em; margin-top: -2vh">Slides: *insert link*</p>
+							<p style="text-align: left; font-size: .6em; margin-top: -2vh">Slides: https://rb.gy/3jdyb</p>
 						</div>
 					</div>
 
@@ -126,7 +126,7 @@
 
 				<section data-background-video="data/hexablob.mp4" data-background-video-loop>
 					<aside class="notes">
-						If you're unfamiliar with creative coding, it might look something like this. Creative coders create programs, called sketches, that generate visual output. In this video, I'm editing a sketch created by user Roni Kaufman. We can see that the effects of editing existing parameters in code can immediately be seen by running the sketch. Here, I'm editing the number of sides of a polygon and the number of bumps which are animated within it. I could then choose to publish my edits as a new sketch; this repurposing of an existing artifact into something new is called remixing.
+						If you're unfamiliar with creative coding, it might look something like this. Creative coders create programs, called sketches, that generate visual output. In this video, I'm editing a sketch posted to the website OpenProcessing, created by the author Roni Kaufman. We can see that the effects of editing existing parameters in code can immediately be seen by running the sketch. Here, I'm editing the number of sides of a polygon and the number of bumps which are animated within it. I could then choose to publish my edits as a new sketch; this repurposing of an existing artifact into something new is called remixing.
 
 						Remixing facilitates this sort of iteration on existing code, but we have yet to understand how creative coders use remixing in practice. Moreover, given the focus on expressivity over functionality, we suspect that code reuse in creative coding is distinct from other programming contexts.
 					</aside>
@@ -135,7 +135,7 @@
 				<section>
 					<p class="r-fit-text"><em>What remixing strategies do creative coders employ to reuse code?</em></p>
 					<aside class="notes">
-						Stemming from these intital insights, we ask the research question: what remixing strategies do creative coders employ to reuse code? HCI researchers have increasingly considered how digital tools can support expressive practices; our intent is not to classify what a remix can or cannot be, but rather to help situate the development of useful tools by understanding the actions of existing communities.
+						Stemming from these intital insights, we ask the research question: what remixing strategies do creative coders employ to reuse code? HCI researchers have increasingly considered how digital tools can support expressive practices; our intent, then, is not to classify what a remix can or cannot be, but rather to help situate the development of useful tools by understanding the actions of existing communities.
 					</aside>
 				</section>
 
@@ -145,8 +145,10 @@
 					</div>
 					<section data-auto-animate>
 						<img data-id="pair" width=750 src="data/single-sketch.png">
-						<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
-
+						<figure>
+							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
+							<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
+						</figure>
 						<aside class="notes">
 							To answer our research question, we pair network analysis with qualitative techniques to capture high-level patterns and meaningful details about how creative coders remix sketches. First, we conducted an analysis of all available sketches on OpenProcessing, an existing creative coding community. We treat each sketch as a node in a network;
 						</aside>
@@ -154,22 +156,36 @@
 
 					<section data-auto-animate>
 						<img data-id="pair" width=750 src="data/sketch-to-remix-crop-once.gif">
-						<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
-						<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob2.gif"></img>
+						<figure>
+							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
+							<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
+						</figure>
+						<figure>
+							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob2.gif"></img>
+							<figcaption>Remix by <em>naha</em></figcaption>
+						</figure>
+						
+						
 
 						<aside class="notes">
-							The relationship between a sketch and a remix can then be formalized in a graph, with edges which point from the original sketch, or the antecedent, to the remix. 
+							and the relationship between a sketch and a remix can then be formalized in a graph, with edges that point from the original sketch, or the antecedent, to the remix. 
 						</aside>
 					</section>
 
 					<section data-auto-animate>
 						<img data-id="pair" width=750 src="data/pair-to-graph-crop-once.gif">
 						<br>
-						<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
-						<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh " height=250 src="data/blob2.gif"></img>
+						<figure>
+							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
+							<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
+						</figure>
+						<figure>
+							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob2.gif"></img>
+							<figcaption>Remix by <em>naha</em></figcaption>
+						</figure>
 
 						<aside class="notes">
-							Of course, sketches might be remixed multiple times, by multiple authors, in a multiplicity of ways. We use the resulting remixing graph to describe high-level details, and also to surface subgraphs relevant to our research questions. We then analyzed the code changes between individual antecedents and remixes to conceptualize themes which we believe speak to current remixing practice. The result is an interpretive analysis of remixing on OpenProcessing, which we use to motivate design provocations for supporting creative community through remixing. 
+							Of course, sketches might be remixed multiple times, by multiple authors, in a multiplicity of ways. We use the resulting remixing graph to describe high-level details and statistics, and also to surface field sites relevant to our research questions. We then analyzed the code changes between individual antecedents and remixes to conceptualize themes which we believe speak to current remixing practice. The result is an interpretive analysis of remixing on OpenProcessing, a set of remixing strategies which may be applied to other creative communities, and design provocations for supporting creative community through remixing. 
 							
 						</aside>
 					</section>
@@ -177,13 +193,8 @@
 
 				<section data-background-video="data/OP-scroll.mp4" data-background-video-loop>
 					<aside class="notes">
-						OpenProcessing is an online commmunity for creative coders to write and share projects. The homepage is shown here. We can see that trending projects are shown in a grid for visitors to explore. OpenProcessing supports
-						code written using the popular creative coding libraries p5.js and
-						Processing. It was independently founded by Sinan
-						Ascioglu separately from the development of the p5.js library itself, and Ascioglu continues design and development of the website.
-						The site has accumulated over a million creative code projects since
-						launching in 2008. It is free to make an account and paid features are
-						also available with particular relevancy for educators and students.
+						OpenProcessing is an online commmunity for creative coders to write and share projects. The homepage is shown here. We can see that trending projects are shown in a grid for visitors to explore. OpenProcessing supports code written using the popular creative coding libraries p5.js and
+						Processing. It was independently founded by separately from the development of the p5.js library itself, and has accumulated over a million creative code projects since launching in 2008.
 					</aside>
 				</section> 
 
@@ -212,7 +223,7 @@
 							</ul>
 						</small>
 						<aside class="notes">
-							We collected data from all possible sketches on OpenProcessing. Of the approx 1.2 million publicly available sketches, about 330,000 of were involved in remixing; this means that 30% of public sketches on the site are either remixes, antecedents, or both. That's just about the same percentage of projects which are remix in the Scratch online community. These remixing graph is shown here-- That picture by itself isn't terribly useful, but I'll highlight some of its important characteristics:
+							Of the approx 1.2 million publicly available sketches, about 330,000, or 30%, were involved in remixing. That's just about the same percentage of projects which are remix in the Scratch online community. These remixing graph is shown here, where each dot is a sketch and lines connecting them represent a remix. I show this image just to provide a sense of scale; I'll highlight some of its important characteristics:
 						</aside>
 					</section>
 
@@ -233,26 +244,22 @@
 								<li>Network Analysis</li>
 								<ul style="list-style-type: disc;">
 									<li><mark class="purp">79,453</mark> subgraphs</li>
-									<li><mark class="purp">1.7</mark> avg forks/sketch</li>
-									<li><mark class="purp">2749, 1674, & 1179</mark> nodes in 3 largest subgraphs </li>							
+									<!-- <li><mark class="purp">1.7</mark> avg forks/sketch</li> -->
+									<li><mark class="purp">2749</mark> nodes in largest subgraph </li>							
 									<li><mark class="purp">49%</mark> of all remixes are self-remixes</li>
-									<ul style="list-style-type: disc;">
+									<!-- <ul style="list-style-type: disc;">
 										<li><mark class="purp">15%</mark> of all sketches</li>
-									</ul>
+									</ul> -->
 								</ul>
 							</ul>
 						</small>
 
 						<aside class="notes">
-							The overall remixing graph is made up of 79,453 subgraphs, or clusters of related sketches. The average sketches isn't highly remixed, but the dataset is unsurprisingly skewed; the largest subgraph consist of nearly 3000 total sketches. 
+							Not every remixed sketch is related to each other; the overall remixing graph is made up of 79,453 subgraphs. The average sketch isn't highly remixed, but the dataset is unsurprisingly skewed; the largest subgraph consists of nearly 3000 total sketches. 
 
-							Much of these findings align with prior studies of remixing communities. A key finding distinctive to OpenProcessing, however, is that we find authors remixing themselves. We assembled the
-							graph of remixes which have the same author as its antecedent on
-							OpenProcessing and found that 49% of all remixed sketches (15%
-							of all publicly available sketches) are involved in what we call self-remixing.
-							We take note of this behaviour throughout our analysis.
+							Much of these findings align with prior studies of remixing communities. A key finding distinctive to OpenProcessing, however, is that we find authors remixing themselves. We found that almost half of all remixes  are involved in what we call self-remixing. We take note of this behaviour throughout our analysis.
 
-							This data provides really useful high-level insight, but to answer our research question, we are especially interested in what has actually changed between these antecedents and remixes. We collated 350 antecedent-remix pairs sampled from the remixing graph for in-depth analysis.
+							This data provides useful high-level insight, but to answer our research question, we are especially interested in what has actually changed between these antecedents and remixes. We collated 350 antecedent-remix pairs sampled from the remixing graph for in-depth analysis.
 						</aside>
 					</section>
 				</section>
@@ -266,8 +273,11 @@
 				<section data-transition="none-out">
 					<div class="split">
 						<div class="column-left">
-							<img width="70%" src="data/pink-matter.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers>
+							<figure>
+								<img width="70%" src="data/pink-matter.png">
+								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers>
 								function myCircle (x, y, rad) {
 									let numLayers = 200
 									for (let i = 0; i < numLayers; i++) {
@@ -277,10 +287,14 @@
 									  for (let theta = 0; theta < TAU; theta += TAU / 20) {
 										  ...
 							</code></pre>
+							
 						</div>
 						<div class="column-right">
-							<img width=70% src="data/pink-matter-swirl.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers>
+							<figure>
+								<img width=70% src="data/pink-matter-swirl.png">
+								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers>
 								function myCircle (x, y, rad) {
 								  let numLayers = random(100, 300)
 								  for (let i = 0; i < numLayers; i++) {
@@ -293,12 +307,8 @@
 						</div>
 					</div>
 					<aside class="notes">
-						Before diving into the strategies we found, it's worth explaining our qualitative analysis process. While the relevant data for a thematic analysis is usually text such as an interview transcript, our unit of analysis is
-						am antecedent-remix pair of sketches. This includes the
-						program and visual output from both an antecedent sketch and
-						remix. We found that code edits are crucial to understanding what occurred between an
-						antecedent and its remix. We therefore analyzed code diffs which highlights the differences between the remix and antecedent programs. We conceptualized four high-level remixing strategies, each of which
-						are tied to these specific code edits. I'll walk through an example here to introduce each of these edits, before diving into their nuance.
+						We conducted a thematic analysis for in-depth insight; while the relevant data for a thematic analysis is usually text like interview transcript, our unit of analysis is am antecedent-remix pair of sketches. We analyzed code diffs which highlight the changes between the remix and antecedent programs and conceptualized four high-level remixing strategies, each of which
+						are tied to these specific code edits. I'll walk through an example here to introduce these edits, before diving into their nuance.
 					</aside>
 				</section>
 				
@@ -306,8 +316,11 @@
 				<section data-transition="none">
 						<div class="split">
 							<div class="column-left">
-								<img width="70%" src="data/pink-matter.png">
-								<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
+								<figure>
+									<img width="70%" src="data/pink-matter.png">
+									<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
+								</figure>
+								<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="2">
 									function myCircle (x, y, rad) {
 										let numLayers = 200
 										for (let i = 0; i < numLayers; i++) {
@@ -319,8 +332,11 @@
 								</code></pre>
 							</div>
 							<div class="column-right">
-								<img width=70% src="data/pink-matter-swirl.png">
-								<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
+								<figure>
+									<img width=70% src="data/pink-matter-swirl.png">
+									<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
+								</figure>
+								<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="2">
 									function myCircle (x, y, rad) {
 									  let numLayers = random(100, 300)
 									  for (let i = 0; i < numLayers; i++) {
@@ -341,8 +357,11 @@
 				<section data-transition="none">
 					<div class="split">
 						<div class="column-left">
-							<img width="70%" src="data/pink-matter.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
+							<figure>
+								<img width="70%" src="data/pink-matter.png">
+								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="2">
 								function myCircle (x, y, rad) {
 									let numLayers = 200
 									for (let i = 0; i < numLayers; i++) {
@@ -354,8 +373,11 @@
 							</code></pre>
 						</div>
 						<div class="column-right">
-							<img width=70% src="data/pink-matter-swirl.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
+							<figure>
+								<img width=70% src="data/pink-matter-swirl.png">
+								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="2">
 								function myCircle (x, y, rad) {
 								  let numLayers = random(100, 300)
 								  for (let i = 0; i < numLayers; i++) {
@@ -370,15 +392,18 @@
 					<small><p>tuning</p></small>
 
 					<aside class="notes">
-						We call this editing of existing values in code tuning. Notably, the value isn't changed to another static value, but rather makes use of the random function. This is a function that is built in to the p5.js library itself. We refer to the addition of new code as an extension--
+						We call this editing of existing values in code tuning. Notably, the value isn't changed to another static value, but rather makes use of the random function. This is a function that is built in to the p5.js library itself.
 					</aside>
 				</section>
 
 				<section data-transition="none">
 					<div class="split">
 						<div class="column-left">
-							<img width="70%" src="data/pink-matter.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
+							<figure>
+								<img width="70%" src="data/pink-matter.png">
+								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="2">
 								function myCircle (x, y, rad) {
 									let numLayers = 200
 									for (let i = 0; i < numLayers; i++) {
@@ -390,8 +415,11 @@
 							</code></pre>
 						</div>
 						<div class="column-right">
-							<img width=70% src="data/pink-matter-swirl.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
+							<figure>
+								<img width=70% src="data/pink-matter-swirl.png">
+								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="2">
 								function myCircle (x, y, rad) {
 								  let numLayers = random(100, 300)
 								  for (let i = 0; i < numLayers; i++) {
@@ -403,17 +431,20 @@
 							</code></pre>
 						</div>
 					</div>
-					<small><p>tuning, creative code extension</p></small>
+					<small><p>tuning, extending</p></small>
 					<aside class="notes">
-						and in particular, we refer to the use of functionality exposed by the creative coding library as creative code extensions.
+						We refer to the addition of new code as an extension.
 					</aside>
 				</section>
 
 				<section data-transition="none">
 					<div class="split">
 						<div class="column-left">
-							<img width="70%" src="data/pink-matter.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="5">
+							<figure>
+								<img width="70%" src="data/pink-matter.png">
+								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="5">
 								function myCircle (x, y, rad) {
 									let numLayers = 200
 									for (let i = 0; i < numLayers; i++) {
@@ -425,8 +456,11 @@
 							</code></pre>
 						</div>
 						<div class="column-right">
-							<img width=70% src="data/pink-matter-swirl.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="5">
+							<figure>
+								<img width=70% src="data/pink-matter-swirl.png">
+								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="5">
 								function myCircle (x, y, rad) {
 									let numLayers = random(100, 300)
 									for (let i = 0; i < numLayers; i++) {
@@ -438,17 +472,20 @@
 							</code></pre>
 						</div>
 					</div>
-					<small><p>tuning, creative code extension, generic extension</p></small>
+					<small><p>tuning, extending</p></small>
 					<aside class="notes">
-						Creative code extensions can be contrasted with generic extensions, which do not rely on the creative coding library. For example, a new variable called flick is introduced on line 5. This new variable also makes use of the random function; but we assign qualitative codes only for presence, not intensity, so we don't assign another extension code here.
+						On line 5, a new variable called flick is declared, which would also be an extension; but we assign our qualitative codes only for presence, not frequency, so we won't assign another extension code here.
 					</aside>
 				</section>
 
-				<section data-transition="none">
+				<section data-transition="none" data-auto-animate>
 					<div class="split">
 						<div class="column-left">
-							<img width="70%" src="data/pink-matter.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="6">
+							<figure>
+								<img width="70%" src="data/pink-matter.png">
+								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="6">
 								function myCircle (x, y, rad) {
 								  let numLayers = 200
 								  for (let i = 0; i < numLayers; i++) {
@@ -460,8 +497,11 @@
 							</code></pre>
 						</div>
 						<div class="column-right">
-							<img width=70% src="data/pink-matter-swirl.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="6">
+							<figure>
+								<img width=70% src="data/pink-matter-swirl.png">
+								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
+							</figure>
+							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="6">
 								function myCircle (x, y, rad) {
 									let numLayers = random(100, 300)
 									for (let i = 0; i < numLayers; i++) {
@@ -473,47 +513,30 @@
 							</code></pre>
 						</div>
 					</div>
-					<small><p>tuning, creative code extension, generic extension, annotation</p></small>
+					<small><p data-id="themes">tuning, extending, annotating</p></small>
 
 					<aside class="notes">
-						Finally on line 6, we see a commented line of code is added. We refer to inline comments as 'annotations'; we use the term annotations as opposed to just comments to capture the breadth of content which we observe. I'll note that in the case of commented code, we don't code for tuning or extensions within comments. 
+						And finally on line 6, we see a commented line of code is added. We refer to inline comments as 'annotations'; we use this term as opposed to just comments to capture the breadth of content which we observe.
 					</aside>
 				</section>
 
-				<!-- <section data-transition="none">
-					<div class="split">
-						<div class="column-left">
-							<img width="70%" src="data/pink-matter.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="7">
-								function myCircle (x, y, rad) {
-									let numLayers = 200
-									for (let i = 0; i < numLayers; i++) {
-									  let vertices = []
+				<section data-auto-animate>
+					<small><p style="font-size: 2em" data-id="themes">tuning, extension, annotation</p></small>
 
-
-									  for (let theta = 0; theta < TAU; theta += TAU / 20) {
-										  ...
-							</code></pre>
-						</div>
-						<div class="column-right">
-							<img width=70% src="data/pink-matter-swirl.png">
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="7">
-								function myCircle (x, y, rad) {
-								  let numLayers = random(100, 300)
-								  for (let i = 0; i < numLayers; i++) {
-								    let vertices = []
-								    let flick = random(10,11)
-								    // for (let theta = 0; theta < TAU; theta += TAU / random(10,30)) {
-								    for (let theta = 0; theta < TAU; theta += TAU / flick) {
-									    ...
-							</code></pre>
-						</div>
-					</div>
-					<small><p>tuning, creative code extension, generic extension, annotation</p></small>
 					<aside class="notes">
-						To finish this example, we can see that the increment of the for loop is tuned, but again we're only coding for presence.
+						These are the themes we derive from each of those code edits which I'll present now,
 					</aside>
-				</section> -->
+				</section>
+
+				<section data-auto-animate>
+					<small><p style="font-size: 2em" data-id="themes">collecting, tuning, extending, annotating</p></small>
+
+					<aside class="notes">
+						But our first theme actually involves no code edits at all, a behavior we called collecting
+					</aside>
+				</section>
+
+				
 			</section>
 
 			<!-- COLLECTING -->
@@ -524,8 +547,7 @@
 				<section>
 					<img width="900" src="data/collecting.png">
 					<aside class="notes">
-						The first theme which we observed in our dataset, however, involves no code edits at all. Conventional understandings of remixing focus on the creation
-						of new artifacts. However, we find that many remixes on OpenProcessing contain identical code and therefore visual output. For example, we see several accounts named like the one shown here, where “Best Sketches” or similar language appears in the username. All 74 sketches of this user are collections with no changes made to the code. 
+						Conventional understandings of remixing focus on the creation of new artifacts. However, we find that many remixes on OpenProcessing contain identical code and therefore visuals. For example, we see several accounts named like the one shown here, where “Best Sketches” or similar language appears in the username. All 74 sketches of this user are collections with no changes made to the code. 
 					</aside>
 				</section>
 			</section>
@@ -535,7 +557,8 @@
 				<div class="top-left-header"> 
 					<p class="phl">Annotating</p>
 				</div>
-				<section data-auto-animate>
+
+				<!-- <section data-auto-animate>
 					<video data-autoplay loop width=500 src="data/networking.mp4"></video>
 					<pre><code class="javascript" data-trim data-line-numbers="7">
 						function drawJoiningWalls () {
@@ -544,44 +567,18 @@
 					</code></pre>
 
 					<aside class="notes">
-						Not all changes to code necessarily affect the visual output. On OpenProcessing, we
-						see annotating code using inline code comments is used to learn about others’ sketches, log personal
-						process, and informally version lines of code.
+						Not all changes to code necessarily affect the visual output. While comments seem like a boring or uninteresting part of a usual programmers practice, we see annotating code using inline code comments used in a diversity of ways.
 
-						In the example shown here, user Neill Bogie remixes
-						a sketch to add comments which provide
-						high-level explanations of various functions like the excerpt shown here. After annotating this sketch, the remix author goes on to
-						create several of their own sketches in which they re-implement the
-						algorithm themselves. While leaving explanatory comments in code
-						is not new behavior, what's interesting here is how remixing serves as a way for other authors to
-						annotate a sketch as they learn how it works.
+						In the example shown here, the remix author add comments which provide high-level explanations of various functions. After annotating this sketch, the remix author goes on to create several of their own sketches in which they re-implement the original algorithm. While leaving explanatory comments in code is not new behavior, what's interesting here is how remixing serves as a way to publicly learn about someone else's sketch.
 					</aside>
-				</section>
+				</section> -->
 
 				<section data-auto-animate>
-							<video data-autoplay loop width=500 src="data/networking.mp4"></video>
-							<pre><code class="javascript" data-trim data-line-numbers="7">
-								function drawJoiningWalls () {
-									/* for each pair of agents for whom there is no
-									other agent nearer to either, draw a wall */
-							</code></pre>
-
-							<pre><code class="javascript" data-trim>
-								var length = 150;          var length = 100; // 150
-							</code></pre>
-
-							<aside class="notes">
-								Others annotations require contextualization in a sketch's remixing history. Looking at the remixed line on the bottom here, it is not immediately clear where the number 150 comes from. Going back to the antecedent tells us that this was a previous value for this variable. Such informal version
-								control allows authors to archive past parameters. Again, a key
-								distinction for OpenProcessing is how archiving parameters
-								can become collaborative. It is often not the original author who is
-								versioning the previous line of code but others building from it. These comments can also be passed down several generations, often losing context in the process.
-							</aside>
-				</section>
-
-				<section>
-					<img width="300" src="data/rx1.gif">
-					<img width="300" src="data/rx2.gif">
+					<figure>
+						<img width="300" src="data/rx1.gif">
+						<img width="300" src="data/rx2.gif">
+						<figcaption>Sketches by <em>Aaron Reuland (a_soluble_fish)</em></figcaption>
+					</figure>
 					<pre><code class="javascript" data-trim>
 						/* 
 						ok, this texture algorithm I definitely stole. 98% sure it was from
@@ -594,18 +591,56 @@
 					</code></pre>
 
 					<aside class="notes">
-						Finally, we see annotations which log personal process in ways distinct
-						to creative code. A year after posting their original sketch, author aaron reulandthey remixed it to annotate their process. In the excerpt shown, they
-						describe where they sourced the code snippet to create a “papery”
-						texture. While they say they copy-pasted it at the time of the original
-						sketch, in their annotation they take time to explain its use. Comments like these would not usually be
-						found in production code, but in a creative coding context,
-						they reveal process in a public setting. They're also a way to reckon with attribution; a remix can
-						only have a single antecedent, but code might be inspired by many
-						prior works.
+						Not all changes to code necessarily affect the visual output. While comments seem like a boring or uninteresting part of a usual programmers practice, we see annotating code using inline code comments used in a diversity of ways. I'll highlight a couple of the ways we saw annotations being used which diverge from what we might expect out of inline comments.
+
+						We see annotations which log personal process. A year after posting their original sketch, the author remixed themselves. In the excerpt shown, they describe where they sourced the code snippet to create a “papery” texture. While they say they copy-pasted it at the time of the original sketch, in their annotation they take time to explain its use. Comments like these wouldn't usually be found in production code, but in a creative coding context, they reveal process in a public setting. 
+					</aside>
+				</section>
+
+			<section data-auto-animate>
+					<figure>
+						<img width="300" src="data/rx1.gif">
+						<img width="300" src="data/rx2.gif">
+						<figcaption>Sketches by <em>Aaron Reuland (a_soluble_fish)</em></figcaption>
+					</figure>
+					<pre><code class="javascript" data-trim>
+						/* 
+						ok, this texture algorithm I definitely stole. 98% sure it was from
+						**Che-Yu Wu (openprocessing.org/user/139364)** an amazingly talented 
+						artist, who also adds lots of in-progress stuff to openProcessing-
+						nice to learn from (not that I learned from this at the time I made this,
+						so much as I copied and pasted it) creates a nice papery texture by applying
+						noise to the pixel array, that is blended with the rest of the ’art’ later on.
+						*/
+					</code></pre>
+
+					<pre><code class="javascript" data-trim>
+						var length = 150;          var length = 100; // 150
+					</code></pre>
+
+					<aside class="notes">
+						Others annotations require contextualization in a sketch's remixing history. Looking at the remixed line on the bottom here, it is not immediately clear where the number 150 comes from. Going back to the antecedent tells us that this was a previous value for this variable. This informal version control becomes collaborative. These comments are can be passed down over several generations, sometimes losing context in the process.
 					</aside>
 				</section>
 			</section>
+
+				<!-- <section data-auto-animate>
+						<video data-autoplay loop width=500 src="data/networking.mp4"></video>
+						<pre><code class="javascript" data-trim data-line-numbers="7">
+							function drawJoiningWalls () {
+								/* for each pair of agents for whom there is no
+								other agent nearer to either, draw a wall */
+						</code></pre>
+
+						<pre><code class="javascript" data-trim>
+							var length = 150;          var length = 100; // 150
+						</code></pre>
+
+						<aside class="notes">
+							Others annotations require contextualization in a sketch's remixing history. Looking at the remixed line on the bottom here, it is not immediately clear where the number 150 comes from. Going back to the antecedent tells us that this was a previous value for this variable. This informal version
+							control again becomes collaborative. These comments are can be passed down over several generations, sometimes losing context in the process.
+						</aside>
+				</section> -->
 
 			<!-- TUNING  -->
 			<section>
@@ -616,8 +651,11 @@
 					<br>
 					<div class="split">
 						<div class="col">
-							<video height=70% data-autoplay loop src="data/blob1.mp4"></video>
-							<pre style="width: 22vw"><code class="javascript" data-trim data-line-numbers>
+							<figure>
+								<img style="object-fit: cover; width: 400px; height: 400px; margin-top: -10vh" height=400 src="data/blob1.gif"></img>
+								<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
+							</figure>
+							<pre style="width: 30vw"><code class="javascript" data-trim data-line-numbers>
 								margin = mySize / 100;
 								for (let i=0; i < int(random(50, 100) ); i++) { ... }
 								theShader.setUniform('u_time ', millis () / 1000);
@@ -627,8 +665,11 @@
 							</code></pre>
 						</div>
 						<div class="col">
-							<video height=70% data-autoplay loop src="data/blob2.mp4"></video>
-							<pre style="width: 22vw"><code class="javascript" data-trim data-line-numbers>
+							<figure>
+								<img style="object-fit: cover; width: 400px; height: 400px; margin-top: -10vh" height=400 src="data/blob2.gif"></img>
+								<figcaption>Remix by <em>naha</em></figcaption>
+							</figure>
+							<pre style="width: 30vw"><code class="javascript" data-trim data-line-numbers>
 								margin = mySize / 10;
 								for (let i=0; i < int(random(500, 100) ); i++) { ... }
 								theShader.setUniform('u_time', millis () / 1);
@@ -639,11 +680,8 @@
 						</div>
 					</div>
 					<aside class="notes">
-						One way to explore visuals is to manipulate values in existing
-						code. We observe this tuning frequently in our data set. In the example shown, a distinct visual
-						output is reach solely through tuning existing paramters; all of the
-						changes made in the remix are shown in the accompanying code
-						block.
+						Tuning can serve as a way to explore visual alternatives by editing existing values in code. In the example shown, a distinct visual output is reach solely through tuning existing paramters; all of the
+						changes made in the remix are shown in the accompanying code block.
 					</aside>
 				</section>
 
@@ -651,8 +689,12 @@
 					<br>
 					<div class="split">
 						<div class="column-left">
-							<video height=60% data-autoplay loop src="data/blob1.mp4"></video>
-							<pre style="width: 22vw"><code class="javascript" data-trim data-line-numbers>
+							<figure>
+								<img style="object-fit: cover; width: 400px; height: 400px; margin-top: -10vh" height=400 src="data/blob1.gif"></img>
+								<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
+							</figure>
+							
+							<pre style="width: 30vw"><code class="javascript" data-trim data-line-numbers>
 								margin = mySize / 100;
 								for (let i=0; i < int(random(50, 100) ); i++) { ... }
 								theShader.setUniform('u_time ', millis () / 1000);
@@ -665,8 +707,11 @@
 							</code></pre>
 						</div>
 						<div class="column-right">
-							<video height=60% data-autoplay loop src="data/blob2.mp4"></video>
-							<pre style="width: 22vw"><code class="javascript" data-trim data-line-numbers>
+							<figure>
+								<img style="object-fit: cover; width: 400px; height: 400px; margin-top: -10vh" height=400 src="data/blob2.gif"></img>
+								<figcaption>Remix by <em>naha</em></figcaption>
+							</figure>
+							<pre style="width: 30vw"><code class="javascript" data-trim data-line-numbers>
 								margin = mySize / 10;
 								for (let i=0; i < int(random(500, 100) ); i++) { ... }
 								theShader.setUniform('u_time', millis () / 1);
@@ -681,8 +726,7 @@
 					</div>
 
 					<aside class="notes">
-						I'll emphasize here a close relationship between tuning and anno-
-						tating. Tuning can make inline documentation obsolete. For example, the remixed line of code shown on the bottom right tunes the RGB values which define the color of lines drawn on the screen from red to black. The comment, however, is now out of alignment.
+						I'll emphasize here a close relationship between tuning and annotating. For example, the remixed line of code shown on the bottom right changes RGB value of colors drawn to the screen from red to black. The comment, however, is now out of alignment.
 					</aside>
 				</section>
 
@@ -697,25 +741,26 @@
 				<section>
 					<div class="split">
 						<div class="col">
-							<img width=90% src="data/faces-longer-original.png">
-							<pre style="width: 22vw"><code class="javascript" data-trim>
+							<figure>
+								<img width=90% src="data/faces-longer-original.png">
+								<figcaption>Antecedent by <em>Sasha T.</em></figcaption>
+							</figure>
+							<pre><code class="javascript" data-trim>
 								vertex(xPosition , yPosition);
 							</code></pre>
 						</div>
 						<div class="col">
-							<img width=90%  src="data/faces-longer-remix.png">
-							<pre style="width: 22vw"><code class="javascript" data-trim>
+							<figure>
+								<img width=90% src="data/faces-longer-remix.png">
+								<figcaption>Remix by <em>JFrench</em></figcaption>
+							</figure>
+							<pre><code class="javascript" data-trim>
 								curveVertex(xPosition,yPosition);
 							</code></pre>
 						</div>
 					</div>
 					<aside class="notes">
-						Our themes so far have not involved writing new running code.  A simple example is shown here, where the user shrike changed a single function in Sasha T.’s face generator
-						to make smooth, rounded curves. Instead of connect-
-						ing points directly with vertex(), curveVertex() is another p5.js
-						function which will generate a spline between points. By taking
-						advantage of the creative coding library, the remix is able to make
-						a small but visually substantial change to the sketch.
+						Our themes so far have not involved writing new running code. A simple example of such an extension is shown here, where the remix author changed a single function in this face generator to make smooth,rounded curves. Instead of connect ing points directly with the vertex() function, curveVertex() is another creative coding function which will generate a spline between points.
 					</aside>
 				</section>
 
@@ -723,7 +768,8 @@
 					<br><br>
 					<div class="split">
 						<div class="col">
-							<video height=50% data-autoplay loop src="data/turbulence-a.mp4"></video>
+							<video height=40% data-autoplay loop src="data/turbulence-a.mp4"></video>
+							<p style="font-size: 30%;">Antecendent by <em>Raven Kwok</em></p>
 							<pre style="width: 22vw"><code class="javascript" data-trim>
 								acc = new PVector(0, 0);
 								lifeSpan = int(random(30, 90));
@@ -737,7 +783,8 @@
 							</code></pre>
 						</div>
 						<div class="col">
-							<video height=50% data-autoplay loop src="data/turbulence-b.mp4"></video>
+							<video height=40% data-autoplay loop src="data/turbulence-b.mp4"></video>
+							<p style="font-size: 30%;">Remix by <em>Jasone Labbe</em></p>
 							<pre style="width: 22vw"><code class="javascript" data-trim>
 								acc = new PVector(0, 0);
 								lifeSpan = 90;
@@ -752,11 +799,8 @@
 						</div>
 					</div>
 					<aside class="notes">
-						We see these extensions can be built up to make targeted creative interventions in a remix. In remixing Raven Kwok, Jason Labbe left an inline comment that
-						they noted that they “Changed how it renders to feel more stylized”. Much of the antecedent code is left in tact, with specific sections changed to achieve the desired effect. A selection of the code changes are shown here. Specific variables are tuned
-						to explicit values, and additional code has been added to set the
-						color and size of the of the shapes drawn. These edits stay close to
-						the source material to “stylize” the sketch in a new way.
+						We see these tunings and extensions can be built up to make targeted creative interventions in a remix. Here, specific variables are tuned to explicit values, and additional code has been added to set the
+						color and size of the of the shapes drawn. These edits stay close to the source material to “stylize” the sketch in a new way.
 					</aside>
 				</section>
 
@@ -764,7 +808,11 @@
 					
 					<div class="split">
 						<div class="col">
-							<img width=80% src="data/out.gif">
+							<figure>
+								<img width=80% src="data/out.gif">
+								<figcaption>Antecedent by <em>Okazz</em></figcaption>
+							</figure>
+							
 							<pre><code class="javascript" data-trim>
 								function randomShape(x_, y_, w_, h_, col) {
 									let grfx = createGraphics(w_, h_);
@@ -781,7 +829,10 @@
 							</code></pre>
 						</div>
 						<div class="col">
-							<img width=80% src="data/out2.gif">
+							<figure>
+								<img width=80% src="data/out2.gif">
+								<figcaption>Antecedent by <em>JFrench</em></figcaption>
+							</figure>
 							<pre><code class="javascript" data-trim>
 								function drawTrees(x_, y_, w_, h_, col) {
 									let grfx = createGraphics (w_, h_);
@@ -799,36 +850,21 @@
 						</div>
 					</div>
 					<aside class="notes">
-						Extensions can also reuse, repeat, and reinterpret the antecedent.
-						Okazz’s sketch in on the left here creates a grid of panels. Each panel
-						is filled with a different set of random shapes. JFrench remixed this
-						sketch to create generative landscapes. In the code excerpts shown,
-						we can see how the same code which draws random triangles has
-						been slightly modified to give the effect of trees; the same technique
-						is used with larger triangles to create the mountains. While the code
-						shown highlights how the remix repurposes this particular excerpt,
-						the remix additionally makes larger changes to the overall code
-						organization. For example, it also adds a function to style the sun and moon in the sky, ensuring exactly one circle is drawn.
+						As another example, we see how extensions can reinterpret the antecedent. The original sketch on the left creates a grid of panels filled with random shapes. In the remix, this is edited to create generative landscapes. In the code excerpts shown for example, we can see how the same code which draws random triangles has been slightly modified to give the effect of trees.
 					</aside>
 				</section>
 
 				<section>
-					<img width="100%" src="data/self-remix-family-horizontal.png">
+					<figure>
+						<img width="100%" src="data/self-remix-family-horizontal.png">
+						<figcaption>Family of remixes by <em>Roni Kaufman</em></figcaption>
+					</figure>
 					<aside class="notes">
-						Finally, the remixes we've seen so far have involved one antecedent
-						and one remix. We see authors can explore multiple creative di-
-						rections in a family of remixes.Shown here is a subgraph of
-						remixed sketches beginning with “Square packing study” by Roni
-						Kaufman; however, we only show sketches by the original author.
-						We see the author remixes the original sketch in three different
-						ways. They then elaborate on the resulting sketches. Importantly, the relationship between sketches in distinct chains is obscured without this top-level view of the whole subgraph. 
+						Finally, the remixes we've seen so far have involved one antecedent and one remix. We see authors can explore multiple creative directions in a family of remixes. Shown here is a subgraph of
+						remixed sketches beginning with on called “Square packing study” by Roni
+						Kaufman, but we're only showing sketches by the original author. We see the author remixes the original sketch in three different ways, but the relationship between sketches in distinct chains is obscured without this top-level view of the whole subgraph. 
 						
-						We noted in
-						our network analysis that 49% of all remixed sketches are involved
-						in self-remixing. Filtering the self-remix graph by subgraph size,
-						we over 90% of subgraphs involved in self-remixing have 5 nodes or more. This statistic
-						speaks to the frequency with which authors manage families of
-						versions through remixing.
+						We noted in our network analysis that almost half of all remixed sketches are involved in self-remixing. Filtering the self-remix graph by subgraph size, we over 90% of subgraphs involved in self-remixing have 5 nodes or more. This statistic speaks to the frequency with which authors manage families of versions through remixing.
 					</aside>
 				</section>
 			</section>
@@ -841,14 +877,48 @@
 					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
 						<small style="text-align: left; margin-left: -60vh;">
 							<ul>
-								<li><b>Design Provocations</b></li>
-								<!-- <li>Applicability to Other Contexts</li> -->
+								<li><b>Understanding Existing Creative Communities</b></li>
+								<li>Design Provocations</li>
+								<li>Applicability to Other Contexts</li>
 							</ul>
 						</small>
-						<!-- <figure>  -->
-							<!-- <img width=50% data-src="data/extending-collage.png"> -->
-							<!-- <figcaption>a collection of antecedents and remixes</figcaption> -->
-						<!-- </figure> -->
+						<aside class="notes">
+							In considering key takeaways from our analysis, we focus on lessons we can learn from this community. Rather than informing the design of OpenProcessing–which already makes design improvements guided by the interests of their community–we do so to bring empirical insight to prior HCI research. Recent work notes that only a quarter of HCI systems which support creativity are made publicly available, and just 5% are intended to support a specific population. OpenProcessing inverts this landscape, and we focus on lessons we can learn from an active community.
+						</aside>
+					</section>
+
+					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
+						<small style="text-align: left; margin-left: -60vh;">
+							<ul>
+								<li>Understanding Existing Creative Communities</li>
+								<li><b>Design Provocations</b></li>
+								<li>Applicability to Other Contexts</li>
+							</ul>
+						</small>
+						<aside class="notes">
+							To this end, we suggest a set of design provocations which might support creative community through remixing. These provocations include incorporating code diffs within a code editor to identify changes between antecedents and remixes, tagging remixes with our strategies to help explore particular genres of remixes, facilitating process-oriented documentation, and remixing chunks of code smaller than a full sketch. We propose that these design changes might support and extend creative coding practice.
+						</aside>
+					</section>
+
+					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
+						<small style="text-align: left; margin-left: -60vh;">
+							<ul>
+								<li>Understanding Existing Creative Communities</li>
+								<li>Design Provocations</li>
+								<li><b>Applicability to Other Contexts</b></li>
+							</ul>
+						</small>
+						<aside class="notes">
+							And finally, we've seen here how remixing is taken up is community dependent. We see an opportunity to investigate how other communities employ remixing in application specific ways.
+						</aside>
+					</section>
+
+					<!-- <section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
+						<small style="text-align: left; margin-left: -60vh;">
+							<ul>
+								<li><b>Design Provocations</b></li>
+							</ul>
+						</small>
 						<aside class="notes">
 							From our themes, we outline design provocations. Rather than
 							informing the design of OpenProcessing–which already makes de-
@@ -868,24 +938,13 @@
 								<ul>
 									<li><em>Diff-in-the-loop remixing</em></li>
 								</ul>
-								
-								<!-- <li>Applicability to Other Contexts</li> -->
 							</ul>
 						</small>
-						<!-- <figure> 
-							<img width=50% data-src="data/extending-collage.png">
-							<figcaption>a collection of antecedents and remixes</figcaption>
-						</figure> -->
 
 						<aside class="notes">
-							In our analysis, we found it was
-							impossible to know what changed in a remix without consulting
-							the code for both the antecedent and remix which can be a tedious process. Building on our analysis approach to consult code diffs, we can
-							consider a live code diff view incorporated within the editor. With
-							such a view, a user might open a pair of sketches to immediately see
-							the differences in both code and visual output. For creative coders,
-							this can help identify sections of code which produce desired visual
-							effects.
+							In our analysis, we found it was impossible to know what changed in a remix without consulting
+							the code, which can be a tedious process. Building on our analysis approach, we can
+							consider a live code diff view incorporated within the editor. With this view, an author might open a pair of sketches to and easily identify sections of code which produce desired visual effects.
 						</aside>
 					</section>
 
@@ -897,23 +956,11 @@
 									<li>Diff-in-the-loop remixing</li>
 									<li><em>Tagging remixes</em></li>
 								</ul>
-								
-								<!-- <li>Applicability to Other Contexts</li> -->
 							</ul>
 						</small>
-						<!-- <figure> 
-							<img width=50% data-src="data/extending-collage.png">
-							<figcaption>a collection of antecedents and remixes</figcaption>
-						</figure> -->
 						<aside class="notes">
-							In addition to examining code diffs directly,
-						the remixing strategies we identified can be used to tag remixes.
-						These tags can be leveraged
-						to filter remixes which are collections, or show all remixes which provide annota-
-						tions to help make sense of the sketch. Tagging posts when
-						sharing a project is already supported in OpenProcessing and other
-						similar online communities; our analysis suggests that tagging
-						remixes in particular can aid exploration.
+							The remixing strategies we identified can be used to tag remixes. These tags can be leveraged to filter out remixes which are collections, or show all remixes which provide annotations to help make sense of the sketch. Tagging posts when sharing a project is already supported in OpenProcessing and other
+							similar online communities; our analysis suggests that tagging remixes in particular can aid exploration.
 						</aside>
 					</section>
 
@@ -926,22 +973,11 @@
 									<li>Tagging remixes</li>
 									<li><em>Remix graph annotations</em></li>
 								</ul>
-								
-								<!-- <li>Applicability to Other Contexts</li> -->
 							</ul>
 						</small>
-						<!-- <figure> 
-							<img width=50% data-src="data/extending-collage.png">
-							<figcaption>a collection of antecedents and remixes</figcaption>
-						</figure> -->
 
 						<aside class="notes">
-							While remixing is often presented as a method for collaborative peer produc-
-							tion, our analysis suggests ways that current remixing interfaces
-							limit collaboration. Beyond making remixing graphs visible to users, our analysis suggests we might promote collaboration by allowing authors to share text, images, and notes
-							to annotate the remixing subgraph. We imagine that such process-oriented documentation tools
-							can add depth to creative code sketches, making creative process
-							as open and transparent as the code itself.
+							While remixing is often presented as a method for collaborative peer production, our analysis suggests ways that current remixing interfaces limit collaboration. Beyond making remixing graphs visible to users, we might incorparate tools which facilitate process-oriented documentation to add depth to creative code sketches, making creative process as open and transparent as the code itself.
 						</aside>
 					</section>
 
@@ -955,47 +991,24 @@
 									<li>Remix graph annotations</li>
 									<li><em>Smaller Units of Analysis</em></li>
 								</ul>
-								
-								<!-- <li>Applicability to Other Contexts</li> -->
 							</ul>
 						</small>
-						<!-- <figure> 
-							<img width=50% data-src="data/extending-collage.png">
-							<figcaption>a collection of antecedents and remixes</figcaption>
-						</figure> -->
 						<aside class="notes">
-							Finally, our analysis surfaced productive
-							connections between version control and remixing. While remix-
-							ing inherits a parent-child relationship between antecedents and
-							remixes from software forks, we see remixing often happens at
-							the level of parameters and function arguments. Considering
-							functions, classes, and other code snippets smaller than a full sketch
-							as remixable content can promote collaboration, with implications
-							for both how practitioners remix and the high-level remixing graph
-							characteristics.
+							And finally, our analysis surfaced productive connections between version control and remixing. While remixing inherits a parent-child relationship from software forks, we see remixing often happens at
+							the level of individual parameters and functions. Considering how code snippets smaller than a full sketch can be treated as remixable content might have implications for how practitioners remix.
 						</aside>
-					</section>
-
-					<!-- <section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
-						<small style="text-align: left; margin-left: -60vh;">
-							<ul>
-								<li>Design Provocations</li>
-								<ul>
-									<li>Diff-in-the-loop remixing</li>
-									<li>Tagging remixes</li>
-									<li>Remix graph annotations</li>
-									<li>Smaller Units of Analysis</li>
-								</ul>
-								<li><b>Applicability to Other Contexts</b></li>
-							</ul>
-						</small>
-						<br>
-						<figure> 
-							<img width=50% data-src="data/extending-collage.png">
-							<figcaption>a collection of antecedents and remixes</figcaption>
-						</figure>
 					</section> -->
-			</section> 
+			</section>  
+
+			<section>
+				<p class="r-fit-text">Special thanks to the OpenProcessing, Processing, and p5.js communities, and especially the authors who agreed to share their work for this paper:</p>
+
+				<small><em>Roni Kaufman, caaatisgood, Taiki Saito, Owaun Scantlebury, Richard Bourne, Neill Bogie, Naoki Tsutae, Aaron Reuland (a_soluble_fish), Naha, SamuelYAN, Trrrrrr, Sasha T. (@tequibo), shrike, Raven Kwok, Jason Labbe, Okazz, JFrench, garabotospr, Hans Peter, and Sayama </em></small>
+				<aside class="notes">
+					
+				</aside>
+			</section>
+
 
 			<section>
 				<div class="split">
@@ -1007,7 +1020,7 @@
 
 						<p style="text-align: left; font-size: .6em; margin-top: 20vh;">Blair Subbaraman, Shenna Shim, Nadya Peek</p>
 						<p style="text-align: left; font-size: .6em; margin-top: -2vh">Machine Agency, University of Washington</p>
-						<p style="text-align: left; font-size: .6em; margin-top: -2vh">Slides: *insert link*</p>
+						<p style="text-align: left; font-size: .6em; margin-top: -2vh">Slides: https://rb.gy/3jdyb</p>
 					</div>
 					
 				</div>
