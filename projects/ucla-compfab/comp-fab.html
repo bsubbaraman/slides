@@ -117,23 +117,45 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
+				<section data-auto-animate data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
 					<div class="split">
 						<div class="col">
 							<h4 style="text-align: left;">Computational Fabrication</h4>
 							<p style="text-align: left; font-size: .6em;">Blair Subbaraman</p>
 							<p style="text-align: left; font-size: .6em; margin-top: -2vh">Machine Agency, University of Washington</p>
-							<p style="text-align: left; font-size: .6em; margin-top: -2vh"> Slides: ~link~</p>
+							<p style="text-align: left; font-size: .6em; margin-top: -2vh"> Slides: rb.gy/lgxu6r</p>
 						</div>
 					<br>
 					<aside class="notes">
-						Hi! I'm Blair. I worked at REMAP for a couple years from 2018-2020, where Jeff welcomed me into the world of theater despite my not knowing anything. And I'm now a 4th year PhD student at the Unviersity of Washington, in the department of Human-Centered Design & Engineering. The group that I'm a part of, Machine Agency, does resarch around things like digital fabrication, small-scale automation, and open-source hardware, summarized by the tagline that we harness the precision of machines for the creativity of individuals. I'm going to talk today about some of my own research as it relates to digital & computational fabrication, or the process of making physical things with machines.
+						Hi! I'm Blair. I worked at REMAP for a couple years from 2018-2020, where Jeff welcomed me into the world of theater despite my not knowing anything. Since then, I started a PhD at the Unviersity of Washington, where I'm now in my 4th year in the department of Human-Centered Design & Engineering. I'm going to present on some of my own research as it relates to digital & computational fabrication, or broadly, the process of making physical things with machines. In particular, I'll talk about connecting coding interfaces and computational fabrication tools as a way to broaden participation in both physical and digital production.
 					</aside>
+				</section>
+
+				<section data-auto-animate data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
+					<h4 style="text-align: left;">Key Takeaways</h4>
+					<p style="text-align: left; font-size: .6em;">- Seamless experiences aren't always better</p>
+
+					<aside class="notes">
+						And as I share some of these projects, I hope to convince you of a couple key ideas. The first is that in building computational tools for fabrication, the goal doesn't need to be an end-to-end seamless experience, at least not at first. There's this idea in popular culture as well as in research that we're working towards a sort of star trek Replicator type application, where matter is automatically compiled into fully working objects. While I admit this seems pretty cool, I think the reality is that there are too many niches of possible users of computational fabrication to
+						cater to them all with a single tool. And in fact, I think that overly focusing on interfaces in which you just press 'start' is really limiting in how we can employ fabrication in new & exciting ways. Part of what I'm interested in is how we can reduce the threshold for users to modify and make seamless experiences for their unique use case. 
+					</aside>
+				</section>
+
+				<section data-auto-animate data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
+					<h4 style="text-align: left;">Key Takeaways</h4>
+					<p style="text-align: left; font-size: .6em;">- Seamless experiences aren't always better</p>
+					<p style="text-align: left; font-size: .6em;">- It matters who is using the tool, and how</p>
+
+					<aside class="notes">
+						To that point, taking into account who is using the tool and why is a productive way to build new computational fabrication systems. The needs of someone designing electronic circuits and, say, a ceramicist wanting to 3D print with clay are quite different, and each person brings with them unique existing expertise. Accounting for and incorporating these differences can lead to divergent fabrication machines and interfaces.
+
+						Maybe these takeaways lack context for now, but I'll try to hammer them home and bring some nuance to them as they come up over the course of this talk.
+					</aside>	
 				</section>
 
 				<section data-background-video="data/mohr-plotter.mp4">
 					<aside class="notes">
-						I wanted to start with a historical anecdote. This is a snippet from a documentary by IBM in the 1970s. It shows the work process of Manfred Mohr, a German artist who was a part of the first wave of artists using computers to make visual art. Here we see him programming, which at that time was not done at a screen but rather with pen and paper, making flowcharts and then creating physical punched cards which were read by the computer. We then see Mohr walk to a separate area and sit down at this  screen. This isn't actually a computer, which were still the size of entire rooms, but it's just a screen that displays the results of a computers calculation. We can see the output of Mohr's program begin to appear, which is showing various rotations of a cube. At this stage, Mohr can decide if he likes the results, or if he'd like to go back and edit the program to make something different. If it passes his scrutiny, then the piece can be physically drawn using a pen plotter. Both the computer and the plotter were, at the time, an expensive resource, so the stakes are pretty high here to create something you actually liked.
+						I wante to start with a briefly historical anecdote. This is a snippet from a documentary by IBM in the 1970s. It shows the work process of Manfred Mohr, a German artist who was a part of the first wave of artists who gained access to computers to make visual art. Here we see him programming, which at that time was not done at a screen but rather with pen and paper, making flowcharts and then creating physical punched cards which were read by the computer. We then see Mohr walk to a separate area and sit down at this  screen. This isn't actually a computer, which were still the size of entire rooms, but it's just a screen that displays the results of a computers calculation. We can see the output of Mohr's program begin to appear, which is showing various rotations of a cube. At this stage, Mohr can decide if he likes the results, or if he'd like to go back and edit the program to make something different. If it passes his scrutiny, then the piece can be physically drawn using a pen plotter. This is a drawing machine that can move left, right, up, and down around a flat surface. Both the computer and the plotter were, at the time, an expensive resource, so the stakes are pretty high here to create something you actually liked.
 					</aside>
 				</section> 
 
@@ -142,31 +164,123 @@
 					<div class="split">
 						<div class="col">
 							<figure>
-								<img height=300 data-src="data/punching-cards.png">
+								<img height=250 data-src="data/punching-cards.png">
 								<figcaption>Punching computer cards</figcaption>
 							</figure>
 						</div>
 
 						<div class="col">
 							<figure>
-								<img height=300 data-src="data/mohr-plotter.png">
-								<figcaption>Changing plotter pens</figcaption>
+								<img height=250 data-src="data/first-sketch.png">
+								<figcaption>Creating visuals with code</figcaption>
 							</figure>
 						</div>
 					</div>
 
 					<aside class="notes">
 						I show this clip to bring some historical depth to our conversation around both computation & fabrication. This era was very 'fabrication first' in a sense, since there were limited graphical output options. These pen plotters are arguably some of the first digital fabrication machines being used in an artistic or design process. I want to compare Mohr's work process with how we might work today to make the same piece. With respect to computation, obviously a lot has changed, and how we interact with computers has changed drastically. If we were making Mohr's piece today, we could write code to immediately see results on our laptops and quickly make small, iterative changes to get the output we liked. And, there wouldn't necessarily be a pressure to physically draw what we make, beacuse we could much more easily share the image, or better yet, the code itself.
-
-						With respect to fabrication, though, Mohr's interaction is actually pretty similar to today. In Mohr's case, the computer wrote the data on a magnetic tape which was then connected to the plotter to execute. If we were, say, 3D printing something today, we would generate machine instructions on our laptops, put the file on an SD card, and then plug it into the machine to execute. Past a few dialog boxes and sliders, we don't have much of a say in what the machine does, nor can we change the machine's behaviour, after pressing start.
 					</aside>
 				</section>
+
+				<section data-auto-animate>
+					<h4>Computation & Fabrication, Then & Now</h4>
+					<div class="split">
+						<div class="col">
+							<figure>
+								<img height=200 data-src="data/punching-cards.png">
+								<figcaption>Punching computer cards</figcaption>
+							</figure>
+
+							<figure>
+								<img height=200 data-src="data/mohr-plotter.png">
+								<figcaption>Changing plotter pens</figcaption>
+							</figure>
+
+						</div>
+
+						<div class="col">
+							<figure>
+								<img height=200 data-src="data/first-sketch.png">
+								<figcaption>Creating visuals with code</figcaption>
+							</figure>
+
+							<figure>
+								<img height=200 data-src="data/plottertwitter.png">
+								<figcaption>Plotter images shared on Twitter</figcaption>
+							</figure>
+						</div>
+					</div>
+
+					<aside class="notes">
+						With respect to fabrication, there's also some major differences. Tabletop plotters are widely available for personal use, along with a host of other machines like 3D printers and laser cutters. In this sense, fabrication is more accessible today; but part of what I want to emphasize today is that this is only one limited dimension of accessibility. If we look at Mohr's interaction with the plotter, it's actually pretty similar to today. In Mohr's case, the computer wrote the data on a magnetic tape which was then connected to the plotter to execute. If we were fabricating something today, we would generate machine instructions on our laptops, put the file on an SD card, and then plug it into the machine to execute. Past a few dialog boxes and number sliders, we don't have much of a say in what the machine does, nor can we change the machine's behaviour, after pressing start.
+					</aside>
+				</section>
+
+				<section data-auto-animate>
+					<h4>Research Context</h4>
+					<small><p><em>"Harnessing the precision of machines for the creativity of individuals"</em></p></small><br>
+
+					<figure>
+						<video style="height: 250px; margin-bottom: 3vh" loop src="data/plottertwitter.mp4"></video>
+						<figcaption data-id="fig1">Twigg-Smith et al.</figcaption>
+					</figure>
+
+					<figure>
+						<video style="height: 250px; margin-bottom: 3vh" loop src="data/imprimer.mp4"></video>
+						<figcaption data-id="fig1">Tran O'Leary et al.</figcaption>
+					</figure>
+
+					<aside class="notes">
+						The lab I'm in, called Machine Agency, does research around topics like digital fabrication, small-scale automation, and open source communities, and is broadly summarized by the tagline, "harnessing the precision of machines for the creativity of individuals". The research takes several forms, from qualitative investigations into how digital fabrication tools are used in the real-world, to building systems, and I want to provide a bit of context here on the sorts of things we've worked on in the past and where I'm coming from.
+					</aside>
+
+				</section>
+
+				<section data-auto-animate>
+					<h4>Research Context</h4>
+					<small><p><em>"Harnessing the precision of machines for the creativity of individuals"</em></p></small><br>
+
+					<figure>
+						<video style="height: 300px; margin-bottom: 3vh" data-autoplay loop src="data/plottertwitter.mp4"></video>
+						<figcaption data-id="fig1">Twigg-Smith et al.</figcaption>
+					</figure>
+
+					<figure>
+						<video style="height: 200px; margin-bottom: 3vh" loop src="data/imprimer.mp4"></video>
+						<figcaption data-id="fig1">Tran O'Leary et al.</figcaption>
+					</figure>
+
+					<aside class="notes">
+						So for example, a labmate of mine, Hannah, looked at the artwork and processes that were being shared on Twitter under the hashtag 'PlotterTwitter', which is a pretty cool hashtag to check out if you've not seen it before. And a lot of what is being shared and discussed in these spaces are things like, trying different types of pens, or different types of paper, to get interesting results, and the sorts of things that are shared between users are tips and hacks to use the plotter in unintended ways. This goes back to the idea that a seamless experience with a machine isn't always better.
+					</aside>
+
+				</section>
+
+				<section data-auto-animate>
+					<h4>Research Context</h4>
+					<small><p><em>"Harnessing the precision of machines for the creativity of individuals"</em></p></small><br>
+
+					<figure>
+						<video style="height: 200px; margin-bottom: 3vh" loop src="data/plottertwitter.mp4"></video>
+						<figcaption data-id="fig1">Twigg-Smith et al.</figcaption>
+					</figure>
+
+					<figure>
+						<video style="height: 300px; margin-bottom: 3vh" data-autoplay loop src="data/imprimer.mp4"></video>
+						<figcaption data-id="fig1">Tran O'Leary et al.</figcaption>
+					</figure>
+
+					<aside class="notes">
+						Another lab member, Jasper, has been working on an augmented reality interface for CNC milling. So here we can see the outline of the object that he is going to cut is projected down onto the material to be able to confirm the setup before actually cutting anything out.						
+					</aside>
+				</section>
+				
 
 				<section>
 					<p><em>How can we support domain experts to creatively engage computer controlled machines?</em></p>
 
 					<aside class="notes">
-						In my own work, I investigate how we can support artists, scientists, and other pracitioners who are already experts in their field to creatively engage computer controlled machines. Machines like 3D printers, laser cutters, and mills are becoming increasingly cheaper and widespread--I'll bet there's a makerspace in walking distance of your classroom right now full of these machines--but the ways we are made to use them are too often prescriptive, limiting the creative possibilities. I try to investigate this question at a couple of different levels in my work. This includes staging systems interventions for use in the real-world, as well as understanding the behaviour of existing communities to ground future systems.
+						For my own part in all of this, my research laregly focuses on how we can support artists, scientists, and other pracitioners who are already experts in their field to creatively engage computer controlled machines. Machines like 3D printers, laser cutters, and mills are becoming increasingly cheaper and widespread--I'll bet there's a makerspace in walking distance of your classroom right now full of these machines--but the ways we are made to use them are too often prescriptive, limiting our creative possibilities. I try to investigate this question at a couple of different levels in my work. This includes staging systems interventions for use in the real-world, as well as understanding the behaviour of existing communities to ground the development of future systems.
 					</aside>
 				</section> 
 
@@ -174,12 +288,12 @@
 					<h4>Overview</h4>
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" loop src="data/slicer.mp4"></video>
-						<figcaption data-id="fig1">Maintaining Machines</figcaption>
+						<figcaption data-id="fig1">Computational Fabrication</figcaption>
 					</figure>
 
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" src="data/cc-square.mp4"></video>
-						<figcaption data-id="fig4">Remixing Code</figcaption>
+						<figcaption data-id="fig4">Creative Code</figcaption>
 					</figure>
 
 					<figure>
@@ -190,25 +304,25 @@
 
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" src="data/pipette-speedup-square.mp4"></video>
-						<figcaption data-id="fig3">Duckbot</figcaption>
+						<figcaption data-id="fig3">Creative Automation</figcaption>
 					</figure>
 
 					
 					<aside class="notes">
-						To this end, I'll briefly discuss 4 projects related to computational fabrication today.
+						To this end, in this talk I want to introduce two areas of physical and digital practice--computational fabrication and creative code--and then talk about two projects which intersect these practices.
 					</aside>
 				</section> 
 
 				<section data-auto-animate>
 					<h4>Overview</h4>
 					<figure>
-						<video style="width: 300px; margin-bottom: 3vh" data-autoplay loop src="data/slicer.mp4"></video>
-						<figcaption data-id="fig1"><br>Maintaining Machines</figcaption>
+						<video style="width: 250px; margin-bottom: 3vh" data-autoplay loop src="data/slicer.mp4"></video>
+						<figcaption data-id="fig1"><br>Computational Fabrication</figcaption>
 					</figure>
 					
 					<figure>
-						<video style="width: 200px; margin-bottom: 3vh" src="data/cc-square.mp4"></video>
-						<figcaption data-id="fig4">Remixing Code</figcaption>
+						<video style="width: 250px; margin-bottom: 3vh" data-autoplay loop src="data/cc-square.mp4"></video>
+						<figcaption data-id="fig4">Creative Code</figcaption>
 					</figure>
 
 					<figure>
@@ -220,15 +334,17 @@
 
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" src="data/pipette-speedup-square.mp4"></video>
-						<figcaption data-id="fig3">Duckbot</figcaption>
+						<figcaption data-id="fig3">Creative Automation</figcaption>
 					</figure>
 
 					<aside class="notes">
-						First, I'll introduce some core ideas and practices of digital fabrication--and then immediately complicate these core assumptions that are baked into digital fabrication software tools. In particular, software tools for fabrication are meant create a physical part that is as faithful to the digital model as possible, which can become disconnected from exploring physical propterites of material.  
+						First, I'll introduce some core ideas and practices of computational fabrication--and then I'll immediately complicate these core assumptions that are baked into existing software. In particular, I want to show how software tools for fabrication are meant create a physical part that is as faithful to the digital model as possible, which can become disconnected from exploring physical properties of materials.  
+
+						Then, I'll jump from physical practice to digital practice to introduce creative coding, which is broadly the process of programming for expressive over functional purposes. Since Manfred Mohr's time, artists have developed many software tools to tailored to their creative pursuits. Put in conversation with digital fabrication practice, we can start to see opportunities for new sorts of fabrication interfaces. 
 					</aside>
 				</section> 
 
-				<section data-auto-animate>
+				<!-- <section data-auto-animate>
 					<h4>Overview</h4>
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" loop src="data/slicer.mp4"></video>
@@ -253,18 +369,18 @@
 					<aside class="notes">
 						Then, I'll jump from physical practice to digital practice to introduce creative coding, which is broadly the process of programming for expressive over functional purposes. Since Manfred Mohr's time, artists have developed many software tools to tailored to their creative pursuits, and we can see how creative coding benefits from large existing communities that share art and code online. Put in conversation with digital fabrication practice, we can start to see opportunities for new sorts of fabrication interfaces. 
 					</aside>
-				</section> 
+				</section>  -->
 
 				<section data-auto-animate>
 					<h4>Overview</h4>
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" loop src="data/slicer.mp4"></video>
-						<figcaption data-id="fig1">Maintaining Machines</figcaption>
+						<figcaption data-id="fig1">Computational Fabrication</figcaption>
 					</figure>
 
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" src="data/cc-square.mp4"></video>
-						<figcaption data-id="fig4">Remixing Code</figcaption>
+						<figcaption data-id="fig4">Creative Code</figcaption>
 					</figure>
 
 					<figure>
@@ -274,11 +390,11 @@
 
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" src="data/pipette-speedup-square.mp4"></video>
-						<figcaption data-id="fig3">Duckbot</figcaption>
+						<figcaption data-id="fig3">Creative Automation</figcaption>
 					</figure>
 
 					<aside class="notes">
-						Following some of these insights, I'll move from qualitative work to a couple of systems. p5.fab is a javascript library which supports control of digital fabrication machines from a creative coding environment; I'll introduce the tool and discuss some reactions from artists who tested the system;
+						Following some of these insights, I'll talk about a couple of systems that I've worked on. p5.fab is a javascript library which supports control of digital fabrication machines from a creative coding environment; I'll introduce the tool and discuss some reactions from artists who tested the system;
 					</aside>
 				</section> 
 
@@ -286,12 +402,12 @@
 					<h4>Overview</h4>
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" loop src="data/slicer.mp4"></video>
-						<figcaption data-id="fig1">Maintaining Machines</figcaption>
+						<figcaption data-id="fig1">Computational Fabrication</figcaption>
 					</figure>
 
 					<figure>
 						<video style="width: 200px; margin-bottom: 3vh" src="data/cc-square.mp4"></video>
-						<figcaption data-id="fig4">Remixing Code</figcaption>
+						<figcaption data-id="fig4">Creative Code</figcaption>
 					</figure>
 
 					<figure>
@@ -301,21 +417,21 @@
 
 					<figure>
 						<video style="width: 300px; margin-bottom: 3vh" data-autoplay src="data/pipette-speedup-square.mp4"></video>
-						<figcaption data-id="fig3">Duckbot</figcaption>
+						<figcaption data-id="fig3">Creative Automation</figcaption>
 					</figure>
 					
 					<aside class="notes">
-						and finally, I'll briefly talk about a laboratory automation system developed for plant biologists to think about how alternative machine interfaces might be of interest across domains.
+						and finally, I'll briefly talk about a laboratory automation system developed for plant biologists to think about how alternative machine interfaces might be of interest across domains. While this example is related to science, the point here is more in generalizing a bit from computational fabrication of individual artifacts to creatively employing automation.
 					</aside>
 				</section> 
 
 				<section>
 					<section>
-						<h3 style="text-align: left;">Maintaining Machines</h3>
-						<p style="text-align: left;">Broadening understandings of digital fabrication</p>
+						<h3 style="text-align: left;">Computational Fab, Creative Code</h3>
+						<!-- <p style="text-align: left;">Connecting digital & physical production</p> -->
 
 						<aside class="notes">
-							So, we'll start in the world of digital fabrication.
+							So, we'll start in the world of digital fabrication, peppering in some insights & takeaways from prior qualitative research along the way.
 						</aside>
 					</section>
 				
@@ -342,9 +458,27 @@
 						<aside class="notes">
 							Before diving into the nitty-gritty of digital fabrication, I'll untangle the terms 'computational design', 'digital fabrication', and 'computational fabrication'. Computational design can refer to a whole range of design practices that incorporate computational processes. This involves the use of programing to do things like create and modify form and structure, but computational design isn't so much one specific technical skill as way to design rule sets which produce multiple outcomes.
 
-							Digital fabrication is manufacturing process where a machine used is controlled by a computer. Common digital fabrication machines today are 3D printers, laser cutters, and mills; increasingly, these machines are available to hobbyists, or are are made available in community contexts like MakerSpaces.
+							Digital fabrication is a manufacturing process where a machine is controlled by a computer. Common digital fabrication machines today are 3D printers, laser cutters, and mills; increasingly, these machines are available to hobbyists, or are are made available in community contexts like MakerSpaces.
 
-							Computational fabrication, then, is more or less chaining together of computational design and digital fabrication. It integrates programming, design, and digital fabrication to design forms then construct these forms using fabricaiton machines.
+							Computational fabrication, then, is more or less chaining together of computational design and digital fabrication. It integrates programming, design, and digital fabrication to design forms then construct these forms using fabrication machines.
+						</aside>
+					</section>
+
+					<section>
+						<h4>Fabrication, Big & Small</h4>
+
+						<figure>
+							<img height=400 data-src="data/stuttgart.jpg">
+							<figcaption>Research Pavilion, University of Stuttgart</figcaption>
+						</figure>
+
+						<figure>
+							<img height=400 data-src="data/kinematic-dress.jpg">
+							<figcaption>Kinematic Dress, Nervous System</figcaption>
+						</figure>
+
+						<aside class="notes">
+							The principles of computational design can be combined with different machines to create objects across a range of scales, from the architectural to the tabletop. The left image here shows a robot arm constructing a computationally generated pavilion at the University of Stuttgart; on the right is the Kinematic Dress from the design studio Nervous system, where they came up simulation techniques to take a large 3D thing, a dress, and fold & flatten it into something that can be 3d printed in one piece.
 						</aside>
 					</section>
 
@@ -361,7 +495,7 @@
 						</aside>
 					</section> -->
 
-					<section data-auto-animate>
+					<section>
 						<h4>A Usual 3D Printing Workflow</h4>
 
 						<figure>
@@ -381,11 +515,24 @@
 						</figure>
 
 						<aside class="notes">
-							Let's take 3D printing as an example to understand a usual fabrication workflow. First, you need to design a model to print. This is typically done in computer aided design or a similar environment; common examples are Rhino3D, Blender, Fusion360, or SolidWorks. Then, we need to use this geometry to plan the machines toolpaths, or the path it will take as it moves through space. This is done by importing the model in a computer-aided manufacturing, or CAM, software. For 3D printing, this is called the slicer, as it is intended to divide a model into a series of contours to be printed layer-by-layer. The slicer will produce machine instructions called g-code, or geometry code, which can be exectued on the machine.   
+							Let's take 3D printing as an example to understand a usual fabrication workflow. First, you need to design a model to print. This is typically done in computer aided design or a similar environment; maybe people have used on of these before, and common examples are Rhino3D, Blender, or SolidWorks. Then, we need to use this geometry to plan the machines toolpaths, or the path it will take as it moves through space. This is done by importing the model in a computer-aided manufacturing, or CAM, software. For 3D printing, this is called the slicer, as it is intended to divide a model into a series of contours to be printed layer-by-layer. The slicer will produce machine instructions called g-code, or geometry code, which can be exectued on the machine.   
 						</aside>
 					</section>
 
-					<section data-auto-animate>
+					<section>
+						<h4>A Unusual 3D Printing Workflow</h4>
+						<figure>
+							<img height=400 data-src="data/tactum.gif">
+							<img height=400 data-src="data/tactum.jpg">
+							<figcaption><em>Tactum</em>, Gannon et al.</figcaption>
+						</figure>
+
+						<aside class="notes">
+							It's worth noting that prior work has taken issue with this workflow, especially around the modeling stage. As an example of this, here's a system called Tactum, intended to create 3D printed wearables directly on your body. They project the design directly onto your arm and you can manipulate the geometry with gestures to see what it will look like before 3D printing it.
+						</aside>
+					</section>
+
+					<section>
 						<h4>Promise vs. Practice </h4>
 
 						<figure>
@@ -398,1038 +545,625 @@
 							<figcaption>Actual outcome from 3D printing (<em>from r/FixMyPrint</em>)</figcaption>
 						</figure>
 						<aside class="notes">
-							For owners of machines like FDM 3D printers, on-demand access to precision parts is a reality, but this reality also entails the work required to maintain a machine. Parts have to be calibrated, cleaned, repaired, and replaced. While software settings can be repeated, reverted, and refined, the condition of the machine ultimately determines physical consequences for fabrication processes. In this work, we look to maintenance practices to expound the embodied dimensions of 3D printing practice.  
-							
-							Home and hobbyist 3D printing is a particularly promising site to begin understanding current digital fabrication machine maintenance, since 3D printing has grown immensely in popularity in the past
-							decade, providing many sites of practice. In our work, we specifically focus on FFF 3D printers, given their widespread adoption.
+							But even with new and intuitive modeling techniques, things often don't go as planned when you go to physicall manufacture something. There will often be problems with the geometry, and there are a bunch of physical constraints like not being to print models with sharp angles because each layer needs to be supported from underneath. And unlike Mohr's plotter that we saw earlier, which was maintained in a well-funded laboratory by a group of technicians, most people 3D printing today are using them in their homes or studios.The workflow we saw assumes that machines will obediently execute exactly what we tell it to, but that isn't always the case. We see then this kind of glaring disconnect between digital tools and the physical process of fabrication.
 						</aside>
 					</section>
 
 					<section>
-						<h4>Empirical Setting: r/FixMyPrint</h4>
-						<video height="500" data-autoplay loop src="data/fmp-scroll.mp4"></video>
+						<h4>Promise vs. Practice </h4>
+						<figure>
+							<img width="1000" src="data/inner-ear.png">
+							<figcaption>Physicalizing audio data in custom sculptural
+								forms</figcaption>
+						</figure>
 
 						<aside class="notes">
-							To gain empirical insight into this question, we begin with observations of the subredded FixMyPrint, where posts run the gamut from mechanical repair through custom firmware updates. We then conducted interviews and fielded survey responses from members of this community. The community had about 67k members at the time of our study and has since grown to over 100k. Here I'm briefly scrolling through the top posts of this past month. We can see that posts generally include images or a video; in the selection shown here, we can see a question converning aesthetics, or the wavy effect seen on a print, a question concerning mechanical adhesion on a print, on one considering the flow of filament from the nozzle of the machine. And so already we see a breadth of issues that negotiate printer hardware and software.
+							These problems become particularly acute in computational fabrication processes. This is an example from a past project I worked on, where a group of designers wanted to use audio data to drive the generation of clay sculptural forms. The raw data is used to start a digital simulation, and the resulting 3D form is printed using a clay 3D printer. The successful integration of computational methods and physical manufacturing here is dependent on establishing correspondences between digital instructions and physical outcomes, but these connections aren't well mapped. Most of the work here was in testing and tuning the simulation so that the resulting model was both printable and legible for their specific context. These software-driven fabrication workflows really require extensive software testing, tweaking, and optimization in response to machine and material behavior. 
+						</aside>
+					</section>
+					
+
+					<section>
+						<h4>Promise vs. Practice </h4>
+						<figure>
+							<img height="300" src="data/stl-head.jpg">
+							<figcaption>Models are saved as <code>stls</code>, which are just lists of triangles</figcaption>
+						</figure>
+
+						<figure>
+							<img height="300" src="data/gcode.png">
+							<figcaption>Machine instructions are saved as g-code</figcaption>
+						</figure>
+
+						<aside class="notes">
+							And briefly, this disconnect between digital and physical reality extends all the way to the underlying representation of digital models. When you make a model in CAD, or find one online, the standard file format is an stl. This is just a list of triangles that define the boundary surface of your model; these triangles can be bigger or smaller depending on how detailed you model is and the resolution of whateve machine you're using. However, this isn't a very expressive file format; as we can increasingly print with more than one material, or muliple colors, there's no way to represent what's happening inside the object, which depending on the application can be just as important as the exterior. And g-code, which are the instructions that are sent to the machine, are basically just a list of coordinates to move to at a certain speed. Again, this language makes a lot of assumptions on what it is you want to do with the machine. There's no clean ways to, say, incorporate sensor data which can affect the machines motion at run-time. 
 						</aside>
 					</section>
 
+					<section data-auto-animate>
+						<p class="r-fit-text">Practitioners negotiate <b>digital software</b> with <b>physical practice</b>.</p>
+						<aside class="notes">
+							The end result is that pracitioners are made to reconcile digital software with a fundamentally physical practice. Crossing the digital/physical divide remains challenging, especially when developing products with novel materials, forms, or manufacturing contexts.
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<p class="r-fit-text">Practitioners negotiate <b>digital software</b> with <b>physical practice</b>.</p>
+						<p class="r-fit-text">How can we support a wider range of interactions with the machine?</p>
+						<aside class="notes">
+						From a systems design perspective, this analysis prompts us to think about how we can support a wider range of interactions with the machine, particularly ones that shifts our focus from the screen to the machine.
+						</aside>
+					</section>
+
+					<!-- <section data-auto-animate>
+						<p class="r-fit-text">Practitioners negotiate <b>digital software</b> with <b>physical practice</b></p>
+						<small>
+							<blockquote>
+								I noticed [the clog] because I gradually had more and
+								more under-extrusion. Which at first was I guess totally
+								fine in my eyes, because it never printed totally perfectly
+								before... I tried all the things like settings in my slicer before I
+								actually went for disassembling stuff, because it was
+								also kind of scary. And it seemed like a lot of work. Now
+								I know that it’s not that way. It’s quite easy, it just takes
+								a couple of screws.
+							</blockquote>
+							- P1
+						</small>
+						<img width=90% src="data/extrusion.png">
+						<aside class="notes">
+							As just one example of this, I really like this story from one of our interview participants. They noticed that their printer was under-extruding, meaning less filament was being deposited than necessary as shown in this image. This didn't seem to be an issue at first, because they say their printer never printer perfectly anyways. To fix the issue, they edited software settings, but this obsucred the root problem, which was in fact a clog. They say:
+							
+							quote
+
+							From a systems design perspective, this analysis prompts us to think about how we can support a wider range of interactions with the machine, particularly ones that shifts our focus from the screen to the machine.
+						</aside>
+					</section> -->
 					
 
-					<section data-auto-animate>					
+					<!-- <section data-auto-animate>					
 						<p>Routines | Repairs | Refinements | Reconciliations</p>
 						<p>put a picture here</p>
 						<aside class="notes">
 							We conceptualized 4 main themes which we situate within digital fabrication practice.
 							talk about main takeaways
 						</aside>
-					</section>
+					</section> -->
 
 				</section>
 				<!-- END MAINTENANCE	 -->
 
-				<!-- START REMIXING -->
+				<!-- START CODE -->
 				<section>
-					<section data-auto-animate>
+					<!-- <section data-auto-animate>
 						<h3 style="text-align: left;">Remixing Code</h3>
 						<p style="text-align: left;">Understanding communities of creative practice</p>
 
 						<aside class="notes">
-							
+							I want to put a pin in our conversation about digital fabrication for a second, and jump to a primarily digital practice, creative coding.
 						</aside>
-					</section>
+					</section> -->
 
 					<section data-background-video="data/hexablob.mp4" data-background-video-loop>
 						<aside class="notes">
-							If you're unfamiliar with creative coding, it might look something like this. Creative coders create programs, called sketches, that generate visual output. In this video, I'm editing a sketch posted to the website OpenProcessing, created by the author Roni Kaufman. We can see that the effects of editing existing parameters in code can immediately be seen by running the sketch. Here, I'm editing the number of sides of a polygon and the number of bumps which are animated within it. I could then choose to publish my edits as a new sketch; this repurposing of an existing artifact into something new is called remixing.
+							I want to put a pin in our conversation about digital fabrication for a second, and jump to a primarily digital practice, creative coding.  If you're unfamiliar with creative coding, it might look something like this. Creative coders create programs, called sketches, that generate visual output. The mission of these tools is broadly to make sketching with code as intuitive as sketching with a pen and paper. In this video, I'm editing a sketch posted to the website OpenProcessing. We can see that the effects of editing existing parameters in code can immediately be seen by running the sketch. Here, I'm editing the number of sides of a polygon and the number of bumps which are animated within it. 
+							
+							------------
+
+							I could then choose to publish my edits as a new sketch; this repurposing of an existing artifact into something new is called remixing.
 	
+							------------
+
 							Remixing facilitates this sort of iteration on existing code, but we have yet to understand how creative coders use remixing in practice. Moreover, given the focus on expressivity over functionality, we suspect that code reuse in creative coding is distinct from other programming contexts.
 						</aside>
 					</section> 
 
 					<section>
-						background info: creative code + community, JJ work
+						<h4>Creative Coding</h4>
+						<figure>
+							<img height=400 data-src="data/cc-tools.png">
+							<figcaption>Open Source Software Tools for the Arts </figcaption>
+						</figure>
+
+						<figure>
+							<img height=400 data-src="data/jacobs-paper.png">
+							<figcaption>Li et al.</figcaption>
+						</figure>
+
 						<aside class="notes">
+							There are lots of creative coding toolkits and libraries out there; some popular ones include p5.js, Processing, and OpenFrameworks. UCLA is actually a hub for development of these tools and communities, with Lauren McCarthy and Casey Reas in Design Media Arts being the creators of p5.js and Processing respectively. These tools have been developed by artists in alignment with their creative goals to overcome the limitations of the software available to them. They're are used by very large and active communities; p5.js, for example, is used by an estimated 10 million global users, for use in educational contexts through critically acclaimed artworks. Previous research has argued for pairing art production with tool production to foster broader participation in creative system development, and has investigated the software development practices of artists to guide technical collaborations. 
 						</aside>
 					</section> 
 
 					<section>
-						<p class="r-fit-text"><em>What remixing strategies do creative coders employ to reuse code?</em></p>
+						<h4>Connecting Creative Code & Digital Fabrication</h4>
+						<div class="split">
+							<div class="col">
+								<figure>
+									<img height=400 style="margin-bottom: 4vh" data-src="data/basic.png">
+									<figcaption>BASIC code to control a plotter, 1964. <br> From <em>Form and Code</em>, Reas & McWilliams </figcaption>
+								</figure>
+							</div>
+
+							<div class="col">
+								<br><br>
+								<figure>
+									<pre style="width:30vw; margin-bottom: 4vh"><code class="javascript" data-trim data-line-numbers>
+										function draw() {
+											let sideLength = 10;
+											for (let x = 0; x <= 90; x += 10) {
+											  for (let y = 0; y <= 90; y += 10) {
+												  rect(x, y, sideLength, sideLength);
+											  }
+											}
+										}
+									</code></pre>
+									<figcaption>Drawing a grid of squares with p5.js, 2023</figcaption>
+								</figure>
+							</div>
+						</div>
 						<aside class="notes">
-							Stemming from these intital insights, we ask the research question: what remixing strategies do creative coders employ to reuse code? HCI researchers have increasingly considered how digital tools can support expressive practices; our intent, then, is not to classify what a remix can or cannot be, but rather to help situate the development of useful tools by understanding the actions of existing communities.
+							These tools have come a long way from the programming tools that we saw Manfred Mohr was using for his plotter. You don't need to be a software engineer or have years computer science education in order to make what you want anymore. I would say that digital fabrication tools are currently in a place not unlike 1980s computer art in this regard, in that unless you're an expert dedicated to building new fabrication worklows, you're more or less stuck trying to bend the current tools and their resulting look & aesthetic.
 						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<img data-id="pair" width=750 src="data/single-sketch.png">
-						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
-							<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
-						</figure>
-						<aside class="notes">
-							To answer our research question, we pair network analysis with qualitative techniques to capture high-level patterns and meaningful details about how creative coders remix sketches. First, we conducted an analysis of all available sketches on OpenProcessing, an existing creative coding community. We treat each sketch as a node in a network;
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<img data-id="pair" width=750 src="data/sketch-to-remix-crop-once.gif">
-						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
-							<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
-						</figure>
-						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob2.gif"></img>
-							<figcaption>Remix by <em>naha</em></figcaption>
-						</figure>
-						
-						
-
-						<aside class="notes">
-							and the relationship between a sketch and a remix can then be formalized in a graph, with edges that point from the original sketch, or the antecedent, to the remix. 
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<img data-id="pair" width=750 src="data/pair-to-graph-crop-once.gif">
-						<br>
-						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
-							<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
-						</figure>
-						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob2.gif"></img>
-							<figcaption>Remix by <em>naha</em></figcaption>
-						</figure>
-
-						<aside class="notes">
-							Of course, sketches might be remixed multiple times, by multiple authors, in a multiplicity of ways. We use the resulting remixing graph to describe high-level details and statistics, and also to surface field sites relevant to our research questions. We then analyzed the code changes between individual antecedents and remixes to conceptualize themes which we believe speak to current remixing practice.
-						</aside>
-					</section>
+					</section> 
 
 					<section>
-						pictures of remixes, takeaways
+						<h4>Connecting Creative Code & Digital Fabrication</h4>
+						<div class="split">
+							<div class="col">
+								<figure>
+									<img height=200 style="margin-bottom:4vh" data-src="data/stl.png">
+									<br>
+									<img height=200 style="margin-bottom:4vh" data-src="data/gcode.png">
+									<figcaption> Current model representations in CAD and CAM</figcaption>
+								</figure>
+							</div>
+
+							<div class="col">
+								<figure>
+									<video style="height: 475px; margin-bottom: 3vh" data-autoplay loop src="data/p5fab-intro.mp4"></video>
+									<figcaption>Direct toolpath design with <code>p5.fab</code></figcaption>
+								</figure>
+							</div>
+						</div>
 						<aside class="notes">
+							So what might be gain from collapsing current CAD and CAM approaches to directly specify machine toolpaths? How does a programmatic representation and approach to computational fabrication change the sorts of interactions and artifacts we can create? 
 						</aside>
 					</section> 
 				</section>
+
+				<section>
+					<section>
+						<h3 style="text-align: left;">p5.fab</h3>
+						<p style="text-align: left;"><em>Bridging Creative Code & Digital Fabrication</em></p>
+
+						<aside class="notes">
+							To investigate this question, I worked on p5.fab, which is a javascript library to control fabrication machines from the creative coding environment p5.js
+						</aside>
+					</section>
+
+					<section data-background-video="data/line-vase.mp4"> 
+						<aside class="notes">
+							p5.fab tries to speak to the apparent tension between the precision & accuracy of machines like 3D printers, and the messy embodied practices which surround them. The video here shows a 3D printer whirring around-- plastic filament is melted in the hotend shown here, which is then extruded through the nozzle. We're printing these freehanging extrusions of a single line width across overextruded dots. This wouldn't be possible to print with off-the-shelf software for 3D printing, which is instead really good at optimizing the path the machine should take based on a digital model. In contrast, the printing the object shown here requires manual tuning to negotatiate speed, acceleration, and the amount of filament that's extruded. This requires testing and observing material behavior rather than reasoning about in a modeling file. 
+						</aside>
+					</section>
+					
+
+					<section data-transition="none-in none-out">
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/fab-anim.mp4"></video>
+						<aside class="notes">
+							The idea is directly control the machine programatticaly to iteratively observe material outcomes. We can compose prints with methods like this-- the base fab object represents the machine, and carries machine data like the nozzle and filament radius, and size of the machine. 
+						</aside>
+					</section>
+				
+
+					<section data-transition="none-in none-out" >
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/code-anim.mp4"></video>
+						<aside class="notes">
+							If we want to move to a position without depositing material, we can move retract, which will pull filament away from the nozzle to prevent unwanted oozing. Then we can move to an (x,y,z) coordinate on the bed.
+						</aside>
+					</section>
+
+					<section data-transition="none-in none-out" >
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/move-to-center.mp4"></video>
+						<aside class="notes">
+							For examnple, if we want to move to the center of the bed, we can access the machine's maxX and maxY properties.
+						</aside>
+					</section>
+
+					<section data-transition="none-in none-out" >
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/move-extrude.mp4"></video>
+						<aside class="notes">
+							We can print filament with the move extrude command. Here we might also specify a speed and specific extrusion amount. We provide access to other sorts of commands like this, 
+						</aside>
+					</section>
+
+					<section data-transition="none-in none-out" >
+						<video style="outline: 5px solid white; outline-offset: -4px;" width=1000 data-autoplay src="data/more-code.mp4"></video>
+						<aside class="notes">
+							and together they help us quickly build up 3 dimensional shapes, and specify interesting geometry.
+						</aside>
+					</section>
+
+					<section data-auto-animate data-background-iframe="https://machineagency.github.io/p5.fab/editor/index.html" data-background-interactive>
+						<aside class="notes">
+							So for example, here's the editor-- we could open the Lissajous curve example, and visualize the toolpaths by changing some values
+						</aside>
+					</section>
+		
+					<section data-background-video="data/lissajous-print-4x.mp4">
+						<aside class="notes">
+							and the idea is to make things plug-n-play, so we connect the computer over wired usb to the printer and then can start streaming commands immediately to the printer 
+						</aside>
+					</section>
+
+					<section>
+						<h3>Motion Attribute Control</h3>
+						<figure>
+							<video style="height: 400px; margin-bottom: 3vh" data-autoplay loop src="data/velocity-painting.mp4"></video>
+							<figcaption>Velocity painting with <code>p5.fab</code></figcaption>
+						</figure>
+
+						<figure>
+							<img style="height: 400px; margin-bottom: 3vh" src="data/velocity-cube.jpg"></video>
+							<figcaption>A printed cube with a checkered surface</figcaption>
+						</figure>
+
+						<aside class="notes">
+							To have finer-grain control compared to standard tools, it's important to be able to not just specify geometry, but to have lower level control over how the extruder is moving between those points. In the print shown here we use an  approach called “velocity painting” to add a checkered pattern to one face of a cube. By speeding up or slowing down the print, the printer will deposit slightly different amounts of filament, leaving a visible texture on the exterior.
+						</aside>
+					</section>
+
+					<section data-background-video="data/material-explorations.mp4">
+						<aside class="notes">
+							As I've been trying to demonstrate so far, fine-grain toolpath control coupled with iterative material exploration can be leveraged for expressive gain. We print a series of structures which explore toolpath geometry, motion, and extrusion. We reached each of these designs through a process of material exploration of various machine parameters. By tapping in to craft sensibilities fundamental to 3D printing practice, the goal is to encourage the operator to physically engage with the material and machine.
+
+							For example, we can craft curved toolpaths which move off of the X-Y plane. Here, a sinusoidal toolpath allows filament to coil repeatedly and naturally. This produces a textured surface finish. Importantly, we can continuously manipulate extrusion amount, height, speed, and more in code to explore different material outcomes.  
+
+							We also used the system to create unique interface. Normally, printing software will assume that you're printing on an unaltered, flat surface.  We used p5.fab to design a workflow to print directly onto an existing object elevated from the print bed. As an example, here we’re printing a decorative handle onto a cup. I'm aligning the nozzle to the desired position using a controls interface and incrementally lowering the nozzle until it just touches a piece of paper. We choose two points on the cup which define the handle endpoints and the precise geometry is generated on the fly, using the selected positions from the real world to set handle’s length. 
+						</aside>
+					</section>
+
+					<section data-background-video="data/ca-1017.mp4">
+						<aside class="notes">
+							Moving to a programming environment means we can use other existing libraries and resources to build up interactive machine interfaces. Here's a quick example where I've connected a MIDI controller to be able to modify print speed and extrusion parameters in real-time-ish. So different knobs are mapped to different values in code, and we can tune prints as they're running. As we zoom in here, you'll see the printer slow down and start to drop filament from a height. This example uses a MIDI controller, but we could just as easily start to integrate computer vision or other sensor data to drive the machine.
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Tensions & Opportunities in Building Community</h4>
+						<img width=auto data-src="data/workshops.jpg">
+						
+						<aside class="notes">
+							We tested p5.fab in two workshops; first with 3 professional artists working with code, and then with 3 makers experienced with 3D printing.  Across both our workshops, we found productive tensions and intersections between creative coding & 3D printing workflows. For example, the artists found waiting for a model to print much slower than their usual digital processes, even as makers found sending commands straight to the machine to be much faster than reverting to CAD and CAM software. What I also found interesting was how p5.fab made experts out of begginers and beginners out of experts. For example, the artists had never 3D printed and were able to immediately design & print complicated geometry. On the other hand, makers with minimal programming experience had to get a handle on coding, but were able to use the machine as a physical debugging platform to test their code.
+
+						</aside>
+						</section>
+
+					<section data-auto-animate>
+						<h4>Tensions & Opportunities in Building Community</h4>
+						<small>
+							<blockquote>
+								As someone who considers 3D printing to be a bit daunting (CAD software always seems like a huge barrier to entry), it was so liberating to just get direct control of the machine. The layers of abstraction that CAD/slicer software add are really boring to me, so not having to deal with that is so fun...
+							</blockquote>
+						</small>
+						<img width=auto data-src="data/workshops.jpg">
+						
+						<aside class="notes">
+							I really liked this quote from one of the artist participants, who said ~quote~
+
+							So, this was a real goal of the system; not to instantly make super fancy and slick artifacts, but to invite broader participation in digital fabrication. Going forward, I'm excited about the opportunities write and share code to create physical artifacts,
+						</aside>
+						</section>
 				</section>
 				<!-- END REMIXING -->
 
-				
-
-
-				<section data-auto-animate>
-					<h3 style="text-align: left;">p5.fab</h3>
-					<p style="text-align: left;">Briding digital fabrication and creative code</p>
-
-					<aside class="notes">
-						
-					</aside>
-					
-				</section>
-
 				<section>
-					<h3 style="text-align: left;">The Duckbot</h3>
-					<p style="text-align: left;">Automation to support scientific exploration</p>
+					<section>
+						<h3 style="text-align: left;">From Fabrication to Automation</h3>
+						<!-- <p style="text-align: left;">Automation to support scientific exploration & beyond</p> -->
 
-					<aside class="notes">
-						
-					</aside>
-					
-				</section>
-
-				<section>
-					<div class="top-left-header"> 
-						<p class="phl">Remixing Creative Code</p>
-					</div>
-					<section data-auto-animate>
-						<img data-id="pair" width=750 src="data/single-sketch.png">
-						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
-							<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
-						</figure>
 						<aside class="notes">
-							To answer our research question, we pair network analysis with qualitative techniques to capture high-level patterns and meaningful details about how creative coders remix sketches. First, we conducted an analysis of all available sketches on OpenProcessing, an existing creative coding community. We treat each sketch as a node in a network;
+							but I want to transition here to show how these sorts of alternative machine interfaces can support the development of new workflows and experiences across domains.
+						</aside>
+					</section>
+
+					<section data-auto-animate data-transition="none-out">
+						<h4>Automation as a Tool for Creative Exploration</h4>
+						<figure>
+							<img height=400 src="data/two_circles.gif"></img>
+							<figcaption><em>Two Circles</em>, Madeline Gannon</figcaption>
+						</figure>
+
+						<aside class="notes">
+							And, similar to how creative code uses code as a creative medium, what I'm interested in with p5.fab and beyond is how we can sort of lift automation out of it's industrial legacies to build tools for creative exploration. This is a project from the designer Madeline Gannon called two circles-- it's a 2 meter googley eye attached to a 10,000 pound industrial robot, not unlike the robot arm I showed earlier for making architectural scale pavilions. There's a depth sensor here tracking people's positions, and the robot is programmed to inquisitively lean in when you do, and run away if you try to touch it. This sort of straightforward repurposing of the robot arm totally throws to the wind the conventional workflows for using these machines in pursuit of a more interactive experience.
+						</aside>
+					</section>
+
+					<section data-auto-animate data-transition="none-in">
+						<h4>Automation as a Tool for Creative Exploration</h4>
+						<figure>
+							<video style="height: 400px; margin-bottom: 3vh" data-autoplay loop src="data/choreorobotics.mp4"></video>
+							<figcaption><em>Choreorobotics</em>, Madeline Gannon</figcaption>
+						</figure>		
+						
+						<aside class="notes">
+							Madeline is now working on a toolkit to control cable robots from the creative coding toolkit OpenFrameworks. Again, repurposing these robots for use in a very different context, here as a sort of room-scale installation, totally flips the way that we think about controlling these machines. Rather than coming up with a single design that's going to be run over and over again, we now want to be able to rapidly change and edit what the machine is doing.   
 						</aside>
 					</section>
 
 					<section data-auto-animate>
-						<img data-id="pair" width=750 src="data/sketch-to-remix-crop-once.gif">
+						<h4>Automation as a Tool for Creative Exploration</h4>
 						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
-							<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
+							<video style="height: 400px; margin-bottom: 3vh" data-autoplay loop src="data/choreorobotics.mp4"></video>
+							<figcaption><em>Choreorobotics</em>, Madeline Gannon</figcaption>
+						</figure>		
+						<p><small>requires...</small></p>
+						<ul>
+							<small> 
+							<li>Modular, Low-cost, Extensible Hardware</li>
+							<li>Human-centered Systems for Controlling Machines</li>
+							</small>
+						</ul>
+	
+						<aside class="notes">
+							This picture of automation requires some distinct infrastructure. First, niche applications require niche tools, we can't take advantage of high volume sales & production to offset costs. Instead, we need modular, low-cost, and extensible hardware to customize one-off applications. 
+							
+							And after we build a machine, we need good ways of actually running it. Following the same line of thought as p5.fab or Madeline's robots here, we can think about writing code which generates machine instructions to allow reusability and flexibility running machines.
+						</aside>
+					</section>
+					
+
+					<section data-transition="none-in fade-out">
+						<h4>Modular, Low-cost, Extensible Hardware</h4>
+						<p><small>Open-source design for distributed manufacturing</small></p>
+						<figure>
+							<img height=300 data-src="data/jubilee.jpg">
+							<figcaption>Jubilee: tool-changing machine</figcaption>
 						</figure>
 						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob2.gif"></img>
-							<figcaption>Remix by <em>naha</em></figcaption>
+							<video style="height: 300px; margin-bottom: 3vh" data-autoplay loop src="data/tool-lock.mp4"></video>
+							<figcaption>Design for precise, repeatable positioning</code></figcaption>
 						</figure>
-						
-						
 
 						<aside class="notes">
-							and the relationship between a sketch and a remix can then be formalized in a graph, with edges that point from the original sketch, or the antecedent, to the remix. 
+							To the first point, this is Jubilee; a multi-tool changing platform previously developed in our lab. Jubilee looks like a conventional 3D printer- it has a carriage that can move around in the x-y plane, and the bed can move up and down. It's interior volume is 300x300x300mm. It also has the ability to automatically pick up and change tools. That's shown on the right, where we see the carriage features this twist lock shaft. Each tool has a matching wedge plate, and the shaft can engage the tool and twist to lock it. By virtue of some clever mechanical design, these pickups are repeatable, so every time we grab a tool we can be sure its in the same place. 
+
+							Jubilee is fully open-source, and designed to be fabricatable. This means it is made with parts that are readily available, or made with readily available tools & equipment, and there are at least 170 Jubilees in the world which we know of that have been independentely built.
+						</aside>
+					</section>
+
+					<section data-transition="none-in none-out">
+							<b>Modular, Low-cost, Extensible Hardware</b>
+							<p><small>Digital fabrication of modular and customizable hardware</small></p>
+							<figure>
+								<img height=300 data-src="data/gigapan.jpg">
+								<figcaption>gigapan microscopy</figcaption>
+							</figure>
+							<figure>
+								<img height=300 data-src="data/jubilee-diagram.jpg">
+								<figcaption>multi-tool processes</figcaption>
+							</figure>
+
+							<aside class="notes">
+								Jubilee's tool-changing ability allows us to build up multi-tool processes. We can park multiple tools on Jubilee, and change between them as the machine runs. This allows us to build custom tools. Take this microscope tool shown here for example-- it's almost entirely 3D printed, with a few standard  screws and the like thrown in. In terms of electronics, Jubilee features both control boards for motion planning and controlling things like motors, as well as a Raspberry Pi, which if you've not heard of is a cheap computer. This means we can plug this USB microscope in to the Raspberry Pi to take & analyze images while moving it around.
+							</aside>
+						</section>
+					
+					<section data-transition="none-in fade-out">
+						<b>Modular, Low-cost, Extensible Hardware</b>
+						<p><small>Multi-tool processes</small></p>
+						<figure>
+							<video style="height: 300px; margin-bottom: 3vh" data-autoplay loop src="data/plotting.mp4"></video>
+							<figcaption>Multi-color plotting</figcaption>
+						</figure>
+
+						<figure>
+							<video style="height: 300px; margin-bottom: 3vh" data-autoplay loop src="data/benchy.mp4"></video>
+							<figcaption>Multi-color printing</figcaption>
+						</figure>
+
+						<aside class="notes">
+							Here's a couple examples of Jubilee being used, on the left to plot in multiple colors, and on the right the result of a multi-color print. These are both satisfying examples of using existing software with the machine, but they're still largely constrained by the usual digital fabrication steps we talked about earlier.
+							
+							A real advantage of Jubilee, though, is in  being able to create any custom tool you want.
 						</aside>
 					</section>
 
 					<section data-auto-animate>
-						<img data-id="pair" width=750 src="data/pair-to-graph-crop-once.gif">
+						<h4>Automation as a Tool for Creative Exploration</h4>
+						<img width=auto data-src="data/creative-automation.jpg">
+	
+						<aside class="notes">
+							In my own work, we've been thinking about automation in scientific contexts.
+
+							For science, creative automation might look something like this: defining an experiment up front in a way that accommodates niche experimental design; being able to compile that experiment to instructions which can
+							be run on a machine-- and maybe this requires physically configuring the machine for your custom applicatio-- and finally collecting data, where the operator--the scientist in this case-- can have some role to play at runtime.
+	
+							Now, I'm taking a brief detour into science, but the interest here is in how we can provide flexible infrastructure to build, customize, and run machines across a <i>range</i> of applications. Even though the application here is scientific exploration, I think there are some key insights here which are generalizable across other contexts.
+						</aside>
+					</section>
+
+					<section>
+						<b>The Duckbot</b>
+						<p><small>Customizing Jubilee for plant biology</small></p>
+						<img height=300 data-src="data/overhead.png">
+						<img height=300 data-src="data/syringe-zoom.png">
+						<img height=300 data-src="data/inoculation-zoom.png">
+
+						<aside class="notes">
+							We've been exploring an instantiation of Jubilee outfitted with tools for plant biology. Our collaborators work with duckweed, which are the aquatic plant you see here, and so we've called the resulting machine the duckbot. Biologists often want to grow different types in different environmental conditions to see their effect, so the configuration shown here uses different tools to move liquid, move duckweed, and then take pictures of the plant growing.
+
+							A hard part of making custom tools though, is that we need a way to control them. Our usual ways of working with machines breaks down when we want to do things like move little plants around, rather than 3D print a cube. 
+
+						</aside>
+					</section>
+
+					<section data-transition="none-in fade-out" data-auto-animate>
+						<h4>Programmatic Control</h4>
+						<pre><code class="python" data-line-numbers="1|2|3|4|5-7">	m = Machine()
+	m.tool_change(syringe)
+	m.move_to(x=media_reservoir.x, y=media_reservoir.y)
+	syringe.aspirate(mL=20)
+	well = well_plate("A1")
+	m.move_to(x=well.x, y=well.y)
+	syringe.dispense(mL=1.5)
+	</code></pre>
+						<video controls loop width=900 data-autoplay src="data/example-controls.mp4"></video>
+						<aside class="notes">
+							To that end, we can take a similar approach to p5.fab to control the machine.Here we're connecting to the machine and specify a certain tool to pick up-- we see the bed automatically dropping down 
+							to accommodate the size of the syringe here. Then we can navigate over top a reservoir placed on the machine and aspirate a certain volume of media. Then, we can move to a specific well to dispense. 
+						</aside>
+					</section>
+
+					<section>
+						<h4>Programmatic Control</h4>
+						<figure>
+							<img height=400 src="data/jupyter.png"></img>
+							<figcaption>By running code in a Jupyter notebook,</figcaption>
+						</figure>
+						<figure>
+							<video style="height: 400px; margin-bottom: 3vh" data-autoplay loop src="data/image-plates-composed.mp4"></video>
+							<figcaption>we can control the machine + tools in new ways</figcaption>
+						</figure>
+						<aside class="notes">
+							The commands I just showed are being executed from a Jupyter notebook; if you haven't heard of Jupyter notebooks, it's a document where you can write and run small chunks of code and also write plain text notes. They're pretty common in data science, but they haven't really been used to control machines; we're pretty excited about how computational notebooks can faciliate iterative and exploratory machine control. We've been building up a library of tools paired with controls software to integrate while the machine is running; for example, this video on the right shows the machine picking up a camera tool. We can take advantage of some simple computer vision to identify the plants in the image, and differentially manipulate samples depending on, say, how big or healthy the plants are.
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Heterogeneous Processes</h4>
+						<figure>
+							<video style="height: 300px; margin-bottom: 3vh" data-autoplay loop src="data/pipette-speedup-square.mp4"></video>
+							<figcaption>Liquid tranfser</figcaption>
+						</figure>
+
+						<figure>
+							<video style="height: 300px; margin-bottom: 3vh" data-autoplay loop src="data/inoculation-loop-pickup.mp4"></video>
+							<figcaption>Duckweed manipulation</figcaption>
+						</figure>
+
+						<figure>
+							<img style="height: 300px;" src="data/lm-loop.gif"></video>
+							<figcaption>Image collection</figcaption>
+						</figure>
+
+						<aside class="notes">
+							We used our duckbot to automate experiments, from computational design tools to plan experiements, through machine execution, and subsequent data analysis...
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Heterogeneous Processes</h4>
+						<figure>
+							<video style="height: 225px; margin-bottom: 3vh" data-autoplay loop src="data/pipette-speedup-square.mp4"></video>
+							<!-- <figcaption>cap</figcaption> -->
+						</figure>
+
+						<figure>
+							<video style="height: 225px; margin-bottom: 3vh" data-autoplay loop src="data/inoculation-loop-pickup.mp4"></video>
+							<!-- <figcaption>cap</figcaption> -->
+						</figure>
+
+						<figure>
+							<img style="height: 225px;" src="data/lm-loop.gif"></video>
+							<!-- <figcaption>cap</figcaption>							 -->
+						</figure>
+
 						<br>
+
 						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob1.gif"></img>
-							<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
+							<img height=225 data-src="data/rhino.jpg">
+							<!-- <figcaption>Computer Aided Design (CAD)</figcaption> -->
 						</figure>
+		
 						<figure>
-							<img style="object-fit: cover; width: 250px; height: 250px; margin-top: -10vh" height=250 src="data/blob2.gif"></img>
-							<figcaption>Remix by <em>naha</em></figcaption>
+							<video style="width: 225px; margin-bottom: 3vh" loop src="data/slicer.mp4"></video>
+							<!-- <figcaption data-id="fig1">Computer Aided Manufacturing (CAM)</figcaption> -->
+						</figure>
+		
+						<figure>
+							<img height=225 data-src="data/benchy-print.jpg">
+							<!-- <figcaption>Computer Numeric Control (CNC)</figcaption> -->
 						</figure>
 
 						<aside class="notes">
-							Of course, sketches might be remixed multiple times, by multiple authors, in a multiplicity of ways. We use the resulting remixing graph to describe high-level details and statistics, and also to surface field sites relevant to our research questions. We then analyzed the code changes between individual antecedents and remixes to conceptualize themes which we believe speak to current remixing practice.
-							
-						</aside>
-					</section>
-				</section>
-
-				<section data-background-video="data/OP-scroll.mp4" data-background-video-loop>
-					<aside class="notes">
-						OpenProcessing is an online commmunity for creative coders to write and share projects. The homepage is shown here. We can see that trending projects are shown in a grid for visitors to explore. OpenProcessing supports code written using the popular creative coding libraries p5.js and
-						Processing. It was independently founded by separately from the development of the p5.js library itself, and has accumulated over a million creative code projects since launching in 2008.
-					</aside>
-				</section> 
-
-				<!-- <section data-background-video="data/OP-interface.mp4" data-background-video-loop>
-					<aside class="notes">
-						If we click into a project, we can see both the visual and the code used to create it. You can see that I'm editing an existing parameter in code; immediately after making this change, I could save the project as a fork on my own user page. We can also look at all the other forks of this project, and explore the changes that others might have made. Forking is a common feature in software engineering contexts, and an author who forks a project duplicates the sketch to their own account. In our context, we will treat the original sketch as the antecedent, and the fork as a remix.
-					</aside>
-				</section>  -->
-
-				<!-- HAIRBALL SECTION -->
-				<section>
-					<div class="top-left-header"> 
-						<p class="phl">Understanding High-Level Remixing Practices</p>
-					</div>
-					<section data-background-image="data/hairball.png" data-background-position="right" data-background-size="800px" data-auto-animate>
-						<small>
-							<ul style="list-style-type: none; text-align: left; margin-left: -60vh; line-height:180%">
-								<li>Dataset</li>
-								<ul style="list-style-type: disc;">
-									<li><mark class="purp">1.2 million</mark> sketches available</li>
-									<li><mark class="purp">336,069</mark> sketches in remixing graph</li>
-									<ul style="list-style-type: disc;">
-										<li><mark class="purp">30%</mark> of all sketches</li>
-									</ul>
-								</ul>
-							</ul>
-						</small>
-						<aside class="notes">
-							Of the approx 1.2 million publicly available sketches, about 330,000, or 30%, were involved in remixing. That's just about the same percentage of projects which are remix in the Scratch online community. These remixing graph is shown here, where each dot is a sketch and lines connecting them represent a remix. I show this image just to provide a sense of scale; I'll highlight some of its important characteristics:
-						</aside>
-					</section>
-
-					<section data-background-image="data/hairball.png" data-background-position="right" data-background-size="800px" data-auto-animate="">
-						<small>
-							<ul style="list-style-type: none; text-align: left; margin-left: -60vh; line-height:180%">
-								<li>Dataset</li>
-								<ul style="list-style-type: disc;">
-									<li><mark class="purp">1.2 million</mark> sketches available</li>
-									<li><mark class="purp">336,069</mark> sketches in remixing graph</li>
-									<ul style="list-style-type: disc;">
-										<li><mark class="purp">30%</mark> of all sketches</li>
-									</ul>
-								</ul>
-
-								<br>
-
-								<li>Network Analysis</li>
-								<ul style="list-style-type: disc;">
-									<li><mark class="purp">79,453</mark> subgraphs</li>
-									<!-- <li><mark class="purp">1.7</mark> avg forks/sketch</li> -->
-									<li><mark class="purp">2749</mark> nodes in largest subgraph </li>							
-									<li><mark class="purp">49%</mark> of all remixes are self-remixes</li>
-									<!-- <ul style="list-style-type: disc;">
-										<li><mark class="purp">15%</mark> of all sketches</li>
-									</ul> -->
-								</ul>
-							</ul>
-						</small>
-
-						<aside class="notes">
-							Not every remixed sketch is related to each other; the overall remixing graph is made up of 79,453 subgraphs. The average sketch isn't highly remixed, but the dataset is unsurprisingly skewed; the largest subgraph consists of nearly 3000 total sketches. 
-
-							Much of these findings align with prior studies of remixing communities. A key finding distinctive to OpenProcessing, however, is that we find authors remixing themselves. We found that almost half of all remixes  are involved in what we call self-remixing. We take note of this behaviour throughout our analysis.
-
-							This data provides useful high-level insight, but to answer our research question, we are especially interested in what has actually changed between these antecedents and remixes. We collated 350 antecedent-remix pairs sampled from the remixing graph for in-depth analysis.
-						</aside>
-					</section>
-				</section>
-
-
-				<!-- WORKED EXAMPLE -->
-				<section>
-					<div class="top-left-header"> 
-						<p class="phl">Antecedent-Remix Pairs: A Worked Example</p>
-					</div>
-				<section data-transition="none-out">
-					<div class="split">
-						<div class="column-left">
-							<figure>
-								<img width="70%" src="data/pink-matter.png">
-								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
-							</figure>
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers>
-								function myCircle (x, y, rad) {
-									let numLayers = 200
-									for (let i = 0; i < numLayers; i++) {
-									  let vertices = []
-
-
-									  for (let theta = 0; theta < TAU; theta += TAU / 20) {
-										  ...
-							</code></pre>
-							
-						</div>
-						<div class="column-right">
-							<figure>
-								<img width=70% src="data/pink-matter-swirl.png">
-								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
-							</figure>
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers>
-								function myCircle (x, y, rad) {
-								  let numLayers = random(100, 300)
-								  for (let i = 0; i < numLayers; i++) {
-								    let vertices = []
-								    let flick = random(10,11)
-									  // for (let theta = 0; theta < TAU; theta += TAU / random(10,30)) {
-									  for (let theta = 0; theta < TAU; theta += TAU / flick) {
-										  ...
-							</code></pre>
-						</div>
-					</div>
-					<aside class="notes">
-						We conducted a thematic analysis for in-depth insight; while the relevant data for a thematic analysis is usually text like interview transcript, our unit of analysis is am antecedent-remix pair of sketches. We analyzed code diffs which highlight the changes between the remix and antecedent programs and conceptualized four high-level remixing strategies, each of which
-						are tied to these specific code edits. I'll walk through an example here to introduce these edits, before diving into their nuance.
-					</aside>
-				</section>
-				
-
-				<section data-transition="none">
-						<div class="split">
-							<div class="column-left">
-								<figure>
-									<img width="70%" src="data/pink-matter.png">
-									<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
-								</figure>
-								<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
-									function myCircle (x, y, rad) {
-										let numLayers = 200
-										for (let i = 0; i < numLayers; i++) {
-										  let vertices = []
+							and, I know we've taken a bit of a scientific tangent here, but I want to take a moment to compare this to the usual digital fabrication workflow we saw earlier. Rather than one overarching pipeline from digital production to physical production, with Jubilee computational design and machine control are interwoven at each step of the process. And where before we were modeling and fabricating individual artiftacts, now we're stringing together complex workflows. 
 	
-	
-										  for (let theta = 0; theta < TAU; theta += TAU / 20) {
-											  ...
-								</code></pre>
-							</div>
-							<div class="column-right">
-								<figure>
-									<img width=70% src="data/pink-matter-swirl.png">
-									<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
-								</figure>
-								<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
-									function myCircle (x, y, rad) {
-									  let numLayers = random(100, 300)
-									  for (let i = 0; i < numLayers; i++) {
-									    let vertices = []
-									    let flick = random(10,11)
-										  // for (let theta = 0; theta < TAU; theta += TAU / random(10,30)) {
-										  for (let theta = 0; theta < TAU; theta += TAU / flick) {
-										    ...
-								</code></pre>
-							</div>
-						</div>
-
-						<aside class="notes">
-							In the line highlighted here, the value of the variable numLayers is changed from 200 to a random value between 200 and 300.
+							Going forward, I think systems like p5.fab or the Duckbot are just the beginning of an emerging paradigm to control fabrication machines using literate programs. 
 						</aside>
+					</section>
 				</section>
 
-				<section data-transition="none">
-					<div class="split">
-						<div class="column-left">
-							<figure>
-								<img width="70%" src="data/pink-matter.png">
-								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
-							</figure>
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
-								function myCircle (x, y, rad) {
-									let numLayers = 200
-									for (let i = 0; i < numLayers; i++) {
-									  let vertices = []
-
-
-									  for (let theta = 0; theta < TAU; theta += TAU / 20) {
-										  ...
-							</code></pre>
-						</div>
-						<div class="column-right">
-							<figure>
-								<img width=70% src="data/pink-matter-swirl.png">
-								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
-							</figure>
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
-								function myCircle (x, y, rad) {
-								  let numLayers = random(100, 300)
-								  for (let i = 0; i < numLayers; i++) {
-									let vertices = []
-									let flick = random(10,11)
-									  // for (let theta = 0; theta < TAU; theta += TAU / random(10,30)) {
-									  for (let theta = 0; theta < TAU; theta += TAU / flick) {
-										...
-							</code></pre>
-						</div>
-					</div>
-					<small><p>tuning</p></small>
-
-					<aside class="notes">
-						We call this editing of existing values in code tuning. Notably, the value isn't changed to another static value, but rather makes use of the random function. This is a function that is built in to the p5.js library itself.
-					</aside>
-				</section>
-
-				<section data-transition="none">
-					<div class="split">
-						<div class="column-left">
-							<figure>
-								<img width="70%" src="data/pink-matter.png">
-								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
-							</figure>
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
-								function myCircle (x, y, rad) {
-									let numLayers = 200
-									for (let i = 0; i < numLayers; i++) {
-									  let vertices = []
-
-
-									  for (let theta = 0; theta < TAU; theta += TAU / 20) {
-										  ...
-							</code></pre>
-						</div>
-						<div class="column-right">
-							<figure>
-								<img width=70% src="data/pink-matter-swirl.png">
-								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
-							</figure>
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="2">
-								function myCircle (x, y, rad) {
-								  let numLayers = random(100, 300)
-								  for (let i = 0; i < numLayers; i++) {
-									let vertices = []
-									let flick = random(10,11)
-									  // for (let theta = 0; theta < TAU; theta += TAU / random(10,30)) {
-									  for (let theta = 0; theta < TAU; theta += TAU / flick) {
-										...
-							</code></pre>
-						</div>
-					</div>
-					<small><p>tuning, extending</p></small>
-					<aside class="notes">
-						We refer to the addition of new code as an extension.
-					</aside>
-				</section>
-
-				<!-- <section data-transition="none">
-					<div class="split">
-						<div class="column-left">
-							<figure>
-								<img width="70%" src="data/pink-matter.png">
-								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
-							</figure>
-							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="5">
-								function myCircle (x, y, rad) {
-									let numLayers = 200
-									for (let i = 0; i < numLayers; i++) {
-										let vertices = []
-										
-										
-										for (let theta = 0; theta < TAU; theta += TAU / 20) {
-										  ...
-							</code></pre>
-						</div>
-						<div class="column-right">
-							<figure>
-								<img width=70% src="data/pink-matter-swirl.png">
-								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
-							</figure>
-							<pre style="width: 25vw;"><code class="javascript" data-trim data-line-numbers="5">
-								function myCircle (x, y, rad) {
-									let numLayers = random(100, 300)
-									for (let i = 0; i < numLayers; i++) {
-										let vertices = []
-										let flick = random(10,11)
-										// for (let theta = 0; theta < TAU; theta += TAU / random(10,30)) {
-										for (let theta = 0; theta < TAU; theta += TAU / flick) {
-											...
-							</code></pre>
-						</div>
-					</div>
-					<small><p>tuning, extending</p></small>
-					<aside class="notes">
-						On line 5, a new variable called flick is declared, which would also be an extension; but we assign our qualitative codes only for presence, not frequency, so we won't assign another extension code here.
-					</aside>
-				</section> -->
-
-				<section data-transition="none" data-auto-animate>
-					<div class="split">
-						<div class="column-left">
-							<figure>
-								<img width="70%" src="data/pink-matter.png">
-								<figcaption>Antecedent by <em>Taiki Saito</em></figcaption>
-							</figure>
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="6">
-								function myCircle (x, y, rad) {
-								  let numLayers = 200
-								  for (let i = 0; i < numLayers; i++) {
-								    let vertices = []
-									
-									
-									  for (let theta = 0; theta < TAU; theta += TAU / 20) {
-										  ...
-							</code></pre>
-						</div>
-						<div class="column-right">
-							<figure>
-								<img width=70% src="data/pink-matter-swirl.png">
-								<figcaption>Remix by <em>Owaun Scantlebury</em></figcaption>
-							</figure>
-							<pre style="width: 22vw;"><code class="javascript" data-trim data-line-numbers="6">
-								function myCircle (x, y, rad) {
-									let numLayers = random(100, 300)
-									for (let i = 0; i < numLayers; i++) {
-										let vertices = []
-										let flick = random(10,11)
-										// for (let theta = 0; theta < TAU; theta += TAU / random(10,30)) {
-										for (let theta = 0; theta < TAU; theta += TAU / flick) {
-											...
-							</code></pre>
-						</div>
-					</div>
-					<small><p data-id="themes">tuning, extending, annotating</p></small>
-
-					<aside class="notes">
-						And finally on line 6, we see a commented line of code is added. We refer to inline comments as 'annotations'; we use this term as opposed to just comments to capture the breadth of content which we observe.
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<small><p style="font-size: 2em" data-id="themes">tuning, extension, annotation</p></small>
-
-					<aside class="notes">
-						These are the themes we derive from each of those code edits which I'll present now,
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<small><p style="font-size: 2em" data-id="themes">collecting, tuning, extending, annotating</p></small>
-
-					<aside class="notes">
-						But our first theme actually involves no code edits at all, a behavior we called collecting
-					</aside>
-				</section>
-
-				
-			</section>
-
-			<!-- COLLECTING -->
-			<section>
-				<div class="top-left-header"> 
-					<p class="phl">Collecting</p>
-				</div>
+				<!-- CONCLUSION -->
 				<section>
-					<img width="900" src="data/collecting.png">
-					<aside class="notes">
-						Conventional understandings of remixing focus on the creation of new artifacts. However, we find that many remixes on OpenProcessing contain identical code and therefore visuals. For example, we see several accounts named like the one shown here, where “Best Sketches” or similar language appears in the username. All 74 sketches of this user are collections with no changes made to the code. 
-					</aside>
-				</section>
-			</section>
+					<section>
+						<figure>
+							<img height=300 src="data/mohr-plotter.png"></img>
+							<figcaption>Mohr changing plotter pens </figcaption>
+						</figure>
 
-			<!-- Annotating -->
-			<section>
-				<div class="top-left-header"> 
-					<p class="phl">Annotating</p>
-				</div>
-
-				<!-- <section data-auto-animate>
-					<video data-autoplay loop width=500 src="data/networking.mp4"></video>
-					<pre><code class="javascript" data-trim data-line-numbers="7">
-						function drawJoiningWalls () {
-							/* for each pair of agents for whom there is no
-							other agent nearer to either, draw a wall */
-					</code></pre>
-
-					<aside class="notes">
-						Not all changes to code necessarily affect the visual output. While comments seem like a boring or uninteresting part of a usual programmers practice, we see annotating code using inline code comments used in a diversity of ways.
-
-						In the example shown here, the remix author add comments which provide high-level explanations of various functions. After annotating this sketch, the remix author goes on to create several of their own sketches in which they re-implement the original algorithm. While leaving explanatory comments in code is not new behavior, what's interesting here is how remixing serves as a way to publicly learn about someone else's sketch.
-					</aside>
-				</section> -->
-
-				<section data-auto-animate>
-					<figure>
-						<img width="300" src="data/rx1.gif">
-						<img width="300" src="data/rx2.gif">
-						<figcaption>Sketches by <em>Aaron Reuland (a_soluble_fish)</em></figcaption>
-					</figure>
-					<pre><code class="javascript" data-trim>
-						/* 
-						ok, this texture algorithm I definitely stole. 98% sure it was from
-						**Che-Yu Wu (openprocessing.org/user/139364)** an amazingly talented 
-						artist, who also adds lots of in-progress stuff to openProcessing-
-						nice to learn from (not that I learned from this at the time I made this,
-						so much as I copied and pasted it) creates a nice papery texture by applying
-						noise to the pixel array, that is blended with the rest of the ’art’ later on.
-						*/
-					</code></pre>
-
-					<aside class="notes">
-						Not all changes to code necessarily affect the visual output. While comments seem like a boring or uninteresting part of a usual programmers practice, we see annotating code using inline code comments used in a diversity of ways. I'll highlight a couple of the ways we saw annotations being used which diverge from what we might expect out of inline comments.
-
-						We see annotations which log personal process. A year after posting their original sketch, the author remixed themselves. In the excerpt shown, they describe where they sourced the code snippet to create a “papery” texture. While they say they copy-pasted it at the time of the original sketch, in their annotation they take time to explain its use. Comments like these wouldn't usually be found in production code, but in a creative coding context, they reveal process in a public setting. 
-					</aside>
-				</section>
-
-			<section data-auto-animate>
-					<figure>
-						<img width="300" src="data/rx1.gif">
-						<img width="300" src="data/rx2.gif">
-						<figcaption>Sketches by <em>Aaron Reuland (a_soluble_fish)</em></figcaption>
-					</figure>
-					<pre><code class="javascript" data-trim>
-						/* 
-						ok, this texture algorithm I definitely stole. 98% sure it was from
-						**Che-Yu Wu (openprocessing.org/user/139364)** an amazingly talented 
-						artist, who also adds lots of in-progress stuff to openProcessing-
-						nice to learn from (not that I learned from this at the time I made this,
-						so much as I copied and pasted it) creates a nice papery texture by applying
-						noise to the pixel array, that is blended with the rest of the ’art’ later on.
-						*/
-					</code></pre>
-
-					<pre><code class="javascript" data-trim>
-						var length = 150;          var length = 100; // 150
-					</code></pre>
-
-					<aside class="notes">
-						Others annotations require contextualization in a sketch's remixing history. Looking at the remixed line on the bottom here, it is not immediately clear where the number 150 comes from. Going back to the antecedent tells us that this was a previous value for this variable. This informal version control becomes collaborative. These comments are can be passed down over several generations, sometimes losing context in the process.
-					</aside>
-				</section>
-			</section>
-
-				<!-- <section data-auto-animate>
-						<video data-autoplay loop width=500 src="data/networking.mp4"></video>
-						<pre><code class="javascript" data-trim data-line-numbers="7">
-							function drawJoiningWalls () {
-								/* for each pair of agents for whom there is no
-								other agent nearer to either, draw a wall */
-						</code></pre>
-
-						<pre><code class="javascript" data-trim>
-							var length = 150;          var length = 100; // 150
-						</code></pre>
+						<figure>
+							<video style="height: 300px; margin-bottom: 3vh" data-autoplay loop src="data/tool-change.mp4"></video>
+							<figcaption>Jubilee changing tools</figcaption>
+						</figure>
 
 						<aside class="notes">
-							Others annotations require contextualization in a sketch's remixing history. Looking at the remixed line on the bottom here, it is not immediately clear where the number 150 comes from. Going back to the antecedent tells us that this was a previous value for this variable. This informal version
-							control again becomes collaborative. These comments are can be passed down over several generations, sometimes losing context in the process.
+							And as a parting thought, I just want you to prompt you to think about the sorts of things that Manfred Mohr could make with his plotter, versus the sorts of things we can make with 3D printers now, versus what we can make with machines like Jubilee and tools like p5.fab. And, in tandem with the technical infrastructure that we've been talking about, this sort of work implies a whole host of social infrastructure, like: how to share workflows rather than files, how to version control physical processes, and more.
 						</aside>
-				</section> -->
+					</section>
 
-			<!-- TUNING  -->
-			<section>
-				<div class="top-left-header"> 
-					<p class="phl">Tuning</p>
-				</div>
-				<section data-auto-animate>
+					
+				</section>
+
+
+				<section data-auto-animate data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
+					<h4 style="text-align: left;">Key Takeaways</h4>
+					<p style="text-align: left; font-size: .6em;">- Seamless experiences aren't always better</p>
+					<p style="text-align: left; font-size: .6em;">- It matters who is using the tool, and how</p>
+
+					<aside class="notes">
+						Coming back to the original goals I set out for this talk, we're equipped to take stock and bring a bit more nuance to the original takeaways.
+					</aside>	
+				</section>
+
+				<section data-auto-animate data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
+					<h4 style="text-align: left;">Key Takeaways</h4>
+					<p style="text-align: left; font-size: .6em;">- Seamless experiences aren't always better,</p>
+					<p style="text-align: left; font-size: .6em;"><em>Tools that help practitioners navigate the physical/digital divide can expand the design space of computational fabrication.</em></p>
+					<p style="text-align: left; font-size: .6em;">- It matters who is using the tool, and how.</p>
+
+					<aside class="notes">
+						I claimed that seamless experiences aren't always better, and through systems like p5.fab I tried to show how tools which help users navigate the physical/digital divide, rather than render it invisible, can expand the design space of computational fabrication. This isn't so much a claim against a seamless user experience, so much as an argument for the development of tools which allow users to make their own seamless experiences.
+					</aside>	
+				</section>
+
+				<section data-auto-animate data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
+					<h4 style="text-align: left;">Key Takeaways</h4>
+					<p style="text-align: left; font-size: .6em;">- Seamless experiences aren't always better</p>
+					<p style="text-align: left; font-size: .6em;"><em>Tools that help practitioners navigate the physical/digital divide can expand the design space of computational fabrication.</em></p>
+					<p style="text-align: left; font-size: .6em;">- It matters who is using the tool, and how</p>
+					<p style="text-align: left; font-size: .6em;"><em>Acounting for unique user expertise can inform new approaches to machine design and control. </em></p>
+
+					<aside class="notes">
+						I also claimed that it matters who is using the tool, and how. For both p5.fab and the duckbot, grounding system development in actual practice leads to different fabrication interfaces. A computational notebook or a creative coding environment is a far cry from usual computer aided design software; as we engage more practitioners from different backgrounds, I think we can expect correspondingly diverse approaches to machine design and control.
+					</aside>	
+				</section>
+
+				<section data-auto-animate data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
+					<div class="split">
+						<div class="col">
+							<h4 style="text-align: left;">Computational Fabrication</h4>
+							<p style="text-align: left; font-size: .6em;">Blair Subbaraman</p>
+							<p style="text-align: left; font-size: .6em; margin-top: -2vh">Machine Agency, University of Washington</p>
+							<p style="text-align: left; font-size: .6em; margin-top: -2vh"> Slides: rb.gy/lgxu6r</p>
+							<p style="text-align: left; font-size: .6em; margin-top: -2vh">blahblahblair.com</p>
+						</div>
 					<br>
-					<div class="split">
-						<div class="col">
-							<figure>
-								<img style="object-fit: cover; width: 400px; height: 400px; margin-top: -5vh" height=400 src="data/blob1.gif"></img>
-								<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
-							</figure>
-							<pre style="width: 22vw"><code class="javascript" data-trim data-line-numbers>
-								margin = mySize / 100;
-								for (let i=0; i < int(random(50, 100) ); i++) { ... }
-								theShader.setUniform('u_time ', millis () / 1000);
-								let version = random ([1 ,2 ,4 ,6 ,8]) * 100;
-								let c = random (2000 , 5000) ;
-								colorMode(HSB, 360, 100, 100, 100);
-							</code></pre>
-						</div>
-						<div class="col">
-							<figure>
-								<img style="object-fit: cover; width: 400px; height: 400px; margin-top: -5vh" height=400 src="data/blob2.gif"></img>
-								<figcaption>Remix by <em>naha</em></figcaption>
-							</figure>
-							<pre style="width: 22vw"><code class="javascript" data-trim data-line-numbers>
-								margin = mySize / 10;
-								for (let i=0; i < int(random(500, 100) ); i++) { ... }
-								theShader.setUniform('u_time', millis () / 1);
-								let version = random ([200,150,77,50,140] * 100;
-								let c = random (1000, 2000);
-								colorMode(HSB, 21, 10, 10, 10);
-							</code></pre>
-						</div>
-					</div>
 					<aside class="notes">
-						Tuning can serve as a way to explore visual alternatives by editing existing values in code. In the example shown, a distinct visual output is reach solely through tuning existing paramters; all of the
-						changes made in the remix are shown in the accompanying code block.
+						I'll stop there, and I'm interested in questions or comments that people have.
 					</aside>
 				</section>
-
-				<section data-auto-animate>
-					<br>
-					<div class="split">
-						<div class="column-left">
-							<figure>
-								<img style="object-fit: cover; width: 400px; height: 400px; margin-top: -5vh" height=400 src="data/blob1.gif"></img>
-								<figcaption>Antecedent by <em>SamuelYAN</em></figcaption>
-							</figure>
-							
-							<pre style="width: 22vw"><code class="javascript" data-trim data-line-numbers>
-								margin = mySize / 100;
-								for (let i=0; i < int(random(50, 100) ); i++) { ... }
-								theShader.setUniform('u_time ', millis () / 1000);
-								let version = random ([1 ,2 ,4 ,6 ,8]) * 100;
-								let c = random (2000 , 5000) ;
-								colorMode(HSB, 360, 100, 100, 100);
-							</code></pre>
-							<pre><code class="javascript" data-trim>
-								stroke (244 , 37 , 37 , 60); // red
-							</code></pre>
-						</div>
-						<div class="column-right">
-							<figure>
-								<img style="object-fit: cover; width: 400px; height: 400px; margin-top: -5vh" height=400 src="data/blob2.gif"></img>
-								<figcaption>Remix by <em>naha</em></figcaption>
-							</figure>
-							<pre style="width: 22vw"><code class="javascript" data-trim data-line-numbers>
-								margin = mySize / 10;
-								for (let i=0; i < int(random(500, 100) ); i++) { ... }
-								theShader.setUniform('u_time', millis () / 1);
-								let version = random ([200,150,77,50,140] * 100;
-								let c = random (1000, 2000);
-								colorMode(HSB, 21, 10, 10, 10);
-							</code></pre>
-							<pre ><code class="javascript" data-trim>
-								stroke (0, 0, 0); // red
-							</code></pre>
-						</div>
-					</div>
-
-					<aside class="notes">
-						I'll emphasize here a close relationship between tuning and annotating. For example, the remixed line of code shown on the bottom right changes RGB value of colors drawn to the screen from red to black. The comment, however, is now out of alignment.
-					</aside>
-				</section>
-
-			</section>
-
-			<!-- EXTENDING -->
-			<section>
-				<div class="top-left-header"> 
-					<p class="phl">Extending</p>
-				</div>
-
-				<section>
-					<div class="split">
-						<div class="col">
-							<figure>
-								<img width=90% src="data/faces-longer-original.png">
-								<figcaption>Antecedent by <em>Sasha T.</em></figcaption>
-							</figure>
-							<pre><code class="javascript" data-trim>
-								vertex(xPosition , yPosition);
-							</code></pre>
-						</div>
-						<div class="col">
-							<figure>
-								<img width=90% src="data/faces-longer-remix.png">
-								<figcaption>Remix by <em>JFrench</em></figcaption>
-							</figure>
-							<pre><code class="javascript" data-trim>
-								curveVertex(xPosition,yPosition);
-							</code></pre>
-						</div>
-					</div>
-					<aside class="notes">
-						Our themes so far have not involved writing new running code. A simple example of such an extension is shown here, where the remix author changed a single function in this face generator to make smooth,rounded curves. Instead of connect ing points directly with the vertex() function, curveVertex() is another creative coding function which will generate a spline between points.
-					</aside>
-				</section>
-
-				<!-- <section>
-					<br><br>
-					<div class="split">
-						<div class="col">
-							<video height=40% data-autoplay loop src="data/turbulence-a.mp4"></video>
-							<p style="font-size: 30%;">Antecendent by <em>Raven Kwok</em></p>
-							<pre style="width: 22vw"><code class="javascript" data-trim>
-								acc = new PVector(0, 0);
-								lifeSpan = int(random(30, 90));
-								decay = random(0.75, 0.9);
-
-
-
-
-
-								c = color(random(255), random(255), 255);
-							</code></pre>
-						</div>
-						<div class="col">
-							<video height=40% data-autoplay loop src="data/turbulence-b.mp4"></video>
-							<p style="font-size: 30%;">Remix by <em>Jasone Labbe</em></p>
-							<pre style="width: 22vw"><code class="javascript" data-trim>
-								acc = new PVector(0, 0);
-								lifeSpan = 90;
-								decay = 0.75;
-								this.h = h;
-								h += 0.5;
-								if (h > maxH) {
-									h = minH+h-maxH;
-									}
-								c = color(h, 255, 255, 10);
-							</code></pre>
-						</div>
-					</div>
-					<aside class="notes">
-						We see these tunings and extensions can be built up to make targeted creative interventions in a remix. Here, specific variables are tuned to explicit values, and additional code has been added to set the
-						color and size of the of the shapes drawn. These edits stay close to the source material to “stylize” the sketch in a new way.
-					</aside>
-				</section> -->
-
-				<section>
-					
-					<div class="split">
-						<div class="col">
-							<figure>
-								<img width=80% src="data/out.gif">
-								<figcaption>Antecedent by <em>Okazz</em></figcaption>
-							</figure>
-							
-							<pre><code class="javascript" data-trim>
-								function randomShape(x_, y_, w_, h_, col) {
-									let grfx = createGraphics(w_, h_);
-									let rnd = int(random(6));
-									let num = int(random(1, 4));
-									...
-									for (let i = 0; i < num; i++) {
-									  let w = random(5, w_ * 0.35);
-									  let h = random(5, h_ * 0.35);
-									  let x = (random(1.4)-0.2)*grfx.width;
-									  let y = (random(1.4)-0.2)*grfx.height;
-									  ...
-								  }
-							</code></pre>
-						</div>
-						<div class="col">
-							<figure>
-								<img width=80% src="data/out2.gif">
-								<figcaption>Antecedent by <em>JFrench</em></figcaption>
-							</figure>
-							<pre><code class="javascript" data-trim>
-								function drawTrees(x_, y_, w_, h_, col) {
-									let grfx = createGraphics (w_, h_);
-									count = int(random(30));
-
-									...
-									for (let i = 0; i < count; i++) {
-									let w = random(2, 10);
-									let h = w * random (2, 5);
-									let x = (random(1.4) - 0.2) * grfx.width;
-									let y = (random(1.4) - 0.2) * grfx.height;
-									...
-									};
-							</code></pre>
-						</div>
-					</div>
-					<aside class="notes">
-						We see these tunings and extensions can be built up to make targeted creative interventions in a remix. The original sketch on the left creates a grid of panels filled with random shapes. In the remix, this is edited to create generative landscapes. In the code excerpts shown for example, we can see how the same code which draws random triangles has been slightly modified to give the effect of trees.
-					</aside>
-				</section>
-
-				<section>
-					<figure>
-						<img width="100%" src="data/self-remix-family-horizontal.png">
-						<figcaption>Family of remixes by <em>Roni Kaufman</em></figcaption>
-					</figure>
-					<aside class="notes">
-						Finally, the remixes we've seen so far have involved one antecedent and one remix. We see authors can explore multiple creative directions in a family of remixes. Shown here is a subgraph of
-						remixed sketches beginning with on called “Square packing study” by Roni
-						Kaufman, but we're only showing sketches by the original author. We see the author remixes the original sketch in three different ways, but the relationship between sketches in distinct chains is obscured without this top-level view of the whole subgraph. 
-						
-						We noted in our network analysis that almost half of all remixed sketches are involved in self-remixing. Filtering the self-remix graph by subgraph size, we over 90% of subgraphs involved in self-remixing have 5 nodes or more. This statistic speaks to the frequency with which authors manage families of versions through remixing.
-					</aside>
-				</section>
-			</section>
-
-			<section>
-					<div class="top-left-header"> 
-						<p class="phl">Key Takeaways</p>
-					</div>
-
-					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
-						<small style="text-align: left; margin-left: -60vh;">
-							<ul>
-								<li><b>Understanding Existing Creative Communities</b></li>
-								<li>Design Provocations</li>
-								<li>Applicability to Other Contexts</li>
-							</ul>
-						</small>
-						<aside class="notes">
-							In considering key takeaways from our analysis, we focus on lessons we can learn from this community. Rather than informing the design of OpenProcessing–which already makes design improvements guided by the interests of their community–we do so to bring empirical insight to prior HCI research. Recent work notes that only a quarter of HCI systems which support creativity are made publicly available, and just 5% are intended to support a specific population. OpenProcessing inverts this landscape, and we focus on lessons we can learn from an active community.
-						</aside>
-					</section>
-
-					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
-						<small style="text-align: left; margin-left: -60vh;">
-							<ul>
-								<li>Understanding Existing Creative Communities</li>
-								<li><b>Design Provocations</b></li>
-								<li>Applicability to Other Contexts</li>
-							</ul>
-						</small>
-						<aside class="notes">
-							To this end, we suggest a set of design provocations which might support creative community through remixing. These provocations include incorporating code diffs within a code editor to identify changes between antecedents and remixes, tagging remixes with our strategies to help explore particular genres of remixes, facilitating process-oriented documentation, and remixing chunks of code smaller than a full sketch. We propose that these design changes might support and extend creative coding practice.
-						</aside>
-					</section>
-
-					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
-						<small style="text-align: left; margin-left: -60vh;">
-							<ul>
-								<li>Understanding Existing Creative Communities</li>
-								<li>Design Provocations</li>
-								<li><b>Applicability to Other Contexts</b></li>
-							</ul>
-						</small>
-						<aside class="notes">
-							And finally, we've seen here how remixing is taken up is community dependent. We see an opportunity to investigate how other communities employ remixing in application specific ways.
-						</aside>
-					</section>
-
-					<!-- <section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
-						<small style="text-align: left; margin-left: -60vh;">
-							<ul>
-								<li><b>Design Provocations</b></li>
-							</ul>
-						</small>
-						<aside class="notes">
-							From our themes, we outline design provocations. Rather than
-							informing the design of OpenProcessing–which already makes de-
-							sign improvements guided by the interests of their community–we
-							do so to bring empirical insight to prior HCI research. Recent re-
-							search notes that only 25% of HCI systems which support creativity
-							are made publicly available, and just 5% are intended to support
-							a specific population. OpenProcessing inverts this landscape,
-							and we focus on lessons we can learn from an active community
-						</aside>
-					</section>
-
-					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
-						<small style="text-align: left; margin-left: -60vh;">
-							<ul>
-								<li><b>Design Provocations</b></li>
-								<ul>
-									<li><em>Diff-in-the-loop remixing</em></li>
-								</ul>
-							</ul>
-						</small>
-
-						<aside class="notes">
-							In our analysis, we found it was impossible to know what changed in a remix without consulting
-							the code, which can be a tedious process. Building on our analysis approach, we can
-							consider a live code diff view incorporated within the editor. With this view, an author might open a pair of sketches to and easily identify sections of code which produce desired visual effects.
-						</aside>
-					</section>
-
-					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
-						<small style="text-align: left; margin-left: -60vh;">
-							<ul>
-								<li><b>Design Provocations</b></li>
-								<ul>
-									<li>Diff-in-the-loop remixing</li>
-									<li><em>Tagging remixes</em></li>
-								</ul>
-							</ul>
-						</small>
-						<aside class="notes">
-							The remixing strategies we identified can be used to tag remixes. These tags can be leveraged to filter out remixes which are collections, or show all remixes which provide annotations to help make sense of the sketch. Tagging posts when sharing a project is already supported in OpenProcessing and other
-							similar online communities; our analysis suggests that tagging remixes in particular can aid exploration.
-						</aside>
-					</section>
-
-					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
-						<small style="text-align: left; margin-left: -60vh;">
-							<ul>
-								<li><b>Design Provocations</b></li>
-								<ul>
-									<li>Diff-in-the-loop remixing</li>
-									<li>Tagging remixes</li>
-									<li><em>Remix graph annotations</em></li>
-								</ul>
-							</ul>
-						</small>
-
-						<aside class="notes">
-							While remixing is often presented as a method for collaborative peer production, our analysis suggests ways that current remixing interfaces limit collaboration. Beyond making remixing graphs visible to users, we might incorparate tools which facilitate process-oriented documentation to add depth to creative code sketches, making creative process as open and transparent as the code itself.
-						</aside>
-					</section>
-
-					<section data-auto-animate data-background-image="data/extensions.png" data-background-position="right" data-background-size="65vh">
-						<small style="text-align: left; margin-left: -60vh;">
-							<ul>
-								<li><b>Design Provocations</b></li>
-								<ul>
-									<li>Diff-in-the-loop remixing</li>
-									<li>Tagging remixes</li>
-									<li>Remix graph annotations</li>
-									<li><em>Smaller Units of Analysis</em></li>
-								</ul>
-							</ul>
-						</small>
-						<aside class="notes">
-							And finally, our analysis surfaced productive connections between version control and remixing. While remixing inherits a parent-child relationship from software forks, we see remixing often happens at
-							the level of individual parameters and functions. Considering how code snippets smaller than a full sketch can be treated as remixable content might have implications for how practitioners remix.
-						</aside>
-					</section> -->
-			</section>  
-
-			<section>
-				<p class="r-fit-text">Special thanks to the OpenProcessing, Processing, and p5.js communities, and especially the authors who agreed to share their work for this paper:</p>
-
-				<small><em>Roni Kaufman, caaatisgood, Taiki Saito, Owaun Scantlebury, Richard Bourne, Neill Bogie, Naoki Tsutae, Aaron Reuland (a_soluble_fish), Naha, SamuelYAN, Trrrrrr, Sasha T. (@tequibo), shrike, Raven Kwok, Jason Labbe, Okazz, JFrench, garabotospr, Hans Peter, and Sayama </em></small>
-				<aside class="notes">
-					
-				</aside>
-			</section>
-
-
-			<section>
-				<div class="split">
-					<div class="col">
-						<img width=400 data-src="data/teaser.png">
-					</div>
-					<div class="col">
-						<h6 style="text-align: left; margin-top: 2vh;"> Forking a Sketch: How the OpenProcessing Community Uses Remixing to Collect, Annotate, Tune, and Extend Creative Code </h6>
-
-						<p style="text-align: left; font-size: .6em; margin-top: 20vh;">Blair Subbaraman, Shenna Shim, Nadya Peek</p>
-						<p style="text-align: left; font-size: .6em; margin-top: -2vh">Machine Agency, University of Washington</p>
-						<p style="text-align: left; font-size: .6em; margin-top: -2vh">Slides: https://rb.gy/3jdyb</p>
-					</div>
-					
-				</div>
-			</section>
-			
-
-
-
-
-
 			<!-- end divs -->
 			</div>
 		</div>
