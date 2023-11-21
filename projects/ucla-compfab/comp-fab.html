@@ -124,10 +124,13 @@
 							<p style="text-align: left; font-size: .6em;">Blair Subbaraman</p>
 							<p style="text-align: left; font-size: .6em; margin-top: -2vh">Machine Agency, University of Washington</p>
 							<p style="text-align: left; font-size: .6em; margin-top: -2vh"> Slides: rb.gy/lgxu6r</p>
+							<p style="text-align: left; font-size: .6em; margin-top: -2vh"> blahblahblair.com</p>
 						</div>
 					<br>
 					<aside class="notes">
-						Hi! I'm Blair. I worked at REMAP for a couple years from 2018-2020, where Jeff welcomed me into the world of theater despite my not knowing anything. Since then, I started a PhD at the Unviersity of Washington, where I'm now in my 4th year in the department of Human-Centered Design & Engineering. I'm going to present on some of my own research as it relates to digital & computational fabrication, or broadly, the process of making physical things with machines. In particular, I'll talk about connecting coding interfaces and computational fabrication tools as a way to broaden participation in both physical and digital production.
+						Hi! I'm Blair. I worked at REMAP for a couple years from 2018-2020, where Jeff welcomed me into the world of theater despite my not knowing anything. Since then, I started a PhD at the University of Washington, where I'm now in my 4th year in the department of Human-Centered Design & Engineering. 
+						<br><br>
+						I'm going to present on some of my own research as it relates to digital & computational fabrication, or broadly, the process of making physical things with machines. In particular, I'll talk about connecting computational fabrication tools with coding interfaces as a way to broaden participation in both physical and digital production. I'll be sharing some videos and related projects along the way, so a link to my slides is here in case Zoom messes up playback or you find anything interesting and want to take a second look.
 					</aside>
 				</section>
 
@@ -136,8 +139,12 @@
 					<p style="text-align: left; font-size: .6em;">- Seamless experiences aren't always better</p>
 
 					<aside class="notes">
-						And as I share some of these projects, I hope to convince you of a couple key ideas. The first is that in building computational tools for fabrication, the goal doesn't need to be an end-to-end seamless experience, at least not at first. There's this idea in popular culture as well as in research that we're working towards a sort of star trek Replicator type application, where matter is automatically compiled into fully working objects. While I admit this seems pretty cool, I think the reality is that there are too many niches of possible users of computational fabrication to
-						cater to them all with a single tool. And in fact, I think that overly focusing on interfaces in which you just press 'start' is really limiting in how we can employ fabrication in new & exciting ways. Part of what I'm interested in is how we can reduce the threshold for users to modify and make seamless experiences for their unique use case. 
+						As I share some of these projects, I hope to convince you of a couple key ideas. The first is that in building computational tools for fabrication, the goal doesn't need to be an end-to-end seamless experience, at least not at first. 
+						<br><br>
+						There's this idea in popular culture--as well as in research--that we're working towards a sort of star trek Replicator type application, where matter is automatically compiled into fully working objects. While I admit this seems pretty cool, I think the reality is that there are too many niches of possible users of computational fabrication to
+						cater to them all with a single tool. 
+						<br><br>
+						And in fact, I think that overly focusing on interfaces in which you just press 'start' is really limiting in how we can employ fabrication in new & exciting ways. Part of what I'm interested in is how we can let users make and modify their own seamless experiences for their unique use case. 
 					</aside>
 				</section>
 
@@ -147,15 +154,15 @@
 					<p style="text-align: left; font-size: .6em;">- It matters who is using the tool, and how</p>
 
 					<aside class="notes">
-						To that point, taking into account who is using the tool and why is a productive way to build new computational fabrication systems. The needs of someone designing electronic circuits and, say, a ceramicist wanting to 3D print with clay are quite different, and each person brings with them unique existing expertise. Accounting for and incorporating these differences can lead to divergent fabrication machines and interfaces.
-
-						Maybe these takeaways lack context for now, but I'll try to hammer them home and bring some nuance to them as they come up over the course of this talk.
+						To that point, taking into account who is using the tool and why is a productive way to build new computational fabrication systems. The needs of someone designing electronic circuits and, say, a ceramicist wanting to 3D print with clay are quite different, and each brings with them unique existing expertise. Accounting for and incorporating these differences can lead to divergent fabrication machines and interfaces.
+						<br><br>
+						Maybe these takeaways lack context for now, but I'll try to bring some nuance to them as they come up over the course of this talk.
 					</aside>	
 				</section>
 
 				<section data-background-video="data/mohr-plotter.mp4">
 					<aside class="notes">
-						I wante to start with a briefly historical anecdote. This is a snippet from a documentary by IBM in the 1970s. It shows the work process of Manfred Mohr, a German artist who was a part of the first wave of artists who gained access to computers to make visual art. Here we see him programming, which at that time was not done at a screen but rather with pen and paper, making flowcharts and then creating physical punched cards which were read by the computer. We then see Mohr walk to a separate area and sit down at this  screen. This isn't actually a computer, which were still the size of entire rooms, but it's just a screen that displays the results of a computers calculation. We can see the output of Mohr's program begin to appear, which is showing various rotations of a cube. At this stage, Mohr can decide if he likes the results, or if he'd like to go back and edit the program to make something different. If it passes his scrutiny, then the piece can be physically drawn using a pen plotter. This is a drawing machine that can move left, right, up, and down around a flat surface. Both the computer and the plotter were, at the time, an expensive resource, so the stakes are pretty high here to create something you actually liked.
+						I wanted to start with a brief historical anecdote. This is a snippet from a documentary by IBM in the 1970s. It shows the work process of Manfred Mohr, a German artist who was a part of the first wave of artists who gained access to computers to make visual art. Here we see him programming, which at that time was not done at a screen but rather with pen and paper, making flowcharts and then creating physical punched cards which were read by the computer. We then see Mohr walk to a separate area and sit down at this  screen. This isn't actually a computer, which were still the size of entire rooms at the time, but it's just a screen that displays the results of a computers calculation. We can see the output of Mohr's program begin to appear, which is showing various rotations of a cube. At this stage, Mohr can decide if he likes the results, or if he'd like to go back and edit the program to make something different. If it passes his scrutiny, then the piece can be physically drawn using a pen plotter. This is a drawing machine that can move left, right, up, and down around a flat surface. Both the computer and the plotter were, at the time, an expensive resource, so the stakes are pretty high here to create something you actually liked.
 					</aside>
 				</section> 
 
@@ -178,7 +185,11 @@
 					</div>
 
 					<aside class="notes">
-						I show this clip to bring some historical depth to our conversation around both computation & fabrication. This era was very 'fabrication first' in a sense, since there were limited graphical output options. These pen plotters are arguably some of the first digital fabrication machines being used in an artistic or design process. I want to compare Mohr's work process with how we might work today to make the same piece. With respect to computation, obviously a lot has changed, and how we interact with computers has changed drastically. If we were making Mohr's piece today, we could write code to immediately see results on our laptops and quickly make small, iterative changes to get the output we liked. And, there wouldn't necessarily be a pressure to physically draw what we make, beacuse we could much more easily share the image, or better yet, the code itself.
+						I show this clip to bring some historical depth to our conversation around both computation & fabrication. This era was very 'fabrication first' in a sense, since there were limited graphical output options. These pen plotters are arguably some of the first digital fabrication machines being used in an artistic or design process. 
+						<br><br>
+						I want to compare Mohr's work process with how we might work today to make the same piece. With respect to computation, obviously a lot has changed, and how we interact with computers has changed drastically. If we were making Mohr's piece today, we could write code to immediately see results on our laptops and quickly make interactive and iterative changes to get the output we liked. 
+						<br><br>
+						And, there wouldn't necessarily be a pressure to physically draw what we make, beacuse we could much more easily share the image, or better yet, the code itself.
 					</aside>
 				</section>
 
@@ -212,7 +223,9 @@
 					</div>
 
 					<aside class="notes">
-						With respect to fabrication, there's also some major differences. Tabletop plotters are widely available for personal use, along with a host of other machines like 3D printers and laser cutters. In this sense, fabrication is more accessible today; but part of what I want to emphasize today is that this is only one limited dimension of accessibility. If we look at Mohr's interaction with the plotter, it's actually pretty similar to today. In Mohr's case, the computer wrote the data on a magnetic tape which was then connected to the plotter to execute. If we were fabricating something today, we would generate machine instructions on our laptops, put the file on an SD card, and then plug it into the machine to execute. Past a few dialog boxes and number sliders, we don't have much of a say in what the machine does, nor can we change the machine's behaviour, after pressing start.
+						With respect to fabrication, there's also some major differences. Tabletop plotters are widely available for personal use, along with a host of other machines like 3D printers and laser cutters. In this sense, fabrication is more accessible today; but part of what I want to emphasize is that this is only one limited dimension of accessibility. 
+						<br><br>
+						If we look at Mohr's interaction with the plotter, it's actually pretty similar to today. In Mohr's case, the computer wrote the data on a magnetic tape which was then connected to the plotter to execute. If we were fabricating something today, we would probably generate machine instructions on our laptops, put the file on an SD card, and the... walk over to a machine to plug it in and have the machine run it. Past a few dialog boxes and number sliders, we still don't have much of a say in what the machine does, and we can't change the machine's behaviour, after pressing start.
 					</aside>
 				</section>
 
@@ -231,7 +244,9 @@
 					</figure>
 
 					<aside class="notes">
-						The lab I'm in, called Machine Agency, does research around topics like digital fabrication, small-scale automation, and open source communities, and is broadly summarized by the tagline, "harnessing the precision of machines for the creativity of individuals". The research takes several forms, from qualitative investigations into how digital fabrication tools are used in the real-world, to building systems, and I want to provide a bit of context here on the sorts of things we've worked on in the past and where I'm coming from.
+						The lab I'm in, called Machine Agency, does research around topics like digital fabrication, small-scale automation, and open source communities, and the work is broadly summarized by the tagline, "harnessing the precision of machines for the creativity of individuals".
+						<br><br>
+						The research takes several forms, from qualitative interviews and analysis of how digital fabrication tools are used in the real-world, to building systems, and I want to provide a bit of context here on the sorts of things we've worked on in the past and where I'm coming from.
 					</aside>
 
 				</section>
@@ -251,7 +266,9 @@
 					</figure>
 
 					<aside class="notes">
-						So for example, a labmate of mine, Hannah, looked at the artwork and processes that were being shared on Twitter under the hashtag 'PlotterTwitter', which is a pretty cool hashtag to check out if you've not seen it before. And a lot of what is being shared and discussed in these spaces are things like, trying different types of pens, or different types of paper, to get interesting results, and the sorts of things that are shared between users are tips and hacks to use the plotter in unintended ways. This goes back to the idea that a seamless experience with a machine isn't always better.
+						So for example, a labmate of mine, Hannah, looked at the artwork and processes that were being shared on Twitter under the hashtag 'PlotterTwitter', which is a pretty cool hashtag to check out if you've not seen it before.
+						<br><br>
+						A lot of what is being shared and discussed in these spaces are things like, trying different types of pens and paper, or attaching a watercolor brush to the plotter, to get interesting results. The sorts of things that are shared between users are tips, tricks and hacks to use the plotter in unintended ways. This goes back to the idea that a seamless experience with a machine isn't always better-- sometimes, people want to use the machine in new ways.
 					</aside>
 
 				</section>
@@ -271,7 +288,7 @@
 					</figure>
 
 					<aside class="notes">
-						Another lab member, Jasper, has been working on an augmented reality interface for CNC milling. So here we can see the outline of the object that he is going to cut is projected down onto the material to be able to confirm the setup before actually cutting anything out.						
+						Another lab member, Jasper, has been working on an augmented reality interface for CNC milling. A mill is the larger scale machine shown here, and can cut sheets of weed. Here we can see the outline of the object that he is going to cut is projected down onto the material to be able to confirm the setup before actually cutting anything out.						
 					</aside>
 				</section>
 				
@@ -280,7 +297,9 @@
 					<p><em>How can we support domain experts to creatively engage computer controlled machines?</em></p>
 
 					<aside class="notes">
-						For my own part in all of this, my research laregly focuses on how we can support artists, scientists, and other pracitioners who are already experts in their field to creatively engage computer controlled machines. Machines like 3D printers, laser cutters, and mills are becoming increasingly cheaper and widespread--I'll bet there's a makerspace in walking distance of your classroom right now full of these machines--but the ways we are made to use them are too often prescriptive, limiting our creative possibilities. I try to investigate this question at a couple of different levels in my work. This includes staging systems interventions for use in the real-world, as well as understanding the behaviour of existing communities to ground the development of future systems.
+						For my own part in all of this, my research laregly focuses on how we can support artists, scientists, and other pracitioners who are already experts in their field to creatively engage computer controlled machines. 
+						<br><br>
+						As I've mentioned, machines like 3D printers, laser cutters, and mills are becoming increasingly cheaper and widespread--I'll bet there's a makerspace in walking distance of your classroom right now full of these machines--but the ways we are made to use them are often prescriptive, limiting their creative possibilities. I try to investigate this question at a couple of different levels in my work. This includes staging systems interventions for use in the real-world, as well as understanding the behaviour of existing communities to ground the development of future systems.
 					</aside>
 				</section> 
 
@@ -309,7 +328,7 @@
 
 					
 					<aside class="notes">
-						To this end, in this talk I want to introduce two areas of physical and digital practice--computational fabrication and creative code--and then talk about two projects which intersect these practices.
+						To this end, I want to introduce two broad areas of physical and digital practice--computational fabrication and creative code--and then talk about two projects which intersect these practices.
 					</aside>
 				</section> 
 
@@ -338,9 +357,9 @@
 					</figure>
 
 					<aside class="notes">
-						First, I'll introduce some core ideas and practices of computational fabrication--and then I'll immediately complicate these core assumptions that are baked into existing software. In particular, I want to show how software tools for fabrication are meant create a physical part that is as faithful to the digital model as possible, which can become disconnected from exploring physical properties of materials.  
-
-						Then, I'll jump from physical practice to digital practice to introduce creative coding, which is broadly the process of programming for expressive over functional purposes. Since Manfred Mohr's time, artists have developed many software tools to tailored to their creative pursuits. Put in conversation with digital fabrication practice, we can start to see opportunities for new sorts of fabrication interfaces. 
+						First, I'll introduce some core ideas and practices of computational fabrication--and then I'll immediately complicate the core assumptions that are baked into existing software. In particular, I want to show how software tools for fabrication are meant create a physical part that is as faithful to the digital model as possible, but they can become disconnected from the physical process of fabrication.  
+						<br><br>
+						Then, I'll jump from physical to digital practice to introduce creative coding, which is broadly the process of programming for expressive over functional purposes. Since Manfred Mohr's time, artists have developed software tools tailored to their creative pursuits. Put in conversation with digital fabrication practice, we can start to see opportunities for new sorts of fabrication interfaces. 
 					</aside>
 				</section> 
 
@@ -421,7 +440,7 @@
 					</figure>
 					
 					<aside class="notes">
-						and finally, I'll briefly talk about a laboratory automation system developed for plant biologists to think about how alternative machine interfaces might be of interest across domains. While this example is related to science, the point here is more in generalizing a bit from computational fabrication of individual artifacts to creatively employing automation.
+						and finally, I'll take a brief detour into science to talk about a laboratory automation system developed we've developed for plant biologists to think about how alternative machine interfaces might be of interest across domains. While this example is related to science, the point here is more in generalizing a bit from computational fabrication of individual artifacts to creatively employing automation.
 					</aside>
 				</section> 
 
@@ -431,7 +450,7 @@
 						<!-- <p style="text-align: left;">Connecting digital & physical production</p> -->
 
 						<aside class="notes">
-							So, we'll start in the world of digital fabrication, peppering in some insights & takeaways from prior qualitative research along the way.
+							So, I'll start in the world of digital fabrication, peppering in some insights & takeaways from prior qualitative research along the way.
 						</aside>
 					</section>
 				
@@ -456,10 +475,10 @@
 						</figure>
 
 						<aside class="notes">
-							Before diving into the nitty-gritty of digital fabrication, I'll untangle the terms 'computational design', 'digital fabrication', and 'computational fabrication'. Computational design can refer to a whole range of design practices that incorporate computational processes. This involves the use of programing to do things like create and modify form and structure, but computational design isn't so much one specific technical skill as way to design rule sets which produce multiple outcomes.
-
+							I want to untangle the terms 'computational design', 'digital fabrication', and 'computational fabrication' that I've been using. Computational design can refer to a whole range of design practices that incorporate computational processes. This involves the use of programing to do things like create and modify form and structure, but computational design isn't so much one specific technical skill as way to design rule sets which produce multiple outcomes.
+							<br><br>
 							Digital fabrication is a manufacturing process where a machine is controlled by a computer. Common digital fabrication machines today are 3D printers, laser cutters, and mills; increasingly, these machines are available to hobbyists, or are are made available in community contexts like MakerSpaces.
-
+							<br><br>
 							Computational fabrication, then, is more or less chaining together of computational design and digital fabrication. It integrates programming, design, and digital fabrication to design forms then construct these forms using fabrication machines.
 						</aside>
 					</section>
@@ -515,7 +534,11 @@
 						</figure>
 
 						<aside class="notes">
-							Let's take 3D printing as an example to understand a usual fabrication workflow. First, you need to design a model to print. This is typically done in computer aided design or a similar environment; maybe people have used on of these before, and common examples are Rhino3D, Blender, or SolidWorks. Then, we need to use this geometry to plan the machines toolpaths, or the path it will take as it moves through space. This is done by importing the model in a computer-aided manufacturing, or CAM, software. For 3D printing, this is called the slicer, as it is intended to divide a model into a series of contours to be printed layer-by-layer. The slicer will produce machine instructions called g-code, or geometry code, which can be exectued on the machine.   
+							We can take 3D printing as an example to understand a usual steps of digital fabrication. First, you need to design a model to print. This is typically done in computer aided design or a similar environment; maybe people have used on of these before, and common examples are Rhino3D, Blender, or SolidWorks.
+							<br><br>
+							Then, we need to use this geometry to plan the machines toolpaths, or the path it will take as it moves through space. This is done by importing the model in a computer-aided manufacturing, or CAM, software. For 3D printing, this is called the slicer, as it is intended to divide a model into a series of contours to be printed layer-by-layer.
+							<br><br>
+							The slicer will produce machine instructions called g-code, or geometry code, which can be exectued on the machine.   
 						</aside>
 					</section>
 
@@ -528,7 +551,7 @@
 						</figure>
 
 						<aside class="notes">
-							It's worth noting that prior work has taken issue with this workflow, especially around the modeling stage. As an example of this, here's a system called Tactum, intended to create 3D printed wearables directly on your body. They project the design directly onto your arm and you can manipulate the geometry with gestures to see what it will look like before 3D printing it.
+							It's worth noting that prior work has taken issue with this workflow, especially around the modeling stage. As just one brief example of this, here's a system called Tactum, intended to create 3D printed wearables directly on your body. They project the design directly onto your arm and you can manipulate the geometry with gestures to see what it will look like before 3D printing it.
 						</aside>
 					</section>
 
@@ -545,7 +568,9 @@
 							<figcaption>Actual outcome from 3D printing (<em>from r/FixMyPrint</em>)</figcaption>
 						</figure>
 						<aside class="notes">
-							But even with new and intuitive modeling techniques, things often don't go as planned when you go to physicall manufacture something. There will often be problems with the geometry, and there are a bunch of physical constraints like not being to print models with sharp angles because each layer needs to be supported from underneath. And unlike Mohr's plotter that we saw earlier, which was maintained in a well-funded laboratory by a group of technicians, most people 3D printing today are using them in their homes or studios.The workflow we saw assumes that machines will obediently execute exactly what we tell it to, but that isn't always the case. We see then this kind of glaring disconnect between digital tools and the physical process of fabrication.
+							But even with new and intuitive modeling techniques, things often don't go as planned when you go to physicall manufacture something. There will often be problems with the geometry, and there are a bunch of physical constraints like not being to print models with sharp angles because each layer needs to be supported from underneath. 
+							<br><br>
+							And unlike Mohr's plotter that we saw earlier, which was maintained in a well-funded laboratory by a group of technicians, most people 3D printing today are using them in their homes or studios. The workflow we saw assumes that machines will obediently execute exactly what we tell it to, but that isn't always the case. We see then this kind of glaring disconnect between digital tools and the physical process of fabrication.
 						</aside>
 					</section>
 
@@ -558,7 +583,11 @@
 						</figure>
 
 						<aside class="notes">
-							These problems become particularly acute in computational fabrication processes. This is an example from a past project I worked on, where a group of designers wanted to use audio data to drive the generation of clay sculptural forms. The raw data is used to start a digital simulation, and the resulting 3D form is printed using a clay 3D printer. The successful integration of computational methods and physical manufacturing here is dependent on establishing correspondences between digital instructions and physical outcomes, but these connections aren't well mapped. Most of the work here was in testing and tuning the simulation so that the resulting model was both printable and legible for their specific context. These software-driven fabrication workflows really require extensive software testing, tweaking, and optimization in response to machine and material behavior. 
+							These problems become particularly acute in computational fabrication processes. This is an example from a past project I worked on, where a group of designers wanted to use audio data to drive the generation of clay sculptural forms. The raw data is used to start a digital simulation, and the resulting 3D form is printed using a clay 3D printer. 
+							<br><br>
+							The successful integration of computational design and physical manufacturing here depends on establishing correspondences between digital instructions and physical outcomes, but these connections aren't well mapped. 
+							<br><br>
+							Most of the work of this project was in testing and tuning the simulation so that the resulting model was both printable and legible for their specific context. These software-driven fabrication workflows really require extensive software testing, tweaking, and optimization in response to machine and material behavior. 
 						</aside>
 					</section>
 					
@@ -576,14 +605,20 @@
 						</figure>
 
 						<aside class="notes">
-							And briefly, this disconnect between digital and physical reality extends all the way to the underlying representation of digital models. When you make a model in CAD, or find one online, the standard file format is an stl. This is just a list of triangles that define the boundary surface of your model; these triangles can be bigger or smaller depending on how detailed you model is and the resolution of whateve machine you're using. However, this isn't a very expressive file format; as we can increasingly print with more than one material, or muliple colors, there's no way to represent what's happening inside the object, which depending on the application can be just as important as the exterior. And g-code, which are the instructions that are sent to the machine, are basically just a list of coordinates to move to at a certain speed. Again, this language makes a lot of assumptions on what it is you want to do with the machine. There's no clean ways to, say, incorporate sensor data which can affect the machines motion at run-time. 
+							And briefly, this disconnect between digital and physical reality extends all the way to the underlying representation of digital models.
+							<br><br>
+							When you make a model in Computer aided design, or find one online, the standard file format is an stl. This is just a list of triangles that define the boundary surface of your model; these triangles can be bigger or smaller depending on how detailed you model is and the resolution of whateve machine you're using.
+							<br><br>
+							However, this isn't a very flexible file format; as we can increasingly print with more than one material, or muliple colors, there's no way to represent what's happening inside the object, which depending on the application can be just as important as the exterior. 
+							<br><br>
+							And g-code, which are the instructions that are sent to the machine, are basically just a list of coordinates to move to at a certain speed. Again, this language makes a lot of assumptions on what it is you want to do with the machine. There's no clean way to, say, incorporate sensor data which can affect the machines motion at run-time. 
 						</aside>
 					</section>
 
 					<section data-auto-animate>
 						<p class="r-fit-text">Practitioners negotiate <b>digital software</b> with <b>physical practice</b>.</p>
 						<aside class="notes">
-							The end result is that pracitioners are made to reconcile digital software with a fundamentally physical practice. Crossing the digital/physical divide remains challenging, especially when developing products with novel materials, forms, or manufacturing contexts.
+							The end result is that pracitioners are made to reconcile digital software with what is a fundamentally physical practice. Crossing the digital/physical divide remains challenging, especially when developing products with novel materials, forms, or manufacturing contexts.
 						</aside>
 					</section>
 
@@ -1129,8 +1164,8 @@
 
 				<section data-auto-animate data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
 					<h4 style="text-align: left;">Key Takeaways</h4>
-					<p style="text-align: left; font-size: .6em;">- Seamless experiences aren't always better,</p>
-					<p style="text-align: left; font-size: .6em;"><em>Tools that help practitioners navigate the physical/digital divide can expand the design space of computational fabrication.</em></p>
+					<p style="text-align: left; font-size: .6em;">- Seamless experiences aren't always better</p>
+					<p style="text-align: left; font-size: .6em;"><em>Tools that help practitioners navigate the <br> physical/digital divide can expand the design space <br> of computational fabrication.</em></p>
 					<p style="text-align: left; font-size: .6em;">- It matters who is using the tool, and how.</p>
 
 					<aside class="notes">
@@ -1141,9 +1176,9 @@
 				<section data-auto-animate data-background-image="data/teaser.jpg" data-background-position="right" data-background-size="50%">
 					<h4 style="text-align: left;">Key Takeaways</h4>
 					<p style="text-align: left; font-size: .6em;">- Seamless experiences aren't always better</p>
-					<p style="text-align: left; font-size: .6em;"><em>Tools that help practitioners navigate the physical/digital divide can expand the design space of computational fabrication.</em></p>
+					<p style="text-align: left; font-size: .6em;"><em>Tools that help practitioners navigate the <br> physical/digital divide can expand the design space <br> of computational fabrication.</em></p>
 					<p style="text-align: left; font-size: .6em;">- It matters who is using the tool, and how</p>
-					<p style="text-align: left; font-size: .6em;"><em>Acounting for unique user expertise can inform new approaches to machine design and control. </em></p>
+					<p style="text-align: left; font-size: .6em;"><em>Acounting for unique user expertise can inform <br>new approaches to machine design and control. </em></p>
 
 					<aside class="notes">
 						I also claimed that it matters who is using the tool, and how. For both p5.fab and the duckbot, grounding system development in actual practice leads to different fabrication interfaces. A computational notebook or a creative coding environment is a far cry from usual computer aided design software; as we engage more practitioners from different backgrounds, I think we can expect correspondingly diverse approaches to machine design and control.
