@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>POSE!</title>
+
+		<link rel="stylesheet" href="../../dist/reset.css">
+		<link rel="stylesheet" href="../../dist/reveal.css">
+		<link rel="stylesheet" href="../../dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+		<style>
+			figure {
+				padding: 0;
+				display: inline-block;
+				margin: 0;
+				position: relative;
+			}
+
+			figcaption {
+				position: absolute;
+				font-size: 30%;
+				bottom: 1em;
+				left: 0;
+				/* background-color: yellow; */
+				width: 100%;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>POSE!</h1>
+					<img height=200 data-src="data/pipetting.gif">
+					<img height=200 data-src="data/pose.jpg">
+					<img height=200 data-src="data/overhead.png">
+					<small>University of Washington</small>
+					<br/>
+					<small>April 26, 2024</small>
+				</section>
+
+				<section>
+					<section data-transition="fade-in none-out">
+						<h4>Modular, Low-cost, Extensible Hardware</h4>
+						<p><small>Open-source design for distributed manufacturing</small></p>
+						<figure>
+							<img height=300 data-src="data/jubilee.jpg">
+							<figcaption>Jubilee: tool-changing machine</figcaption>
+						</figure>
+						<figure>
+							<img height=300 data-src="data/tool-lock.jpg">
+							<figcaption>design for precise repeatable positioning</figcaption>
+						</figure>
+
+						<aside class="notes">
+							To the first point, this is Jubilee; a multi-tool changing platform previously developed in
+							our lab. Jubilee looks like a conventional 3D printer- it has a carriage that can move around
+							in the x-y plane, and the bed can move up and down. It's interior volume is 300x300x300mm.
+							It also has the ability to automatically pick up and change tools. That's shown on the right, where we see the carriage
+							features this twist lock shaft. Each tool has a matching wedge plate, and the shaft can
+							engage the tool and twist to lock it. By virtue of some clever mechanical design, 
+							these pickups are repeatable, so every time we grab a tool we can be sure its in the same place. 
+
+							Jubilee is fully open-source, and designed to be fabricatable. This means it is made with parts
+							that are available in low volume, or made with readily available tools & equipment, and distributed with 
+							documentation which inludes all the information needed to build one. The parts to build a Jubilee cost just over 1500 dollars. 
+							There are at least 170 Jubilees in the world which have been independentely built, and this success in the communinity resulted in it
+							being made available as a kit with all the parts needed to build one. 
+						</aside>
+					</section>
+
+						<section data-transition="none-in fade-out">
+							<b>Modular, Low-cost, Extensible Hardware</b>
+							<p><small>Digital fabrication of modular and customizable hardware</small></p>
+							<figure>
+								<img height=300 data-src="data/gigapan.jpg">
+								<figcaption>gigapan microscopy</figcaption>
+							</figure>
+							<figure>
+								<img height=300 data-src="data/jubilee-diagram.jpg">
+								<figcaption>multi-tool processes</figcaption>
+							</figure>
+
+							<aside class="notes">
+							</aside>
+
+						</section>
+				</section>
+
+				<section>
+					<section data-transition="fade-in none-out" data-auto-animate>
+						<h4>Duckbot</h4>
+						<p><small>A Jubilee outfitted with tools and associated control software for handling duckweed</small></p>
+						<img height=300 data-src="data/duckbot.jpg">
+						<img height=300 data-src="data/overhead.png">
+						<img height=300 data-src="data/jupyter.png">
+
+						<aside class="notes">	
+						</aside>
+					</section>
+
+					<section data-transition="" data-auto-animate>
+						<h4>Controlling Jubilee (with Existing Interfaces)</h4>
+						<img height=500 data-src="data/duet.png">
+
+						<aside class="notes">	
+						</aside>
+					</section>
+
+
+					<!-- <section data-transition="none-in none-out" data-auto-animate>
+						<h4>Duckbot</h4>
+						<p><small>Interchangeable tools and bed plates for duckweed applications </small></p>
+						<img height=450 data-src="data/tools.png">
+
+						<aside class="notes">
+							The tools on our duckbot are shown here; we have a standard inoculation loop, a 50cc syringe
+							for liquid handling, both a front facing and downward-facing camera, and a smaller 10cc syringe.
+							In addition, the bed plates on Jubilee are interchangeable. Our duckbot has a bed plate with 6
+							slots for standard sized well plates to be repeatably and securely inserted.
+						</aside>
+					</section>
+
+					<section data-transition="none" data-auto-animate>
+						<h4>Duckbot</h4>
+						<p><small>Interchangeable tools and bed plates for duckweed applications </small></p>
+						<img height=450 data-src="data/bed-plate.png">
+					</section> -->
+
+					<section data-transition="none-in fade-out" data-auto-animate >
+						<h4>Controlling Jubilee (with code)</code></h4>
+						<pre class="stretch"><code class="python" data-line-numbers="1|2|3-7">	m = Machine(address='localhost')
+	m.tool_change(pipette)
+	pipette.transfer(
+		vol=100,
+		source_well = source["A1"],
+		destination_well = dest["A1"]
+		mix_after = (50, 3)
+	)
+	</code></pre>
+						<video controls loop width=800 data-autoplay src="data/transfer-mix_crop.mp4"></video>
+						<aside class="notes">
+						</aside>
+					</section>
+				</section>		
+
+				<section data-auto-animate>
+					<h4>Controlling Jubilee</h4>
+					<video controls loop width=1000 data-autoplay src="data/image-plates-composed.mp4"></video>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<h4>Workshop Activities!</h4>
+					<p><small>Today: Build a pipette tool</small></p>
+					
+					<img height=300 data-src="data/pipette-fig.png">
+					<img height=300 data-src="data/pipette-pickup.gif">
+					<aside class="notes">
+					</aside>
+					</section>
+
+					<section data-auto-animate>
+					<h4>Workshop Activities!</h4>
+					<p><small>Tomorrow: Challenges!</small></p>
+					
+					<img height=300 data-src="data/color-match.png">
+					<img height=300 data-src="data/multimaterial.png">
+					<aside class="notes">
+					</aside>
+					</section>
+
+				</section>
+
+				
+
+				<section>
+					<h1>POSE!</h1>
+					<img height=200 data-src="data/pipetting.gif">
+					<img height=200 data-src="data/pose.jpg">
+					<img height=200 data-src="data/overhead.png">
+					<small>University of Washington</small>
+					<br/>
+					<small>April 26, 2024</small>
+				</section>
+
+				<section>
+					<section>
+						<h4>Pourover Slides!</h4>
+					</section>
+
+					<section>
+						<h4>Growth Curve</h4>
+						<img height=500 data-src="data/lm-growth.png">
+					</section>
+
+					<section>
+						<h4>Syringe Transfer</h4>
+						<img height=500 data-src="data/transfer-tool-graph.png">
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/notes/notes.js"></script>
+		<script src="../../plugin/markdown/markdown.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
