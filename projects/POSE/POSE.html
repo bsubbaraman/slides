@@ -45,7 +45,7 @@
 					<small>April 26, 2024</small>
 				</section>
 
-				<section>
+				<!-- <section>
 					<section data-transition="fade-in none-out">
 						<h4>Modular, Low-cost, Extensible Hardware</h4>
 						<p><small>Open-source design for distributed manufacturing</small></p>
@@ -91,27 +91,42 @@
 							</aside>
 
 						</section>
-				</section>
+				</section> -->
 
-				<section>
-					<section data-transition="fade-in none-out" data-auto-animate>
-						<h4>Duckbot</h4>
-						<p><small>A Jubilee outfitted with tools and associated control software for handling duckweed</small></p>
-						<img height=300 data-src="data/duckbot.jpg">
-						<img height=300 data-src="data/overhead.png">
-						<img height=300 data-src="data/jupyter.png">
-
-						<aside class="notes">	
-						</aside>
-					</section>
 
 					<section data-transition="" data-auto-animate>
-						<h4>Controlling Jubilee (with Existing Interfaces)</h4>
-						<img height=500 data-src="data/duet.png">
-
+						<h4>Okay, I know what a Jubilee is. How do I use it?</h4>
+						<figure>
+							<img height=500 data-src="data/duet.png">
+							<figcaption>Duet Web Control interface</figcaption>
+						</figure>
+					
 						<aside class="notes">	
 						</aside>
 					</section>
+
+					<section>
+						<section data-transition="fade-in none-out" data-auto-animate>
+							<h4>Duckbot</h4>
+							<p><small>A Jubilee outfitted with tools and associated control software for handling duckweed</small></p>
+							<figure>
+								<img height=300 data-src="data/duckbot.jpg">
+								<figcaption>the duckbot!</figcaption>
+							</figure>
+							<figure>
+								<img height=300 data-src="data/overhead.png">
+								<figcaption>has tools to manipulate duckweed,</figcaption>
+							</figure>
+							
+							<figure>
+								<img height=300 data-src="data/jupyter.png">
+								<figcaption>and is controlled via Jupyter notebooks</figcaption>
+							</figure>
+							
+	
+							<aside class="notes">	
+							</aside>
+						</section>
 
 
 					<!-- <section data-transition="none-in none-out" data-auto-animate>
@@ -135,9 +150,7 @@
 
 					<section data-transition="none-in fade-out" data-auto-animate >
 						<h4>Controlling Jubilee (with code)</code></h4>
-						<pre class="stretch"><code class="python" data-line-numbers="1|2|3-7">	m = Machine(address='localhost')
-	m.tool_change(pipette)
-	pipette.transfer(
+						<pre class="stretch"><code class="python" data-line-numbers="1-6"> pipette.transfer(
 		vol=100,
 		source_well = source["A1"],
 		destination_well = dest["A1"]
@@ -152,28 +165,71 @@
 
 				<section data-auto-animate>
 					<h4>Controlling Jubilee</h4>
-					<video controls loop width=1000 data-autoplay src="data/image-plates-composed.mp4"></video>
+					<pre class="stretch"><code class="python" data-line-numbers="1|2|3|4-5">m = Machine()
+m.pickup_tool(camera)
+camera.image_wells(well_plate["A"])
+if growth_rate < threshold:
+  do other things!
+					</code></pre>
+					<video controls loop width=800 data-autoplay src="data/image-plates-composed.mp4"></video>
 					<aside class="notes">
 					</aside>
 				</section>
+
+				<section data-auto-animate data-background-iframe="https://machineagency.github.io/science_jubilee/" data-background-interactive>
+						<aside class="notes">
+							When building the machine, you'll be guided by a set of pdf instructions; here I have the main Jubilee
+							page pulled up just to highlight it as a resource. This page also has links to the Discord community,
+							and a bunch of other community resources.
+						</aside>
+					</section>
+
+				<!-- <section data-auto-animate>
+					<h4>Controlling Jubilee</h4>
+
+					<figure>
+						<img height=500 data-src="data/docs.png">
+						<figcaption>science_jubilee documentation site</figcaption>
+					</figure>
+					
+					<aside class="notes">
+					</aside>
+				</section> -->
 
 				<section>
 					<section data-auto-animate>
 					<h4>Workshop Activities!</h4>
 					<p><small>Today: Build a pipette tool</small></p>
 					
-					<img height=300 data-src="data/pipette-fig.png">
-					<img height=300 data-src="data/pipette-pickup.gif">
+					<figure>
+						<img height=300 data-src="data/pipette-fig.png">
+						<figcaption>pipette tool mechanism</figcaption>
+					</figure>	
+
+					<figure>
+						<img height=300 data-src="data/pipette-pickup.gif">
+						<figcaption>for picking up tips</figcaption>
+					</figure>
 					<aside class="notes">
 					</aside>
+					<p><small>https://github.com/machineagency/POSE-workshop</small></p>
 					</section>
 
 					<section data-auto-animate>
 					<h4>Workshop Activities!</h4>
 					<p><small>Tomorrow: Challenges!</small></p>
 					
-					<img height=300 data-src="data/color-match.png">
-					<img height=300 data-src="data/multimaterial.png">
+					<figure>
+						<img height=300 data-src="data/color-match.png">
+						<figcaption>color matching!</figcaption>
+					</figure>
+
+					<figure>
+						<img height=300 data-src="data/multimaterial.png">
+						<figcaption>gel printing!</figcaption>
+					</figure>
+
+					<p><small>https://github.com/machineagency/POSE-workshop</small></p>
 					<aside class="notes">
 					</aside>
 					</section>

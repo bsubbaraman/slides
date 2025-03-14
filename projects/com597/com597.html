@@ -1,0 +1,447 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>what are me making?</title>
+
+	<link rel="stylesheet" href="../../dist/reset.css">
+	<link rel="stylesheet" href="../../dist/reveal.css">
+	<link rel="stylesheet" href="../../dist/theme/white.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+	<style>
+		figure {
+			padding: 0;
+			display: inline-block;
+			margin: 0;
+			position: relative;
+		}
+
+		figcaption {
+			position: absolute;
+			font-size: 30%;
+			bottom: 1em;
+			left: 0;
+			/* background-color: yellow; */
+			width: 100%;
+		}
+
+		.reveal .col-title {
+			margin: 0;
+		}
+
+		.split {
+			display: flex;
+		}
+
+		.col {
+			flex: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>What are we making again? </h2>
+				<h4>Understanding and Building Online Community around Physical Practices </h4>
+				<!-- <img height=300 data-src="data/overhead.png"> -->
+
+				<small>Blair Subbaraman</small>
+				<br />
+				<small>COM 597</small>
+				<br />
+				<small>2025.03.14</small>
+
+				<aside class="notes">
+					* i've mentioned in class that I do research around small scale automation machines like 3D printers and laser cutters, where I'm mainly focused on how to build systems that are customizable by people trying to accomplish niche tasks, so I work with, for example, artists and scientists, who are two groups of practitioners who often want to do things that there doesn't exist an off-the-shelf solution for. 
+					* I'm trying to essentially start an online community around some tools I've been working on
+					* so this presentation is something like a interpretive lit review, where I'm trying to put prior work around digital fabrication systems and maker community in conversation with the bodies of work we've been reading in class
+					* with a goal to generate productive research questions, sites of research, systems design implications
+				</aside>
+			</section>
+
+			<section data-background-image="data/progression.png">
+				<aside class="notes">
+					The 'consensus' view in the field is that the development of automation technologies is going to mirror computational technologies. On the bottom 'computation' row here, there's a progression from the first computer at MIT in the 50's through to laptops and todays internet of things. As the story goes, automation technologies will follow a similar trajectoy, where the first computer controlled machine at MIT gave way to machines in industry, then to makerspaces/fablabs/hackerspaces, to desktop-class machines in the home. The end game here is something like the star trek replicator, where the global supply chain dissapears and we can manufacture everything locally, as needed.
+
+					We're somewhere here on this timeline.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Who is producing the technology?</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Commons-based Peer Production</h4>
+							<img height=400 data-src="data/reprap.jpg">
+							<br>
+							<small>RepRap 3D Printer, 2007</small>
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">Firms</h4>
+							<img height=400 data-src="data/bambu.jpg">
+							<small>Bambu X1-Carbon, 2024</small>
+						</small>
+					</div>
+				</div>
+				<aside class="notes">
+					Implicit in that utopian viewpoint is that developments in technology will make so easy to manufacture things yourself that there'll be no choice but for everyone to adopt these technologies. This poses the question: who is producing the technology? An illustrative example here is in the history of 3D printing, where there was a lot of excitement starting in the mid 2000s around the RepRap project, which was a project where a community worked together to improve 3D printer designs. It was super successful at this task, and so successful that 3D printing companies adopted the community-contributed designs and are now starting to sell 'closed source' printers.
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>Communities and Firms</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Coase</h4>
+							<img height=400 data-src="data/coase.png"><br>
+							<small>Firms reduce transaction costs</small>
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">Benkler</h4>
+							<img height=400 data-src="data/benkler.png">
+							<small>Peer production reduces costs</small>
+						</small>
+					</div>
+				</div>
+
+				<aside class="notes">
+					This takes us back to the first week of class, where we heard Coase's argument that firms emerge to reduce transaction costs, and Benkler's argument that peer production similarly drives down transaction costs by allowing people to match with tasks they're suited and interested to solve.
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>Communities and Firms</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Coase</h4>
+							<img height=300 data-src="data/coase.png">
+							<small>Firms reduce transaction costs</small>
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">Benkler</h4>
+							<img height=300 data-src="data/benkler.png">
+							<small>Peer production reduces transaction costs</small>
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">Schumpeter</h4>
+							<img height=300 data-src="data/schumpeter.png">
+							<small>Producers (firms) innovate</small>
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">von Hippel</h4>
+							<img height=300 data-src="data/vonhippel.png">
+							<small> Users innovate, transaction-free</small>
+						</small>
+					</div>
+				</div>
+
+				<aside class="notes">
+					Expanding this lineage a bit brings us into the world of innovation theories. Joseph Shumpeter's theory of producer innovation is contemperaneous with Coase, where he talked about innovation as "the economic activity of producing and using new knowledge and ideas about sources of value that
+					results in the disruption and restructuring of the economic order." In Schumpeter's world, only producers, or firms, innovate, and this guided economics theories for a long time. 
+					
+					More recent work frames users as innovators. Eric von Hippel coined the term 'user innovation' to understand how consumers can actually drive innovation, not firms. An example here is in how mountain bikers modify their bikes depending on what they're doing. The idea is that users have highly contextualized, domain specific local information that firms will never have; the argument feels very Hayekian to me in this way.
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>Innovation Strategies</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<img height=500 data-src="data/strategies.png">
+						</small>
+					</div>
+				</div>
+				<small><small>Benkler, Yochai. "Peer production, the commons, and the future of the firm." Strategic Organization 15.2 (2017)</small></small>
+
+				<aside class="notes">
+					This is summarized in a super straightforward and not at all confusing Benkler diagram, which I've stared at for quite a while and still can't totally parse it out. But Benkler is laying out the conditions under which different ways of organizing are best suited: close to the origin are well-defined, routine tasks that firms would be well suited to handle, and out on the frontier here are complex, knowledge-intensive tasks that are better suited to peer production and that user innovation paradigm My main focus here, though is to hone in on the axes he's set up here: on the Y is the resource space of who knows what, and on the x axis is the project space of deciding what to do. One element that I'm trying to better understand is in how peer production assumes that there are people already equipped with relevant skills who can then self-select to tasks. But in the case of small-scale automation technologies, I think a limiting factor is in how it's actually a very specific group of people who need to acquire a very specific set of skills: for example, communities of scientists being able to customize and build machines to run experiments. There's a question of how to provision this research space to enable the conditions for peer production.
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>A Variety of Online Communities...</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Thingiverse</h4>
+							<img height=400 data-src="data/thingi.png">
+						</small>
+					</div>
+				</div>
+
+				<aside class="notes">
+					My entry point to thinking about that problem is to look at existing online communities. Here's a sample pack of some popular ones: maybe people are familiar with Thingiverse, which is the largest online repository of digital models. On Thingiverse, people upload design that can then be 3D printed. It was launched in 2008 by a 3D printing company, basically as a way to produce user-generated content for 3D printers.
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>A Variety of Online Communities...</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Thingiverse</h4>
+							<img height=400 data-src="data/thingi.png">
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">r/FixMyPrint</h4>
+							<img height=400 data-src="data/fix.png">
+						</small>
+					</div>
+				</div>
+
+				<aside class="notes">
+					We can compare Thingiverse with a subreddit called FixMyPrint, where people go to troubleshoot problems with their printers. In many ways, I see FixMyPrint as dealing with the aftermath of Thingiverse: it actually takes a lot of skill and effort to go from a digital model to a physical thing, and FixMyPrint offers a snapshot into people developing these skills.
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>A Variety of Online Communities...</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Thingiverse</h4>
+							<img height=400 data-src="data/thingi.png">
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">r/FixMyPrint</h4>
+							<img height=400 data-src="data/fix.png">
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">#PlotterTwitter</h4>
+							<img height=400 data-src="data/pt.png">
+						</small>
+					</div>
+				</div>
+
+				<aside class="notes">
+					And as a final example, PlotterTwitter is/was a "community" loosely organized this hashtag on Twitter. People would share the creative things they're doing with pen plotters, which are 2D drawing machines that you can program to draw things. It really took off in the last 5 years or so, and plotters are having a bit of a renaissance now with a few companies developing new designs to sell. 
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>...Produce a Variety of Resources</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Thingiverse</h4>
+							<img height=400 data-src="data/thingi.png">
+							Digital models
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">r/FixMyPrint</h4>
+							<img height=400 data-src="data/fix.png">
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">#PlotterTwitter</h4>
+							<img height=400 data-src="data/pt.png">
+						</small>
+					</div>
+				</div>
+
+				<aside class="notes">
+					If we think about the 'resources' that each of these communities provide, Thingiverse seems like the most straightforward, where the goal is to provide a library of 3d printable designs.
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>...Produce a Variety of Resources</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Thingiverse</h4>
+							<img height=400 data-src="data/thingi.png">
+							Digital models
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">r/FixMyPrint</h4>
+							<img height=400 data-src="data/fix.png">
+							Knowledge? Skills?
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">#PlotterTwitter</h4>
+							<img height=400 data-src="data/pt.png">
+						</small>
+					</div>
+				</div>
+
+				<aside class="notes">
+					FixMyPrint on the other hand is generating knowledge, among other things, but it's a particular type of knowledge. It's more commplicated than, say, the fact that sunflowers are yellow, because it ultimately knowledge that is enacted through physical skills.
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>...Produce a Variety of Resources</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Thingiverse</h4>
+							<img height=400 data-src="data/thingi.png">
+							Digital models
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">r/FixMyPrint</h4>
+							<img height=400 data-src="data/fix.png">
+							Knowledge? Skills?
+						</small>
+
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">#PlotterTwitter</h4>
+							<img height=400 data-src="data/pt.png">
+							Approaches/Techniques?
+						</small>
+					</div>
+				</div>
+
+				<aside class="notes">
+					And PlotterTwitter similarly something
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<h4>...Produce a Variety of Resources</h4>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Thingiverse</h4>
+							<img height=300 data-src="data/thingi.png">
+							Digital models
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">r/FixMyPrint</h4>
+							<img height=300 data-src="data/fix.png">
+							Knowledge? Skills?
+						</small>
+
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">#PlotterTwitter</h4>
+							<img height=300 data-src="data/pt.png">
+							Approaches/Techniques?
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">Critical Mass</h4>
+							<img height=300 data-src="data/production-functions.png">
+						</small>
+					</div>
+				</div>
+
+				<aside class="notes">
+					If we think about provisioning these resources as a collective action problem, then one potentially useful insight is in how these communities are interrelated. I'm taking a page out of Nate TeBlunthuis' work here to put these more ecological perspective in conversation with Marwell and Oliver's production functions, which describe how an individual's contribution relates to how much value they get out of the good. In a the case of Thingiverse, I think that it fits this S-shaped curve pretty well, where there was a time when any new contribution to the site was really consequential, but now, with so many designs on the site, the marginal contribution of a new design is pretty low. If a roadblock to other people contributing new designs is the skill and effort it takes to come up with a new design, then I'm curious how these different communities might be interdependent: people might go to FixMyPrint to learn new skills, and take this knowledge back to a place like Thingiverse, for example.
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<em data-auto-animate-id="takeaway">A focus on the variety of resources that online making communities produce can ground systems development in actual practice</em>
+
+				<aside class="notes">
+				</aside>
+			</section>
+
+
+			<section data-auto-animate>
+				<small><em data-auto-animate-id="takeaway">A focus on the variety of resources that online maker communities produce can ground system development in actual practice</em></small>
+				<br><br>
+				<div class="split">
+					<div class="col">
+						<small>
+							<h4 class="col-title">Community Interdependence</h4>
+							<ul>
+								<li> How do makers participate in adjacent communities?</li>
+								<li> How is the notion of 'maker identity' changing—or not—in these online spaces?</li>
+								<li> How are emerging communities of practice organizing online?</li>
+							</ul>
+						</small>
+					</div>
+
+					<div class="col">
+						<small>
+							<h4 class="col-title">Systems Implications</h4>
+							<ul>
+								<li> How can future design repositories be designed to facilitate physical skill development? </li>
+							</ul>
+						</small>
+					</div>
+				</div>
+				<aside class="notes">
+				</aside>
+			</section>
+
+
+
+			<script src="../../dist/reveal.js"></script>
+			<script src="../../plugin/notes/notes.js"></script>
+			<script src="../../plugin/markdown/markdown.js"></script>
+			<script src="../../plugin/highlight/highlight.js"></script>
+			<script>
+				// More info about initialization & config:
+				// - https://revealjs.com/initialization/
+				// - https://revealjs.com/config/
+				Reveal.initialize({
+					hash: true,
+					// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+				});
+			</script>
+
+</html>
